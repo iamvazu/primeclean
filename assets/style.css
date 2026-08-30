@@ -813,3 +813,37 @@ footer.site{background:var(--blue-900);color:#c5dce8;padding:64px 0 28px;margin-
 }
 .legal-callout p{margin-top:0;font-size:.92rem}
 .legal-callout p + p{margin-top:10px}
+
+/* ---------- free walkthrough / cleanliness score offer band ---------- */
+.offer-band{
+  background:linear-gradient(135deg, var(--blue-900), var(--blue-700));
+  border-radius:var(--radius-lg);color:#fff;overflow:hidden;
+  display:grid;grid-template-columns:1.15fr 1fr;gap:0;
+  position:relative;
+}
+.offer-band::before{
+  content:"";position:absolute;width:340px;height:340px;border-radius:50%;
+  background:radial-gradient(circle, rgba(255,255,255,.10), rgba(255,255,255,0) 70%);
+  top:-90px;right:-60px;pointer-events:none;
+}
+.offer-band-body{padding:48px 44px}
+@media (max-width:860px){.offer-band{grid-template-columns:1fr}.offer-band-body{padding:34px 26px}}
+.offer-band .eyebrow.on-dark{color:var(--gold)}
+.offer-band h2{color:#fff;font-size:clamp(1.5rem,2.6vw,2.05rem);margin-top:12px;max-width:22ch}
+.offer-band p.desc{color:rgba(255,255,255,.85);margin-top:16px;max-width:56ch;font-size:1rem;line-height:1.65}
+.offer-checklist{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;margin-top:26px}
+@media (max-width:560px){.offer-checklist{grid-template-columns:1fr}}
+.offer-checklist .check-row{color:#fff;font-size:.92rem}
+.offer-band-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px;align-items:center}
+.offer-band-note{color:rgba(255,255,255,.7);font-size:.84rem;margin-top:14px}
+.offer-band-side{
+  background:rgba(255,255,255,.06);border-left:1px solid rgba(255,255,255,.12);
+  padding:44px 40px;display:flex;flex-direction:column;justify-content:center;gap:22px;
+}
+@media (max-width:860px){.offer-band-side{border-left:none;border-top:1px solid rgba(255,255,255,.12);padding:30px 26px}}
+.offer-band-side .num{
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;color:var(--gold);font-size:1.6rem;flex:none;
+}
+.offer-band-side .step-row{display:flex;gap:14px;align-items:flex-start}
+.offer-band-side .step-row div b{display:block;color:#fff;font-size:.96rem;font-family:'Plus Jakarta Sans',sans-serif}
+.offer-band-side .step-row div span{color:rgba(255,255,255,.78);font-size:.85rem;line-height:1.5}
