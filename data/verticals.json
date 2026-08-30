@@ -1,0 +1,178 @@
+[
+  {
+    "slug": "commercial-office-cleaning",
+    "name": "Commercial Office Cleaning",
+    "shortName": "Office Cleaning",
+    "headline": "Commercial & Class A Office Cleaning Services",
+    "scopeTitle": "Corporate Office Scope of Work",
+    "heroImage": "assets/images/service_offices.jpg",
+    "metaDescription": "Professional commercial office cleaning in {city}, CA. Certified Women-Owned Small Business providing daily janitorial, workstation sanitation, and after-hours keycard service.",
+    "intro": "Prime Clean provides reliable, high-touch commercial office cleaning in {city}, CA. From multi-tenant Class A towers to creative suites, we tailor every scope to your team's operating hours.",
+    "scopeItems": [
+      "Daily workstation surface wiping, touchpoint disinfection, and sanitizing shared electronics",
+      "Executive conference room detailing, streak-free interior glass, and whiteboard resets",
+      "Breakroom & kitchen hygiene: appliance exterior sanitization, counters, and sink detailing",
+      "Restroom replenishment, hospital-grade disinfection, and odor management",
+      "HEPA-filter vacuuming, hard floor dust mopping, and periodic carpet extraction"
+    ],
+    "highlights": [
+      { "title": "Quiet Day Porter or After-Hours", "desc": "Flexible scheduling with keycard/alarm compliance to eliminate disruptions." },
+      { "title": "Digital Shift Checklists", "desc": "Supervisors verify completion electronically on every visit." },
+      { "title": "Eco-Friendly Chemistry", "desc": "Green Seal certified cleaning solutions safe for staff and visitors." }
+    ]
+  },
+  {
+    "slug": "government-facility-janitorial",
+    "name": "Government & Municipal Janitorial",
+    "shortName": "Government Janitorial",
+    "headline": "Government & Public Facility Janitorial Contractor",
+    "scopeTitle": "Public Sector & Civic Facility Scope",
+    "heroImage": "assets/images/gov_building.jpg",
+    "metaDescription": "Certified WOSB & CA Small Business government janitorial contractor in {city}, CA. NAICS 561720, active on SAM.gov and Cal eProcure for municipal and county solicitations.",
+    "intro": "Prime Clean is an independently certified Women-Owned Small Business (WOSB) and CA Small Business delivering compliant, prevailing-wage janitorial services for government facilities in {city}, CA.",
+    "scopeItems": [
+      "Municipal administration buildings, city halls, courthouses, and council chambers",
+      "Public health centers, community hubs, and public works operations yards",
+      "High-traffic public lobby sanitization, secure office cleaning, and restroom maintenance",
+      "Detailed electronic audit logs for contracting officer review and inspection",
+      "Prevailing wage compliance, certified payroll records, and dedicated contract supervisors"
+    ],
+    "highlights": [
+      { "title": "Certified Small Business Credits", "desc": "WOSB & CA SB certifications count directly toward agency spend goals." },
+      { "title": "Security-Vetted Staff", "desc": "Comprehensive background checks and security protocol clearance." },
+      { "title": "Active SAM.gov & Cal eProcure", "desc": "NAICS 561720, bonded, insured, with capability statement on demand." }
+    ]
+  },
+  {
+    "slug": "medical-clinic-cleaning",
+    "name": "Medical & Healthcare Clinic Cleaning",
+    "shortName": "Medical Cleaning",
+    "headline": "Medical, Dental & Healthcare Clinic Disinfection",
+    "scopeTitle": "Healthcare & Clinical Sanitation Protocols",
+    "heroImage": "assets/images/service_medical.jpg",
+    "metaDescription": "Terminal cleaning and hospital-grade medical facility disinfection in {city}, CA. EPA-registered disinfectants, OSHA compliance, and cross-contamination prevention.",
+    "intro": "Cleanliness in healthcare is a non-negotiable standard of care. Prime Clean delivers terminal cleaning, medical-grade disinfection, and strict sanitation protocols for clinics and dental practices in {city}, CA.",
+    "scopeItems": [
+      "EPA-registered List N hospital disinfectants with verified kill-times for pathogens",
+      "Color-coded microfiber towel and mop systems to eliminate room-to-room cross-contamination",
+      "Touchpoint disinfection of exam tables, patient chairs, counters, and door hardware",
+      "Sterilization of waiting room seating, reception check-in desks, and protective partitions",
+      "OSHA-compliant biohazard protocol awareness and HEPA air filtration vacuuming"
+    ],
+    "highlights": [
+      { "title": "Infection Prevention First", "desc": "Protocol-driven cleaning exceeding CDC and California health standards." },
+      { "title": "Healthcare Trained Techs", "desc": "Specialized training on medical grade sanitizers and PPE protocols." },
+      { "title": "Discreet Scheduling", "desc": "Evening and weekend service windows to protect patient privacy." }
+    ]
+  },
+  {
+    "slug": "industrial-warehouse-cleaning",
+    "name": "Industrial & Warehouse Floor Care",
+    "shortName": "Industrial Cleaning",
+    "headline": "Industrial, Logistics & Warehouse Cleaning Services",
+    "scopeTitle": "Industrial Facility Maintenance Scope",
+    "heroImage": "assets/images/service_industrial.jpg",
+    "metaDescription": "Industrial warehouse cleaning and concrete floor scrubbing in {city}, CA. Ride-on floor scrubbers, degreasing, loading dock sanitation, and dust mitigation.",
+    "intro": "Industrial distribution centers, manufacturing plants, and logistics facilities in {city}, CA depend on Prime Clean for high-bay dust control, heavy floor scrubbing, and hazard-free operations.",
+    "scopeItems": [
+      "Electric ride-on and walk-behind industrial floor scrubbing and concrete degreasing",
+      "Loading dock sweeping, pallet staging zone cleanup, and refuse compactor area sanitation",
+      "Breakroom, locker room, and shift restroom sanitation on high-frequency rotations",
+      "Overhead pipe and beam high-dusting for fire code and air quality compliance",
+      "Customized scheduling to accommodate 24/7 logistics and shift handoffs"
+    ],
+    "highlights": [
+      { "title": "Heavy-Duty Floor Machinery", "desc": "Professional scrubbers that remove forklift tire marks and oil residue." },
+      { "title": "Zero Operational Downtime", "desc": "Cleaned in designated zones or scheduled between shift changes." },
+      { "title": "OSHA & Safety Compliant", "desc": "PPE-trained technicians with strict warehouse safety adherence." }
+    ]
+  },
+  {
+    "slug": "property-management-cleaning",
+    "name": "Property Management & Common Area Janitorial",
+    "shortName": "Property Management",
+    "headline": "Multifamily, HOA & Commercial Common Area Janitorial",
+    "scopeTitle": "Residential & Commercial Common Area Scope",
+    "heroImage": "assets/images/service_property.jpg",
+    "metaDescription": "Common area cleaning for multifamily properties, HOAs, and commercial building portfolios in {city}, CA. Lobbies, elevators, fitness centers, and turn cleans.",
+    "intro": "Prime Clean partners with property managers and HOA boards in {city}, CA to keep lobbies, corridors, elevators, and amenity spaces pristine, boosting tenant retention and property value.",
+    "scopeItems": [
+      "Grand lobby maintenance, entrance glass detailing, and reception desk care",
+      "Elevator cab track cleaning, stainless steel polishing, and mirror detailing",
+      "Corridor carpet vacuuming, baseboard detailing, and stairwell sanitization",
+      "Resident amenity cleaning: fitness centers, clubrooms, and shared business lounges",
+      "Fast-response unit turnover deep cleans for vacant move-ins and move-outs"
+    ],
+    "highlights": [
+      { "title": "Supports Resident Retention", "desc": "Clean common areas make tenants proud of where they live and work." },
+      { "title": "Portfolio Pricing", "desc": "Streamlined management across multiple properties with unified billing." },
+      { "title": "Emergency Response", "desc": "Direct supervisor contact for sudden spills or common area issues." }
+    ]
+  },
+  {
+    "slug": "retail-storefront-cleaning",
+    "name": "Retail & Showroom Cleaning",
+    "shortName": "Retail Cleaning",
+    "headline": "Retail Storefront, Boutique & Auto Showroom Cleaning",
+    "scopeTitle": "Customer-Facing Retail Scope",
+    "heroImage": "assets/images/service_retail.jpg",
+    "metaDescription": "Immaculate retail storefront and auto showroom cleaning in {city}, CA. Spotless floors, display glass cleaning, fitting room hygiene, and morning prep.",
+    "intro": "Retail sales depend on inviting, spotless environments. Prime Clean provides reliable morning or evening retail janitorial services in {city}, CA.",
+    "scopeItems": [
+      "High-gloss retail floor care, dust mopping, and daily entrance buffing",
+      "Streak-free storefront display windows, mirrors, and glass entry doors",
+      "Sales counter detailing, POS touchpoint sanitizing, and fitting room hygiene",
+      "Back-of-house stockroom and employee breakroom sanitation",
+      "Trash removal and recycled cardboard disposal management"
+    ],
+    "highlights": [
+      { "title": "Store-Opening Ready", "desc": "Completed before your first customer steps through the door." },
+      { "title": "Flawless Presentation", "desc": "Showcase merchandise and vehicles in the best possible lighting." },
+      { "title": "Consistent Quality", "desc": "Regular quality control audits by dedicated field supervisors." }
+    ]
+  },
+  {
+    "slug": "school-educational-cleaning",
+    "name": "School & Educational Facility Cleaning",
+    "shortName": "School Cleaning",
+    "headline": "School District, Campus & Childcare Center Cleaning",
+    "scopeTitle": "Educational Campus Sanitation Scope",
+    "heroImage": "assets/images/service_education.jpg",
+    "metaDescription": "Safe, non-toxic school and educational facility cleaning in {city}, CA. Classroom sanitization, gym floor care, Green Seal products, and term break resets.",
+    "intro": "Protect student and faculty health with eco-conscious educational facility janitorial across {city}, CA. Built around district procurement schedules and academic calendars.",
+    "scopeItems": [
+      "Classroom desk sanitization, chalkboard/whiteboard care, and floor mopping",
+      "High-traffic hallway locker scrubbing, drinking fountain sanitization, and VCT waxing",
+      "Cafeteria table disinfection, kitchen floor degreasing, and trash management",
+      "Gymnasium and athletic facility floor care and locker room sanitization",
+      "Comprehensive summer, winter, and spring break deep cleans"
+    ],
+    "highlights": [
+      { "title": "Child-Safe Green Chemistry", "desc": "Zero harsh fumes or toxic chemicals in learning environments." },
+      { "title": "District Schedule Alignment", "desc": "Flexible coverage scaled around holidays, exams, and special events." },
+      { "title": "Background-Checked Staff", "desc": "Vetted personnel cleared for educational campus environments." }
+    ]
+  },
+  {
+    "slug": "bank-financial-cleaning",
+    "name": "Bank & Financial Institution Cleaning",
+    "shortName": "Bank Cleaning",
+    "headline": "Bank Branch & Financial Institution Janitorial",
+    "scopeTitle": "Secure Financial Facility Scope",
+    "heroImage": "assets/images/service_financial.jpg",
+    "metaDescription": "Secure and background-checked bank cleaning services in {city}, CA. Polished marble floors, teller station sanitization, ATM cleanliness, and after-hours reliability.",
+    "intro": "Financial institutions require high security and prestige presentation. Prime Clean delivers trustworthy after-hours cleaning for bank branches and credit unions in {city}, CA.",
+    "scopeItems": [
+      "Teller counter sanitization, customer service desk detailing, and barrier glass polishing",
+      "ATM exterior and drive-through kiosk sanitization and debris cleanup",
+      "Marble, terrazzo, and luxury stone floor buffing and high-gloss polishing",
+      "Private executive office and conference room dusting and vacuuming",
+      "Strict compliance with branch opening/closing security codes and alarm procedures"
+    ],
+    "highlights": [
+      { "title": "Security-Conscious Personnel", "desc": "Bonded, insured, and thoroughly vetted janitorial specialists." },
+      { "title": "Prestige Presentation", "desc": "Mirror-finish floors and flawless glass that reflect financial trust." },
+      { "title": "After-Hours Execution", "desc": "Zero interference with customer banking hours." }
+    ]
+  }
+]

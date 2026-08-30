@@ -1,0 +1,271 @@
+[
+  {
+    "slug": "richmond",
+    "name": "Richmond",
+    "county": "Contra Costa County",
+    "region": "West Contra Costa & East Bay",
+    "landmark": "Prime Clean Headquarters & West Contra Costa Corridor",
+    "description": "Headquartered in Richmond, Prime Clean delivers reliable commercial and municipal cleaning across Hilltop, Point Richmond, Downtown, and the Richmond Industrial corridor.",
+    "zipCodes": [
+      "94801",
+      "94804",
+      "94805",
+      "94806"
+    ]
+  },
+  {
+    "slug": "oakland",
+    "name": "Oakland",
+    "county": "Alameda County",
+    "region": "East Bay Hub",
+    "landmark": "Downtown Oakland, Uptown & Jack London Square",
+    "description": "From high-rise Class A corporate offices in Downtown Oakland to municipal facilities and port-adjacent logistics centers.",
+    "zipCodes": [
+      "94612",
+      "94607",
+      "94611",
+      "94621"
+    ]
+  },
+  {
+    "slug": "berkeley",
+    "name": "Berkeley",
+    "county": "Alameda County",
+    "region": "East Bay",
+    "landmark": "Downtown Berkeley, West Berkeley & 4th Street",
+    "description": "Specialized cleaning services for Berkeley's biotech laboratories, corporate office parks, medical clinics, and education facilities.",
+    "zipCodes": [
+      "94702",
+      "94703",
+      "94704",
+      "94710"
+    ]
+  },
+  {
+    "slug": "san-francisco",
+    "name": "San Francisco",
+    "county": "San Francisco County",
+    "region": "San Francisco Bay Area",
+    "landmark": "Financial District, SoMa & Civic Center",
+    "description": "Full-service commercial janitorial for Financial District towers, tech headquarters in SoMa, and public sector agencies across San Francisco.",
+    "zipCodes": [
+      "94102",
+      "94103",
+      "94104",
+      "94105",
+      "94107",
+      "94111"
+    ]
+  },
+  {
+    "slug": "alameda",
+    "name": "Alameda",
+    "county": "Alameda County",
+    "region": "East Bay",
+    "landmark": "Alameda Point & Marina Village Business Park",
+    "description": "Trusted janitorial solutions for Alameda commercial properties, tech campuses, medical suites, and municipal offices.",
+    "zipCodes": [
+      "94501",
+      "94502"
+    ]
+  },
+  {
+    "slug": "emeryville",
+    "name": "Emeryville",
+    "county": "Alameda County",
+    "region": "East Bay",
+    "landmark": "Powell Street Corridor & Biotech Business Parks",
+    "description": "Precision commercial cleaning and sanitization for Emeryville's biotech research firms, retail centers, and modern corporate suites.",
+    "zipCodes": [
+      "94608"
+    ]
+  },
+  {
+    "slug": "san-leandro",
+    "name": "San Leandro",
+    "county": "Alameda County",
+    "region": "East Bay",
+    "landmark": "San Leandro Industrial Corridor & Downtown",
+    "description": "Industrial warehouse degreasing, commercial facility cleaning, and municipal janitorial throughout San Leandro.",
+    "zipCodes": [
+      "94577",
+      "94578",
+      "94579"
+    ]
+  },
+  {
+    "slug": "hayward",
+    "name": "Hayward",
+    "county": "Alameda County",
+    "region": "East Bay",
+    "landmark": "Hayward Executive Business Parks & Industrial Zone",
+    "description": "Comprehensive warehouse, manufacturing facility, and commercial office cleaning services in Hayward and the central East Bay.",
+    "zipCodes": [
+      "94541",
+      "94544",
+      "94545"
+    ]
+  },
+  {
+    "slug": "fremont",
+    "name": "Fremont",
+    "county": "Alameda County",
+    "region": "South East Bay / Silicon Valley North",
+    "landmark": "Bayside Business Park & Warm Springs Tech Corridor",
+    "description": "Industrial maintenance, high-tech manufacturing facility care, and corporate campus janitorial across Fremont.",
+    "zipCodes": [
+      "94536",
+      "94538",
+      "94539"
+    ]
+  },
+  {
+    "slug": "walnut-creek",
+    "name": "Walnut Creek",
+    "county": "Contra Costa County",
+    "region": "Central Contra Costa",
+    "landmark": "Downtown Walnut Creek & Ygnacio Valley Corporate Suites",
+    "description": "Premium office deep cleaning, medical center disinfection, and financial institution janitorial in Walnut Creek.",
+    "zipCodes": [
+      "94596",
+      "94597",
+      "94598"
+    ]
+  },
+  {
+    "slug": "concord",
+    "name": "Concord",
+    "county": "Contra Costa County",
+    "region": "Central Contra Costa",
+    "landmark": "Concord Downtown Plaza & Willow Pass Commercial Corridor",
+    "description": "Government building janitorial, corporate office cleaning, and industrial facility maintenance throughout Concord.",
+    "zipCodes": [
+      "94520",
+      "94521",
+      "94524"
+    ]
+  },
+  {
+    "slug": "san-ramon",
+    "name": "San Ramon",
+    "county": "Contra Costa County",
+    "region": "Tri-Valley",
+    "landmark": "Bishop Ranch Business Complex",
+    "description": "Class A executive suite cleaning, corporate campus day porters, and healthcare clinic disinfection in San Ramon.",
+    "zipCodes": [
+      "94582",
+      "94583"
+    ]
+  },
+  {
+    "slug": "pleasanton",
+    "name": "Pleasanton",
+    "county": "Alameda County",
+    "region": "Tri-Valley",
+    "landmark": "Hacienda Business Park",
+    "description": "High-standard commercial janitorial for corporate headquarters, life science offices, and business parks in Pleasanton.",
+    "zipCodes": [
+      "94566",
+      "94588"
+    ]
+  },
+  {
+    "slug": "san-pablo",
+    "name": "San Pablo",
+    "county": "Contra Costa County",
+    "region": "West Contra Costa",
+    "landmark": "23rd Street Corridor & San Pablo Avenue",
+    "description": "Fast, reliable commercial and municipal janitorial for San Pablo's retail centers, medical clinics, and city government offices, just minutes from our Richmond headquarters.",
+    "zipCodes": [
+      "94806"
+    ]
+  },
+  {
+    "slug": "el-cerrito",
+    "name": "El Cerrito",
+    "county": "Contra Costa County",
+    "region": "West Contra Costa",
+    "landmark": "San Pablo Avenue Corridor & El Cerrito Plaza",
+    "description": "Office, retail, and municipal facility cleaning along the San Pablo Avenue corridor, with rapid response from our nearby Richmond crew base.",
+    "zipCodes": [
+      "94530"
+    ]
+  },
+  {
+    "slug": "hercules",
+    "name": "Hercules",
+    "county": "Contra Costa County",
+    "region": "West Contra Costa",
+    "landmark": "Hercules Bayfront & Sycamore Business Park",
+    "description": "Corporate office parks, waterfront business tenants, and municipal buildings serviced with the same documented standard we bring to every West Contra Costa account.",
+    "zipCodes": [
+      "94547"
+    ]
+  },
+  {
+    "slug": "pinole",
+    "name": "Pinole",
+    "county": "Contra Costa County",
+    "region": "West Contra Costa",
+    "landmark": "Pinole Vista Business Park & Downtown Pinole",
+    "description": "Retail centers, medical offices, and small commercial properties throughout Pinole, backed by a crew based minutes away in Richmond.",
+    "zipCodes": [
+      "94564"
+    ]
+  },
+  {
+    "slug": "martinez",
+    "name": "Martinez",
+    "county": "Contra Costa County",
+    "region": "Central Contra Costa \u2014 County Seat",
+    "landmark": "Downtown Martinez & Contra Costa County Government Center",
+    "description": "As the Contra Costa County seat, Martinez is home to courthouses and county administrative buildings \u2014 exactly the kind of certified, documented public-sector cleaning Prime Clean specializes in.",
+    "zipCodes": [
+      "94553"
+    ]
+  },
+  {
+    "slug": "pleasant-hill",
+    "name": "Pleasant Hill",
+    "county": "Contra Costa County",
+    "region": "Central Contra Costa",
+    "landmark": "Downtown Pleasant Hill & Contra Costa Boulevard",
+    "description": "Corporate offices, medical suites, and retail centers along the Contra Costa Boulevard corridor, cleaned to the same standard as our Walnut Creek and Concord accounts.",
+    "zipCodes": [
+      "94523"
+    ]
+  },
+  {
+    "slug": "lafayette",
+    "name": "Lafayette",
+    "county": "Contra Costa County",
+    "region": "Central Contra Costa \u2014 Lamorinda",
+    "landmark": "Downtown Lafayette & Mt. Diablo Boulevard",
+    "description": "Boutique office suites, financial branches, and property-management common areas in downtown Lafayette and along Mt. Diablo Boulevard.",
+    "zipCodes": [
+      "94549"
+    ]
+  },
+  {
+    "slug": "orinda",
+    "name": "Orinda",
+    "county": "Contra Costa County",
+    "region": "Central Contra Costa \u2014 Lamorinda",
+    "landmark": "Orinda Village & Camino Pablo Corridor",
+    "description": "Property management and HOA common-area cleaning, small professional offices, and retail spaces throughout Orinda Village.",
+    "zipCodes": [
+      "94563"
+    ]
+  },
+  {
+    "slug": "benicia",
+    "name": "Benicia",
+    "county": "Solano County",
+    "region": "Solano County / North Bay",
+    "landmark": "Benicia Industrial Park & Downtown Waterfront",
+    "description": "Industrial park facilities, corporate offices, and municipal buildings in Benicia, serviced as part of Prime Clean's expanding North Bay / Solano County coverage.",
+    "zipCodes": [
+      "94510"
+    ]
+  }
+]
