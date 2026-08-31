@@ -99,29 +99,48 @@
 
   <section>
     <div class="wrap">
-      <div class="feature-panel">
+      <div class="feature-panel" style="grid-template-columns:1.05fr .95fr;align-items:center">
         <div>
-          <span class="eyebrow on-light">Certifications</span>
+          <span class="eyebrow on-light">Verified Credentials</span>
           <h2 style="margin-top:12px">Certified, not just claimed.</h2>
-          <p class="desc">Prime Clean holds active Women-Owned Small Business (WOSB) and California Small Business (SB) certifications. That matters for two reasons: it's independently verified, and it opens set-aside and supplier-diversity opportunities that uncertified vendors can't access.</p>
+          <p class="desc">Prime Clean holds active Women-Owned Small Business (WOSB) and State of California Small Business (SB) certifications. That matters for two reasons: it's independently verified by state and federal agencies, and it fulfills public-sector set-asides and corporate supplier-diversity mandates.</p>
           <div class="feature-list">
-            <div class="check-row"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg></span>Women-Owned Small Business (WOSB)</div>
-            <div class="check-row"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg></span>California Small Business (SB) Certified (Cal eProcure Cert. #2041245)</div>
-            <div class="check-row"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg></span>Licensed, bonded &amp; insured</div>
-            <div class="check-row"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg></span>DIR Registered Contractor (No. JS-LR-1001318678)</div>
-            <div class="check-row"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg></span>Background-checked, trained staff</div>
+            <div class="check-row"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg></span><b>Women-Owned Small Business (WOSB)</b> — SBA Certified</div>
+            <div class="check-row"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg></span><b>State of California Certified Small Business</b> — Cert. #2048444</div>
+            <div class="check-row"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg></span><b>Cal eProcure Registered Vendor</b> — Active State Procurement Status</div>
+            <div class="check-row"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg></span><b>DIR Registered Janitorial Contractor</b> — No. JS-LR-1001318678</div>
+            <div class="check-row"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg></span><b>Fully Licensed, Bonded &amp; Insured</b> ($2M Aggregate Coverage)</div>
           </div>
           <a class="btn btn-outline" style="margin-top:26px" href="government.html">See Our Government Contracting Page</a>
         </div>
-        <div class="feature-visual cert-seal-visual">
-          <svg viewBox="0 0 200 200" fill="none">
-            <circle cx="100" cy="100" r="88" fill="var(--blue-050)"/>
-            <circle cx="100" cy="100" r="88" stroke="var(--blue-500)" stroke-width="2" stroke-dasharray="3 6"/>
-            <circle cx="100" cy="100" r="66" stroke="var(--blue-700)" stroke-width="2"/>
-            <path d="M78 101l16 16 32-34" stroke="var(--gold-deep)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-            <text x="100" y="150" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="9" fill="var(--blue-900)" letter-spacing=".5">WOSB CERTIFIED</text>
-            <text x="100" y="163" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="9" fill="var(--blue-900)" letter-spacing=".5">CA SMALL BUSINESS</text>
-          </svg>
+
+        <!-- OFFICIAL CERTIFICATION LOGOS GRID -->
+        <div class="cert-badges-card">
+          <div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.88rem;color:var(--blue-900);text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--line);padding-bottom:8px">
+            Official Agency Registrations
+          </div>
+          <div class="cert-badges-grid">
+            <div class="cert-badge-box">
+              <img src="assets/logos/logo_sba_wosb.png" alt="U.S. Small Business Administration WOSB Certified Logo" loading="lazy">
+              <span class="cert-badge-label">SBA WOSB Certified</span>
+            </div>
+            <div class="cert-badge-box">
+              <img src="assets/logos/logo_ca_sb_cert.png" alt="State of California Certified Small Business Badge Cert #2048444" loading="lazy">
+              <span class="cert-badge-label">CA SB #2048444</span>
+            </div>
+            <div class="cert-badge-box">
+              <img src="assets/logos/logo_ca_sb_seal.png" alt="State of California Small Business Seal with Bear" loading="lazy">
+              <span class="cert-badge-label">State of California</span>
+            </div>
+            <div class="cert-badge-box">
+              <img src="assets/logos/logo_cagov_sb.png" alt="CA.GOV California Small Business Certified" loading="lazy">
+              <span class="cert-badge-label">CA.GOV Verified</span>
+            </div>
+            <div class="cert-badge-box wide">
+              <img src="assets/logos/logo_cal_eprocure.png" alt="Cal eProcure Official State Procurement Logo" loading="lazy">
+              <span class="cert-badge-label" style="margin-top:6px">Cal eProcure Certified State Vendor</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

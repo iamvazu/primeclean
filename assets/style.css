@@ -503,6 +503,96 @@ nav.primary a:hover, nav.primary a.active{color:var(--blue-700);border-color:var
 }
 .feature-list{display:flex;flex-direction:column;gap:14px;margin-top:24px}
 
+/* Official Certification Badges Grid */
+.cert-badges-card{
+  background:#ffffff;
+  border-radius:var(--radius-lg);
+  padding:24px 22px;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow-card);
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.cert-badges-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:14px;
+  align-items:stretch;
+}
+.cert-badge-box{
+  background:var(--cream);
+  border:1px solid var(--line);
+  border-radius:var(--radius-md);
+  padding:16px 12px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  transition:all .2s ease;
+  min-height:120px;
+}
+.cert-badge-box:hover{
+  border-color:var(--blue-500);
+  background:#ffffff;
+  box-shadow:0 8px 20px rgba(10,47,71,.08);
+  transform:translateY(-2px);
+}
+.cert-badge-box img{
+  max-height:75px;
+  max-width:100%;
+  object-fit:contain;
+  display:block;
+  margin:0 auto;
+}
+.cert-badge-box.wide{
+  grid-column:span 2;
+  padding:14px 18px;
+  min-height:90px;
+}
+.cert-badge-box.wide img{
+  max-height:55px;
+}
+.cert-badge-label{
+  font-size:.74rem;
+  font-weight:700;
+  color:var(--blue-900);
+  margin-top:8px;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  line-height:1.2;
+}
+
+/* Trust Badges Ribbon / Strip */
+.trust-logos-strip{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:32px;
+  flex-wrap:wrap;
+  padding:20px 24px;
+  background:#ffffff;
+  border-radius:var(--radius-md);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow-card);
+  margin-top:24px;
+}
+.trust-logos-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.trust-logos-item img{
+  height:44px;
+  max-width:130px;
+  object-fit:contain;
+}
+@media (max-width:680px){
+  .cert-badges-grid{grid-template-columns:1fr}
+  .cert-badge-box.wide{grid-column:span 1}
+  .trust-logos-strip{gap:20px;justify-content:space-around}
+}
+
 /* ---------- bold band (why choose us) ---------- */
 .band-bold{
   background:var(--blue-600);
