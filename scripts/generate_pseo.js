@@ -100,8 +100,14 @@ const corePages = [
   'government.html',
   'service-areas.html',
   'blog.html',
+  'careers.html',
   'contact.html'
 ];
+
+const industriesDir = path.join(rootDir, 'industries');
+const industryPages = fs.existsSync(industriesDir)
+  ? fs.readdirSync(industriesDir).filter(f => f.endsWith('.html')).map(f => `industries/${f}`)
+  : [];
 
 const blogDir = path.join(rootDir, 'blog');
 const blogArticles = fs.existsSync(blogDir) 
@@ -124,6 +130,12 @@ ${corePages.map(page => `  <url>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>`).join('\n')}
+${industryPages.map(ind => `  <url>
+    <loc>${baseUrl}/${ind}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>`).join('\n')}
 ${blogArticles.map(article => `  <url>
     <loc>${baseUrl}/${article}</loc>
