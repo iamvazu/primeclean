@@ -1115,15 +1115,19 @@ nav.primary a:hover, nav.primary a.active{color:var(--blue-700);border-color:var
 
 /* ---------- footer ---------- */
 footer.site{background:var(--blue-900);color:#c5dce8;padding:64px 0 28px;margin-top:40px}
-.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr 1.1fr;gap:28px}
-@media (max-width:1100px){.foot-grid{grid-template-columns:repeat(3,1fr);gap:32px 24px}}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr 1.1fr;gap:28px;align-items:start}
+@media (max-width:1180px){.foot-grid{grid-template-columns:repeat(3,1fr);gap:36px 24px}}
 @media (max-width:680px){.foot-grid{grid-template-columns:1fr 1fr;gap:28px 20px}}
 @media (max-width:460px){.foot-grid{grid-template-columns:1fr;gap:24px}}
-.foot-grid h4{font-family:'Plus Jakarta Sans',sans-serif;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#7fa3ba;margin-bottom:16px}
+.foot-grid > div{display:flex;flex-direction:column}
+.foot-grid h4{font-family:'Plus Jakarta Sans',sans-serif;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#7fa3ba;margin:0 0 16px;line-height:1.2}
 .foot-grid ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
-.foot-grid a{font-size:.92rem}
+.foot-grid ul li{line-height:1.4}
+.foot-grid a{font-size:.92rem;color:#c5dce8;text-decoration:none;transition:color .15s ease}
 .foot-grid a:hover{color:var(--gold)}
-.foot-brand p{color:#9db8c8;font-size:.9rem;max-width:32ch;margin-top:14px}
+.foot-brand{margin-top:0}
+.foot-brand .brand-logo--footer{display:block;height:auto;max-height:44px;width:auto;margin-bottom:14px}
+.foot-brand p{color:#9db8c8;font-size:.9rem;max-width:32ch;margin:0;line-height:1.55}
 .foot-badges-inline{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
 .foot-badges-inline span{background:rgba(255,255,255,.08);color:#c5dce8;border:1px solid rgba(255,255,255,.12);padding:4px 10px;border-radius:99px;font-size:.74rem;font-weight:600}
 .foot-bottom{

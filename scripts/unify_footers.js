@@ -51,9 +51,11 @@ function getFooterHtml(prefix) {
           <li><a href="${prefix}locations/oakland-commercial-office-cleaning.html">Oakland</a></li>
           <li><a href="${prefix}locations/richmond-commercial-office-cleaning.html">Richmond (HQ)</a></li>
           <li><a href="${prefix}locations/berkeley-commercial-office-cleaning.html">Berkeley</a></li>
-          <li><a href="${prefix}locations/fremont-commercial-office-cleaning.html">Fremont</a></li>
           <li><a href="${prefix}locations/walnut-creek-commercial-office-cleaning.html">Walnut Creek</a></li>
           <li><a href="${prefix}locations/concord-commercial-office-cleaning.html">Concord</a></li>
+          <li><a href="${prefix}locations/martinez-commercial-office-cleaning.html">Martinez</a></li>
+          <li><a href="${prefix}locations/benicia-commercial-office-cleaning.html">Benicia</a></li>
+          <li><a href="${prefix}locations/albany-commercial-office-cleaning.html">Albany</a></li>
           <li><a href="${prefix}locations/pleasanton-commercial-office-cleaning.html">Pleasanton</a></li>
           <li><a href="${prefix}service-areas.html" style="color:var(--gold);font-weight:700">View All 16+ Cities →</a></li>
         </ul>
@@ -63,6 +65,7 @@ function getFooterHtml(prefix) {
         <ul>
           <li><a href="${prefix}about.html">About Prime Clean</a></li>
           <li><a href="${prefix}pricing.html">Pricing Calculator</a></li>
+          <li><a href="${prefix}gallery.html">Before &amp; After Gallery</a></li>
           <li><a href="${prefix}tools/walkthrough-scorecard.html">Walkthrough Scorecard Tool</a></li>
           <li><a href="${prefix}government.html">Government Contracting</a></li>
           <li><a href="${prefix}service-areas.html">Service Coverage</a></li>
