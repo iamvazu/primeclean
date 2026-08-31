@@ -212,32 +212,68 @@
       <div class="foot-brand">
         <img class="brand-logo brand-logo--footer" src="assets/logo-white.png" alt="Prime Clean" width="438" height="204">
         <p>Women-Owned, California Small Business Certified commercial and government cleaning contractor serving the East Bay and San Francisco.</p>
+        <div class="foot-badges-inline">
+          <span>WOSB Certified</span>
+          <span>CA SB #2038912</span>
+          <span>DIR Registered</span>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#offices">Commercial Janitorial</a></li>
+          <li><a href="services.html#day-porter">Day Porter Services</a></li>
+          <li><a href="services.html#medical">Medical &amp; Terminal Disinfection</a></li>
+          <li><a href="services.html#floor-care">Floor Care &amp; Deep Cleaning</a></li>
+          <li><a href="services.html#post-construction">Post-Construction Cleaning</a></li>
+          <li><a href="services.html#window">Window &amp; Glass Care</a></li>
+        </ul>
       </div>
       <div>
         <h4>Industries</h4>
         <ul>
           <li><a href="government.html">Government &amp; Public</a></li>
-          <li><a href="services.html#offices">Corporate Offices</a></li>
-          <li><a href="services.html#medical">Medical &amp; Clinical</a></li>
-          <li><a href="services.html#industrial">Industrial &amp; Warehouse</a></li>
+          <li><a href="services.html#offices">Corporate &amp; Class A Offices</a></li>
+          <li><a href="services.html#medical">Medical &amp; Clinical Facilities</a></li>
+          <li><a href="services.html#industrial">Industrial &amp; Warehouses</a></li>
+          <li><a href="services.html#retail">Retail &amp; Showrooms</a></li>
+          <li><a href="services.html#education">Schools &amp; Education</a></li>
+          <li><a href="services.html#financial">Financial Institutions</a></li>
         </ul>
       </div>
       <div>
-        <h4>Company</h4>
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="locations/san-francisco-commercial-office-cleaning.html">San Francisco</a></li>
+          <li><a href="locations/oakland-commercial-office-cleaning.html">Oakland</a></li>
+          <li><a href="locations/richmond-commercial-office-cleaning.html">Richmond</a></li>
+          <li><a href="locations/berkeley-commercial-office-cleaning.html">Berkeley</a></li>
+          <li><a href="locations/fremont-commercial-office-cleaning.html">Fremont</a></li>
+          <li><a href="locations/walnut-creek-commercial-office-cleaning.html">Walnut Creek</a></li>
+          <li><a href="locations/concord-commercial-office-cleaning.html">Concord</a></li>
+          <li><a href="locations/pleasanton-commercial-office-cleaning.html">Pleasanton</a></li>
+          <li><a href="service-areas.html" style="color:var(--gold);font-weight:700">View All 16+ Cities →</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company &amp; Tools</h4>
         <ul>
           <li><a href="about.html">About Prime Clean</a></li>
           <li><a href="pricing.html">Pricing Calculator</a></li>
+          <li><a href="tools/walkthrough-scorecard.html">Walkthrough Scorecard Tool</a></li>
           <li><a href="government.html">Government Contracting</a></li>
-          <li><a href="service-areas.html">Service Areas</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="service-areas.html">Service Coverage</a></li>
+          <li><a href="contact.html">Contact &amp; Free Walkthrough</a></li>
         </ul>
       </div>
       <div>
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:14155728733">(415) 572-8733</a></li>
+          <li><a href="tel:14155728733" style="color:#fff;font-weight:700">(415) 572-8733</a></li>
           <li><a href="mailto:info@primecleanba.com">info@primecleanba.com</a></li>
-          <li>353 S 24th St, Richmond, CA</li>
+          <li><a href="mailto:jackie@primecleanba.com">jackie@primecleanba.com</a></li>
+          <li>353 S 24th St, Richmond, CA 94804</li>
+          <li style="color:#7fa3ba;font-size:.82rem;margin-top:6px">Mon–Fri: 7:00 AM – 7:00 PM<br>24/7 Operations Dispatch</li>
         </ul>
       </div>
     </div>
@@ -254,92 +290,5 @@
 </footer>
 
 <script src="assets/script.js"></script>
-<script>
-(function(){
-  var SIZE_BRACKETS = [
-    { max: 5000,      low: 0.16, high: 0.26 },
-    { max: 20000,     low: 0.11, high: 0.18 },
-    { max: 50000,     low: 0.09, high: 0.15 },
-    { max: Infinity,  low: 0.08, high: 0.13 }
-  ];
-  var FREQ_MULT   = { "1x": 0.55, "2x": 0.78, "3x": 1.0, "5x": 1.35 };
-  var FREQ_VISITS = { "1x": 4.33, "2x": 8.67, "3x": 13,  "5x": 21.7 };
-  var FREQ_LABEL  = { "1x": "1x / week", "2x": "2x / week", "3x": "3x / week", "5x": "5x / week" };
-  var TYPE_MULT = {
-    "Office": 1.0,
-    "Retail / Showroom": 1.0,
-    "Property Management / Multifamily": 0.95,
-    "Education / School": 1.05,
-    "Financial Institution": 1.1,
-    "Industrial / Warehouse": 0.6,
-    "Medical / Clinical": 1.65,
-    "Other": 1.0
-  };
-  var MONTHLY_MIN = 650;
-
-  var freq = "3x";
-  var sliderEl = document.getElementById("calc-sqft-slider");
-  var numEl = document.getElementById("calc-sqft");
-  var typeEl = document.getElementById("calc-type");
-  var toggleEl = document.getElementById("calc-freq-toggle");
-
-  function roundTo(n, step){ return Math.round(n/step)*step; }
-  function fmt(n){ return "$" + Math.round(n).toLocaleString("en-US"); }
-
-  function compute(){
-    var sqft = Math.max(500, Math.min(500000, parseInt(numEl.value,10) || 0));
-    var type = typeEl.value;
-    var bracket = SIZE_BRACKETS.find(function(b){ return sqft <= b.max; }) || SIZE_BRACKETS[SIZE_BRACKETS.length-1];
-    var typeMult = TYPE_MULT[type] != null ? TYPE_MULT[type] : 1.0;
-    var freqMult = FREQ_MULT[freq];
-    var low = sqft * bracket.low * freqMult * typeMult;
-    var high = sqft * bracket.high * freqMult * typeMult;
-    low = Math.max(MONTHLY_MIN, low);
-    high = Math.max(MONTHLY_MIN + 100, high);
-    low = roundTo(low, low < 2000 ? 10 : 50);
-    high = roundTo(high, high < 2000 ? 10 : 50);
-    if(high <= low) high = low + Math.max(50, Math.round(low*0.15));
-    var visits = FREQ_VISITS[freq];
-    return { low: low, high: high, perVisitLow: low/visits, perVisitHigh: high/visits, visits: visits, sqft: sqft, type: type };
-  }
-
-  function render(){
-    var r = compute();
-    document.getElementById("calc-range").textContent = fmt(r.low) + " – " + fmt(r.high);
-    document.getElementById("calc-subline").textContent =
-      "≈ " + fmt(r.perVisitLow) + " – " + fmt(r.perVisitHigh) + " per visit · " + Math.round(r.visits) + " visits/month";
-    document.getElementById("chip-sqft").textContent = r.sqft.toLocaleString("en-US") + " sq ft";
-    document.getElementById("chip-type").textContent = r.type;
-    document.getElementById("chip-freq").textContent = FREQ_LABEL[freq];
-
-    var params = new URLSearchParams();
-    params.set("sqft", r.sqft);
-    params.set("type", r.type);
-    params.set("freq", FREQ_LABEL[freq]);
-    params.set("est", fmt(r.low) + "-" + fmt(r.high));
-    var qs = "contact.html?" + params.toString() + "#quote-form";
-    document.getElementById("calc-cta-walkthrough").href = qs;
-    document.getElementById("calc-cta-quote").href = qs;
-  }
-
-  sliderEl.addEventListener("input", function(){ numEl.value = sliderEl.value; render(); });
-  numEl.addEventListener("input", function(){
-    var v = parseInt(numEl.value,10) || 0;
-    sliderEl.value = Math.max(500, Math.min(100000, v));
-    render();
-  });
-  typeEl.addEventListener("change", render);
-  toggleEl.querySelectorAll("button").forEach(function(btn){
-    btn.addEventListener("click", function(){
-      toggleEl.querySelectorAll("button").forEach(function(b){ b.classList.remove("active"); });
-      btn.classList.add("active");
-      freq = btn.getAttribute("data-freq");
-      render();
-    });
-  });
-
-  render();
-})();
-</script>
 </body>
 </html>

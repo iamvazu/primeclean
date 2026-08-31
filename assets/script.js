@@ -169,6 +169,113 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
+  // ---------- Pricing Calculator Component ----------
+  var calcContainer = document.querySelector('.calc-grid');
+  if (calcContainer) {
+    var SIZE_BRACKETS = [
+      { max: 5000,      low: 0.16, high: 0.26 },
+      { max: 20000,     low: 0.11, high: 0.18 },
+      { max: 50000,     low: 0.09, high: 0.15 },
+      { max: Infinity,  low: 0.08, high: 0.13 }
+    ];
+    var FREQ_MULT   = { "1x": 0.55, "2x": 0.78, "3x": 1.0, "5x": 1.35 };
+    var FREQ_VISITS = { "1x": 4.33, "2x": 8.67, "3x": 13,  "5x": 21.7 };
+    var FREQ_LABEL  = { "1x": "1x / week", "2x": "2x / week", "3x": "3x / week", "5x": "5x / week" };
+    var TYPE_MULT = {
+      "Office": 1.0,
+      "Corporate Office": 1.0,
+      "Retail / Showroom": 1.0,
+      "Property Management / Multifamily": 0.95,
+      "Education / School": 1.05,
+      "Financial Institution": 1.1,
+      "Industrial / Warehouse": 0.6,
+      "Medical / Clinical": 1.65,
+      "Other": 1.0
+    };
+    var MONTHLY_MIN = 650;
+
+    var freq = "3x";
+    var sliderEl = calcContainer.querySelector("#calc-sqft-slider");
+    var numEl = calcContainer.querySelector("#calc-sqft");
+    var typeEl = calcContainer.querySelector("#calc-type");
+    var toggleEl = calcContainer.querySelector("#calc-freq-toggle");
+    var rangeEl = calcContainer.querySelector("#calc-range");
+    var sublineEl = calcContainer.querySelector("#calc-subline");
+    var chipSqft = calcContainer.querySelector("#chip-sqft");
+    var chipType = calcContainer.querySelector("#chip-type");
+    var chipFreq = calcContainer.querySelector("#chip-freq");
+    var ctaWalkthrough = calcContainer.querySelector("#calc-cta-walkthrough");
+    var ctaQuote = calcContainer.querySelector("#calc-cta-quote");
+
+    function roundTo(n, step){ return Math.round(n/step)*step; }
+    function fmt(n){ return "$" + Math.round(n).toLocaleString("en-US"); }
+
+    function compute(){
+      if (!numEl || !typeEl) return null;
+      var sqft = Math.max(500, Math.min(500000, parseInt(numEl.value,10) || 8000));
+      var type = typeEl.value;
+      var bracket = SIZE_BRACKETS.find(function(b){ return sqft <= b.max; }) || SIZE_BRACKETS[SIZE_BRACKETS.length-1];
+      var typeMult = TYPE_MULT[type] != null ? TYPE_MULT[type] : 1.0;
+      var freqMult = FREQ_MULT[freq] || 1.0;
+      var low = sqft * bracket.low * freqMult * typeMult;
+      var high = sqft * bracket.high * freqMult * typeMult;
+      low = Math.max(MONTHLY_MIN, low);
+      high = Math.max(MONTHLY_MIN + 100, high);
+      low = roundTo(low, low < 2000 ? 10 : 50);
+      high = roundTo(high, high < 2000 ? 10 : 50);
+      if(high <= low) high = low + Math.max(50, Math.round(low*0.15));
+      var visits = FREQ_VISITS[freq] || 13;
+      return { low: low, high: high, perVisitLow: low/visits, perVisitHigh: high/visits, visits: visits, sqft: sqft, type: type };
+    }
+
+    function renderCalc(){
+      var r = compute();
+      if (!r) return;
+      if (rangeEl) rangeEl.textContent = fmt(r.low) + " – " + fmt(r.high);
+      if (sublineEl) {
+        sublineEl.textContent = "≈ " + fmt(r.perVisitLow) + " – " + fmt(r.perVisitHigh) + " per visit · " + Math.round(r.visits) + " visits/month";
+      }
+      if (chipSqft) chipSqft.textContent = r.sqft.toLocaleString("en-US") + " sq ft";
+      if (chipType) chipType.textContent = r.type;
+      if (chipFreq) chipFreq.textContent = FREQ_LABEL[freq] || freq;
+
+      var params = new URLSearchParams();
+      params.set("sqft", r.sqft);
+      params.set("type", r.type);
+      params.set("freq", FREQ_LABEL[freq] || freq);
+      params.set("est", fmt(r.low) + "-" + fmt(r.high));
+      var qs = "contact.html?" + params.toString() + "#quote-form";
+      if (ctaWalkthrough) ctaWalkthrough.href = qs;
+      if (ctaQuote && ctaQuote.getAttribute('href') && ctaQuote.getAttribute('href').includes('contact.html')) {
+        ctaQuote.href = qs;
+      }
+    }
+
+    if (sliderEl && numEl) {
+      sliderEl.addEventListener("input", function(){ numEl.value = sliderEl.value; renderCalc(); });
+      numEl.addEventListener("input", function(){
+        var v = parseInt(numEl.value,10) || 0;
+        sliderEl.value = Math.max(500, Math.min(100000, v));
+        renderCalc();
+      });
+    }
+    if (typeEl) {
+      typeEl.addEventListener("change", renderCalc);
+    }
+    if (toggleEl) {
+      toggleEl.querySelectorAll("button").forEach(function(btn){
+        btn.addEventListener("click", function(){
+          toggleEl.querySelectorAll("button").forEach(function(b){ b.classList.remove("active"); });
+          btn.classList.add("active");
+          freq = btn.getAttribute("data-freq");
+          renderCalc();
+        });
+      });
+    }
+
+    renderCalc();
+  }
+
   // Scroll-reveal: fade + rise elements into view as the user scrolls.
   var revealSelectors = [
     '.step', '.vert-card', '.testi-card', '.reason-card',
