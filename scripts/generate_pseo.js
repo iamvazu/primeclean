@@ -96,6 +96,7 @@ const corePages = [
   'commercial-cleaning-richmond-ca.html',
   'about.html',
   'services.html',
+  'pricing.html',
   'government.html',
   'service-areas.html',
   'contact.html'

@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Walkthrough Scorecard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --cream:#f5f7f9; --cream-deep:#eaeef2; --card:#ffffff;
+  --ink:#101c26; --ink-soft:#3a4a56; --muted:#5c6f7a; --line:#dde4e9;
+  --blue-900:#0a2f47; --blue-700:#0071a8; --blue-600:#1490c7; --blue-500:#3fb9df;
+  --blue-100:#d7edf5; --blue-050:#eef7fb;
+  --gold:#eec04a; --gold-deep:#dba82b;
+  --good:#2f9e5b; --good-bg:#e7f5ec;
+  --fair:#c9821f; --fair-bg:#faf0dc;
+  --poor:#d1493f; --poor-bg:#fbe9e7;
+  --radius-lg:28px; --radius-md:18px; --radius-sm:12px;
+  --shadow-card: 0 18px 40px -22px rgba(10,32,47,.24);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --cream:#0d1720; --cream-deep:#122130; --card:#152534;
+    --ink:#eef3f6; --ink-soft:#c3d0d8; --muted:#8ea1ac; --line:#28394a;
+    --blue-100:#173347; --blue-050:#122534;
+    --good-bg:#123424; --fair-bg:#3a2c10; --poor-bg:#3a1712;
+  }
+}
+:root[data-theme="dark"]{
+  --cream:#0d1720; --cream-deep:#122130; --card:#152534;
+  --ink:#eef3f6; --ink-soft:#c3d0d8; --muted:#8ea1ac; --line:#28394a;
+  --blue-100:#173347; --blue-050:#122534;
+  --good-bg:#123424; --fair-bg:#3a2c10; --poor-bg:#3a1712;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.jk{font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+h1,h2,h3{text-wrap:balance}
+button{font-family:inherit;touch-action:manipulation}
+::selection{background:var(--blue-100)}
+a{color:var(--blue-700)}
+
+/* ---- top bar ---- */
+.topbar{
+  position:sticky;top:0;z-index:20;background:var(--blue-900);color:#fff;
+  padding:14px 18px;display:flex;align-items:center;gap:14px;box-shadow:0 6px 20px -10px rgba(0,0,0,.4);
+}
+.topbar .brand{font-family:'Plus Jakarta Sans';font-weight:800;font-size:1.02rem;letter-spacing:.01em;flex:none}
+.topbar .brand span{color:var(--gold)}
+.topbar .sub{color:rgba(255,255,255,.65);font-size:.76rem;margin-top:1px}
+.topbar-spacer{flex:1}
+.score-chip{
+  display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:6px 8px 6px 14px;flex:none;
+}
+.score-chip .num{font-family:'Plus Jakarta Sans';font-weight:800;font-size:1.05rem}
+.score-chip .band{
+  font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;
+  padding:5px 10px;border-radius:999px;
+}
+.band-excellent{background:var(--good);color:#fff}
+.band-good{background:var(--blue-500);color:#04202c}
+.band-attention{background:var(--fair);color:#fff}
+.band-poor{background:var(--poor);color:#fff}
+.band-none{background:rgba(255,255,255,.16);color:rgba(255,255,255,.7)}
+
+/* ---- layout ---- */
+.shell{max-width:1180px;margin:0 auto;padding:20px 18px 90px}
+.layout{display:grid;grid-template-columns:1fr;gap:20px}
+@media (min-width:960px){.layout.has-report{grid-template-columns:1.05fr .95fr;align-items:start}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:26px;box-shadow:var(--shadow-card)}
+@media (max-width:560px){.panel{padding:18px;border-radius:20px}}
+.eyebrow{font-family:'Plus Jakarta Sans';font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--blue-700)}
+.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+@media (max-width:560px){.field-grid{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:.8rem;font-weight:600;color:var(--muted)}
+.field input,.field select,.field textarea{
+  font:inherit;font-size:.95rem;padding:11px 13px;border-radius:var(--radius-sm);
+  border:1px solid var(--line);background:var(--cream);color:var(--ink);width:100%;
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--blue-500);outline-offset:1px;border-color:var(--blue-500)}
+.field textarea{resize:vertical;min-height:64px}
+
+/* ---- category cards ---- */
+.categories{display:flex;flex-direction:column;gap:14px;margin-top:22px}
+.cat{border:1px solid var(--line);border-radius:var(--radius-md);overflow:hidden;background:var(--card)}
+.cat-head{
+  display:flex;align-items:center;gap:12px;padding:16px 18px;cursor:pointer;user-select:none;
+  background:var(--cream-deep);
+}
+.cat-head .idx{
+  width:30px;height:30px;border-radius:9px;background:var(--blue-050);color:var(--blue-700);
+  display:flex;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans';font-weight:800;font-size:.86rem;flex:none;
+}
+.cat-head .ti{flex:1;min-width:0}
+.cat-head h3{font-size:1rem;margin:0}
+.cat-head .meta{font-size:.78rem;color:var(--muted);margin-top:2px}
+.cat-head .badge{
+  font-family:'Plus Jakarta Sans';font-weight:800;font-size:.86rem;flex:none;
+  width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:var(--blue-050);color:var(--blue-700);
+}
+.cat-head .badge.rated-good{background:var(--good-bg);color:var(--good)}
+.cat-head .badge.rated-fair{background:var(--fair-bg);color:var(--fair)}
+.cat-head .badge.rated-poor{background:var(--poor-bg);color:var(--poor)}
+.cat-head .chev{transition:transform .2s ease;color:var(--muted);flex:none}
+.cat.open .cat-head .chev{transform:rotate(180deg)}
+.cat-body{display:none;padding:6px 18px 20px}
+.cat.open .cat-body{display:block}
+.item-row{padding:14px 0;border-top:1px solid var(--line)}
+.item-row:first-child{border-top:none}
+.item-row .label{font-size:.92rem;font-weight:600}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.seg button{
+  border:1.5px solid var(--line);background:var(--cream);color:var(--ink-soft);
+  border-radius:10px;padding:10px 6px;font-size:.82rem;font-weight:700;cursor:pointer;transition:all .15s ease;
+}
+.seg button:hover{border-color:var(--blue-500)}
+.seg button.sel-good{background:var(--good);border-color:var(--good);color:#fff}
+.seg button.sel-fair{background:var(--fair);border-color:var(--fair);color:#fff}
+.seg button.sel-poor{background:var(--poor);border-color:var(--poor);color:#fff}
+.cat-notes{margin-top:16px}
+.cat-notes label{font-size:.8rem;font-weight:600;color:var(--muted);display:block;margin-bottom:6px}
+.photo-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.photo-thumb{width:64px;height:64px;border-radius:10px;overflow:hidden;position:relative;border:1px solid var(--line);flex:none}
+.photo-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-thumb button{
+  position:absolute;top:2px;right:2px;width:18px;height:18px;border-radius:50%;border:none;
+  background:rgba(16,28,38,.75);color:#fff;font-size:.7rem;line-height:1;cursor:pointer;padding:0;
+}
+.photo-add{
+  width:64px;height:64px;border-radius:10px;border:1.5px dashed var(--line);background:none;
+  display:flex;align-items:center;justify-content:center;color:var(--muted);cursor:pointer;flex:none;font-size:1.4rem;
+}
+.photo-add:hover{border-color:var(--blue-500);color:var(--blue-700)}
+
+/* ---- buttons ---- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:'Plus Jakarta Sans';font-weight:700;font-size:.9rem;border-radius:999px;
+  padding:13px 24px;border:none;cursor:pointer;text-decoration:none;transition:transform .12s ease, filter .12s ease;
+}
+.btn:active{transform:scale(.97)}
+.btn-gold{background:linear-gradient(180deg,var(--gold),var(--gold-deep));color:#3a2a03}
+.btn-gold:hover{filter:brightness(1.04)}
+.btn-outline{background:none;border:1.5px solid var(--line);color:var(--ink)}
+.btn-outline:hover{border-color:var(--blue-500)}
+.btn-ghost{background:var(--blue-050);color:var(--blue-700)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.btn:focus-visible,.seg button:focus-visible,.cat-head:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--blue-500);outline-offset:2px}
+.actions-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+
+/* ---- report ---- */
+.report{display:flex;flex-direction:column;gap:20px}
+.report-head{
+  background:linear-gradient(135deg,var(--blue-900),var(--blue-700));color:#fff;border-radius:var(--radius-lg);
+  padding:30px 28px;position:relative;overflow:hidden;
+}
+.report-head::before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.12),transparent 70%);top:-60px;right:-40px}
+.report-head .rh-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.report-head .brandline{font-family:'Plus Jakarta Sans';font-weight:800;font-size:.95rem}
+.report-head .brandline span{color:var(--gold)}
+.report-head .datel{font-size:.78rem;color:rgba(255,255,255,.65);margin-top:3px}
+.big-score{text-align:right}
+.big-score .n{font-family:'Plus Jakarta Sans';font-weight:800;font-size:2.6rem;line-height:1}
+.big-score .band-label{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
+.report-head h2{font-size:1.5rem;margin:20px 0 4px;position:relative}
+.report-head p{color:rgba(255,255,255,.82);font-size:.92rem;max-width:56ch;position:relative}
+.cat-bars{display:flex;flex-direction:column;gap:14px;margin-top:6px}
+.cat-bar-row .lbl{display:flex;justify-content:space-between;font-size:.86rem;font-weight:700;margin-bottom:6px}
+.bar-track{height:8px;border-radius:99px;background:var(--line);overflow:hidden}
+.bar-fill{height:100%;border-radius:99px}
+.findings{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.finding{display:flex;gap:10px;padding:12px 14px;border-radius:12px;font-size:.88rem;align-items:flex-start}
+.finding.f-poor{background:var(--poor-bg);color:var(--poor)}
+.finding.f-fair{background:var(--fair-bg);color:var(--fair)}
+.finding .dot{width:8px;height:8px;border-radius:50%;background:currentColor;flex:none;margin-top:6px}
+.report-photos{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.report-photos img{width:76px;height:76px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
+.report-cta{background:var(--cream-deep);border-radius:var(--radius-md);padding:22px;text-align:center}
+.report-cta p{font-size:.86rem;color:var(--muted);margin:6px 0 0}
+.hint{font-size:.8rem;color:var(--muted);margin-top:10px;line-height:1.6}
+.empty-report{padding:60px 24px;text-align:center;color:var(--muted)}
+.empty-report .ic{font-size:2.2rem;margin-bottom:10px}
+label.req::after{content:" *";color:var(--poor)}
+.progress-note{font-size:.78rem;color:var(--muted);margin-top:6px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div>
+    <div class="brand">Prime Clean <span>Scorecard</span></div>
+    <div class="sub">Field walkthrough tool</div>
+  </div>
+  <div class="topbar-spacer"></div>
+  <div class="score-chip">
+    <span class="num" id="tb-score">—</span>
+    <span class="band band-none" id="tb-band">Not started</span>
+  </div>
+</div>
+
+<div class="shell">
+  <div class="layout" id="layout">
+
+    <div class="panel" id="form-panel">
+      <span class="eyebrow">New Walkthrough</span>
+      <h1 style="font-size:1.4rem;margin:8px 0 0">Cleanliness &amp; Compliance Scorecard</h1>
+      <div class="field-grid">
+        <div class="field"><label class="req" for="f-business">Business / facility name</label><input id="f-business" placeholder="e.g. Bayview Medical Group"></div>
+        <div class="field"><label for="f-contact">Contact name</label><input id="f-contact" placeholder="e.g. Dana Reyes, Office Manager"></div>
+        <div class="field"><label for="f-city">City</label><input id="f-city" placeholder="e.g. Richmond"></div>
+        <div class="field"><label for="f-type">Facility type</label>
+          <select id="f-type">
+            <option>Office</option><option>Medical / Clinical</option><option>Industrial / Warehouse</option>
+            <option>Retail / Showroom</option><option>Property Management / Multifamily</option>
+            <option>Education</option><option>Financial Institution</option><option>Government / Public</option><option>Other</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-jackie">Assessed by</label><input id="f-jackie" placeholder="Jackie"></div>
+        <div class="field"><label for="f-email">Client email (optional)</label><input id="f-email" type="email" placeholder="for the emailed report"></div>
+      </div>
+      <p class="progress-note" id="progress-note">0 of 26 checklist items rated</p>
+
+      <div class="categories" id="categories"></div>
+
+      <div class="actions-row">
+        <button class="btn btn-gold" id="btn-generate">Generate Client Report</button>
+        <button class="btn btn-outline" id="btn-reset">Start New Walkthrough</button>
+      </div>
+      <p class="hint">Ratings and photos stay on this device until you generate a report or download it — nothing is uploaded automatically.</p>
+    </div>
+
+    <div class="panel" id="report-panel" style="display:none">
+      <div class="report" id="report"></div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+(function(){
+
+var CATEGORIES = [
+  { key:"restrooms", name:"Restrooms & Supply Levels", items:[
+    {label:"Toilets, urinals & sinks visibly clean, no buildup", pts:5},
+    {label:"Floors dry, no odor", pts:5},
+    {label:"Trash emptied, liners in place", pts:4},
+    {label:"Supplies stocked (soap, paper, sanitizer)", pts:4},
+    {label:"Mirrors & fixtures streak-free", pts:2}
+  ]},
+  { key:"hightouch", name:"High-Touch Surface Disinfection", items:[
+    {label:"Door handles & push plates", pts:4},
+    {label:"Light switches", pts:3},
+    {label:"Elevator buttons / handrails", pts:3},
+    {label:"Shared equipment surfaces (copier, kiosk, phones)", pts:4},
+    {label:"Reception desk / counters", pts:3},
+    {label:"Stairwell handrails", pts:3}
+  ]},
+  { key:"floors", name:"Floor Care & Entryways", items:[
+    {label:"Entry mats clean, no debris", pts:4},
+    {label:"Carpets vacuumed, no visible stains", pts:5},
+    {label:"Hard floors swept & mopped, no residue", pts:5},
+    {label:"Baseboards & corners free of buildup", pts:3},
+    {label:"Glass entry doors streak-free", pts:3}
+  ]},
+  { key:"trash", name:"Trash, Recycling & Common Areas", items:[
+    {label:"All bins emptied, liners replaced", pts:5},
+    {label:"Recycling properly sorted", pts:3},
+    {label:"Break room / kitchenette wiped down", pts:5},
+    {label:"Windowsills & surfaces dust-free", pts:4},
+    {label:"General clutter & organization", pts:3}
+  ]},
+  { key:"osha", name:"OSHA & Compliance-Relevant Items", items:[
+    {label:"Chemicals labeled & securely stored", pts:5},
+    {label:"Safety Data Sheets accessible on site", pts:4},
+    {label:"Wet-floor signage protocol in place", pts:3},
+    {label:"Emergency exits & pathways unobstructed", pts:4},
+    {label:"Fire extinguisher access unblocked", pts:4}
+  ]}
+];
+var TOTAL_ITEMS = CATEGORIES.reduce(function(s,c){return s+c.items.length},0);
+var STATE_MULT = { good:1, fair:0.6, poor:0 };
+
+var state = { ratings:{}, notes:{}, photos:{}, open:{} };
+CATEGORIES.forEach(function(c,ci){ state.open[c.key] = ci===0; });
+
+function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+
+function computeScore(){
+  var earned=0, possible=0, rated=0;
+  var catScores = {};
+  CATEGORIES.forEach(function(c){
+    var ce=0, cp=0;
+    c.items.forEach(function(it,ii){
+      cp += it.pts;
+      var r = state.ratings[c.key+"_"+ii];
+      if(r){ rated++; ce += it.pts*STATE_MULT[r]; }
+    });
+    catScores[c.key] = { earned:ce, possible:cp, pct: cp? Math.round(ce/cp*100):0 };
+    earned += ce; possible += cp;
+  });
+  var pct = possible? Math.round(earned/possible*100) : 0;
+  return { pct:pct, rated:rated, total:TOTAL_ITEMS, catScores:catScores };
+}
+
+function band(pct){
+  if(pct>=90) return {cls:"excellent", label:"Excellent"};
+  if(pct>=75) return {cls:"good", label:"Good"};
+  if(pct>=60) return {cls:"attention", label:"Needs Attention"};
+  return {cls:"poor", label:"Poor"};
+}
+
+function updateTopbar(){
+  var s = computeScore();
+  var tbScore = document.getElementById("tb-score");
+  var tbBand = document.getElementById("tb-band");
+  if(s.rated===0){
+    tbScore.textContent = "—";
+    tbBand.className = "band band-none";
+    tbBand.textContent = "Not started";
+  } else {
+    tbScore.textContent = s.pct + "%";
+    var b = band(s.pct);
+    tbBand.className = "band band-"+b.cls;
+    tbBand.textContent = b.label;
+  }
+  document.getElementById("progress-note").textContent = s.rated + " of " + s.total + " checklist items rated";
+  document.getElementById("btn-generate").disabled = s.rated < s.total;
+}
+
+function renderCategories(){
+  var wrap = document.getElementById("categories");
+  wrap.innerHTML = "";
+  CATEGORIES.forEach(function(c, ci){
+    var catDiv = document.createElement("div");
+    catDiv.className = "cat" + (state.open[c.key] ? " open" : "");
+
+    var ratedCount = c.items.filter(function(it,ii){ return !!state.ratings[c.key+"_"+ii]; }).length;
+    var cs = computeScore().catScores[c.key];
+    var badgeCls = "";
+    if(ratedCount===c.items.length){
+      if(cs.pct>=85) badgeCls="rated-good"; else if(cs.pct>=60) badgeCls="rated-fair"; else badgeCls="rated-poor";
+    }
+
+    var head = document.createElement("div");
+    head.className = "cat-head";
+    head.tabIndex = 0;
+    head.innerHTML =
+      '<div class="idx">'+(ci+1)+'</div>'+
+      '<div class="ti"><h3>'+esc(c.name)+'</h3><div class="meta">'+ratedCount+' of '+c.items.length+' rated'+(ratedCount===c.items.length? " · "+cs.pct+"%":"")+'</div></div>'+
+      '<div class="badge '+badgeCls+'">'+(ratedCount===c.items.length? cs.pct : ratedCount+"/"+c.items.length)+'</div>'+
+      '<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+    head.addEventListener("click", function(){ state.open[c.key] = !state.open[c.key]; renderCategories(); });
+    head.addEventListener("keydown", function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); head.click(); } });
+    catDiv.appendChild(head);
+
+    var body = document.createElement("div");
+    body.className = "cat-body";
+
+    c.items.forEach(function(it, ii){
+      var key = c.key+"_"+ii;
+      var row = document.createElement("div");
+      row.className = "item-row";
+      var sel = state.ratings[key];
+      row.innerHTML =
+        '<div class="label">'+esc(it.label)+'</div>'+
+        '<div class="seg">'+
+          '<button data-key="'+key+'" data-v="good" class="'+(sel==="good"?"sel-good":"")+'">Good</button>'+
+          '<button data-key="'+key+'" data-v="fair" class="'+(sel==="fair"?"sel-fair":"")+'">Fair</button>'+
+          '<button data-key="'+key+'" data-v="poor" class="'+(sel==="poor"?"sel-poor":"")+'">Needs Attention</button>'+
+        '</div>';
+      body.appendChild(row);
+    });
+
+    var notesWrap = document.createElement("div");
+    notesWrap.className = "cat-notes";
+    notesWrap.innerHTML = '<label>Notes for this area (optional)</label><textarea data-notes-key="'+c.key+'" placeholder="Anything specific worth mentioning to the client...">'+esc(state.notes[c.key]||"")+'</textarea>';
+    body.appendChild(notesWrap);
+
+    var photosWrap = document.createElement("div");
+    photosWrap.innerHTML = '<label style="font-size:.8rem;font-weight:600;color:var(--muted);display:block;margin:14px 0 0">Photos (optional, this device only)</label>';
+    var photoRow = document.createElement("div");
+    photoRow.className = "photo-row";
+    (state.photos[c.key]||[]).forEach(function(src, pi){
+      var t = document.createElement("div");
+      t.className = "photo-thumb";
+      t.innerHTML = '<img src="'+src+'"><button data-rm-photo="'+c.key+'" data-idx="'+pi+'">&times;</button>';
+      photoRow.appendChild(t);
+    });
+    if((state.photos[c.key]||[]).length < 4){
+      var addBtn = document.createElement("label");
+      addBtn.className = "photo-add";
+      addBtn.innerHTML = '+<input type="file" accept="image/*" capture="environment" data-photo-key="'+c.key+'" style="display:none">';
+      photoRow.appendChild(addBtn);
+    }
+    photosWrap.appendChild(photoRow);
+    body.appendChild(photosWrap);
+
+    catDiv.appendChild(body);
+    wrap.appendChild(catDiv);
+  });
+
+  wrap.querySelectorAll("[data-key]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var key = btn.getAttribute("data-key");
+      var v = btn.getAttribute("data-v");
+      state.ratings[key] = (state.ratings[key]===v) ? null : v;
+      renderCategories();
+      updateTopbar();
+    });
+  });
+  wrap.querySelectorAll("[data-notes-key]").forEach(function(ta){
+    ta.addEventListener("input", function(){ state.notes[ta.getAttribute("data-notes-key")] = ta.value; });
+  });
+  wrap.querySelectorAll("[data-photo-key]").forEach(function(input){
+    input.addEventListener("change", function(){
+      var key = input.getAttribute("data-photo-key");
+      var file = input.files[0];
+      if(!file) return;
+      compressImage(file, function(dataUrl){
+        state.photos[key] = state.photos[key] || [];
+        state.photos[key].push(dataUrl);
+        renderCategories();
+      });
+    });
+  });
+  wrap.querySelectorAll("[data-rm-photo]").forEach(function(btn){
+    btn.addEventListener("click", function(e){
+      e.stopPropagation();
+      var key = btn.getAttribute("data-rm-photo");
+      var idx = parseInt(btn.getAttribute("data-idx"),10);
+      state.photos[key].splice(idx,1);
+      renderCategories();
+    });
+  });
+}
+
+function compressImage(file, cb){
+  var reader = new FileReader();
+  reader.onload = function(e){
+    var img = new Image();
+    img.onload = function(){
+      var maxW = 900;
+      var scale = Math.min(1, maxW/img.width);
+      var canvas = document.createElement("canvas");
+      canvas.width = img.width*scale;
+      canvas.height = img.height*scale;
+      var ctx = canvas.getContext("2d");
+      ctx.drawImage(img,0,0,canvas.width,canvas.height);
+      cb(canvas.toDataURL("image/jpeg", 0.62));
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+function fieldVal(id){ var el=document.getElementById(id); return el?el.value.trim():""; }
+
+function buildReportHTML(forDownload){
+  var s = computeScore();
+  var b = band(s.pct);
+  var business = fieldVal("f-business") || "This facility";
+  var contact = fieldVal("f-contact");
+  var city = fieldVal("f-city");
+  var type = fieldVal("f-type");
+  var jackie = fieldVal("f-jackie") || "Prime Clean";
+  var dateStr = new Date().toLocaleDateString("en-US", {year:"numeric", month:"long", day:"numeric"});
+
+  var barsHtml = CATEGORIES.map(function(c){
+    var cs = s.catScores[c.key];
+    var col = cs.pct>=85 ? "var(--good)" : cs.pct>=60 ? "var(--fair)" : "var(--poor)";
+    return '<div class="cat-bar-row"><div class="lbl"><span>'+esc(c.name)+'</span><span>'+cs.pct+'%</span></div>'+
+      '<div class="bar-track"><div class="bar-fill" style="width:'+cs.pct+'%;background:'+col+'"></div></div></div>';
+  }).join("");
+
+  var findings = [];
+  CATEGORIES.forEach(function(c){
+    c.items.forEach(function(it,ii){
+      var r = state.ratings[c.key+"_"+ii];
+      if(r==="poor" || r==="fair"){
+        findings.push({cat:c.name, label:it.label, sev:r});
+      }
+    });
+    if(state.notes[c.key]){
+      findings.push({cat:c.name, label:state.notes[c.key], sev:"note"});
+    }
+  });
+  var findingsHtml = findings.length ? findings.map(function(f){
+    if(f.sev==="note") return '<div class="finding" style="background:var(--blue-050);color:var(--blue-700)"><span class="dot"></span><span><b>'+esc(f.cat)+':</b> '+esc(f.label)+'</span></div>';
+    return '<div class="finding f-'+f.sev+'"><span class="dot"></span><span><b>'+esc(f.cat)+':</b> '+esc(f.label)+(f.sev==="poor"?" — needs attention":" — could be better")+'</span></div>';
+  }).join("") : '<div class="finding" style="background:var(--good-bg);color:var(--good)"><span class="dot"></span><span>No significant issues flagged in this walkthrough.</span></div>';
+
+  var allPhotos = [];
+  CATEGORIES.forEach(function(c){ (state.photos[c.key]||[]).forEach(function(src){ allPhotos.push(src); }); });
+  var photosHtml = allPhotos.length ? '<div><div class="eyebrow" style="margin-top:4px">Photos from the walkthrough</div><div class="report-photos">'+
+    allPhotos.map(function(src){ return '<img src="'+src+'">'; }).join("") + '</div></div>' : "";
+
+  var recommendation = s.pct>=90 ? "Facility is in excellent condition. A great baseline to maintain." :
+    s.pct>=75 ? "Facility is in good shape overall, with a few areas worth tightening up." :
+    s.pct>=60 ? "Several areas need attention — worth reviewing scope and frequency with your current provider." :
+    "Multiple areas fall below a reasonable standard. This is a good time to compare vendors.";
+
+  var meta = [type, city].filter(Boolean).join(" · ");
+
+  var html = ''+
+    '<div class="report-head">'+
+      '<div class="rh-top">'+
+        '<div><div class="brandline">Prime Clean <span>Cleanliness &amp; Compliance Report</span></div>'+
+        '<div class="datel">'+esc(dateStr)+' · Assessed by '+esc(jackie)+'</div></div>'+
+        '<div class="big-score"><div class="n">'+s.pct+'%</div><div class="band-label">'+esc(b.label)+'</div></div>'+
+      '</div>'+
+      '<h2>'+esc(business)+'</h2>'+
+      (meta ? '<p style="margin-top:-2px;opacity:.85">'+esc(meta)+(contact? " · Attn: "+esc(contact):"")+'</p>' : "")+
+      '<p>'+esc(recommendation)+'</p>'+
+    '</div>'+
+    '<div class="panel" style="padding:24px 22px">'+
+      '<div class="eyebrow">Score by category</div>'+
+      '<div class="cat-bars" style="margin-top:14px">'+barsHtml+'</div>'+
+    '</div>'+
+    '<div class="panel" style="padding:24px 22px">'+
+      '<div class="eyebrow">Findings</div>'+
+      '<div class="findings">'+findingsHtml+'</div>'+
+      (photosHtml? '<div style="margin-top:18px">'+photosHtml+'</div>' : "")+
+    '</div>'+
+    '<div class="report-cta">'+
+      '<div class="eyebrow">Next Step</div>'+
+      '<h3 style="margin:8px 0 0">Want a written quote alongside this score?</h3>'+
+      '<p>Prime Clean · (415) 572-8733 · info@primecleanba.com · Women-Owned &amp; CA Small Business Certified</p>'+
+    '</div>'+
+    (forDownload ? "" :
+      '<div class="actions-row" id="report-actions">'+
+        '<button class="btn btn-gold" id="btn-download">Download Report to Send</button>'+
+        '<button class="btn btn-ghost" id="btn-mailto">Open Email Draft</button>'+
+        '<button class="btn btn-outline" id="btn-back-edit">Back to Checklist</button>'+
+      '</div>'+
+      '<p class="hint">Email drafts open in your own mail app as plain text — attach the downloaded report for photos and full detail.</p>'
+    );
+
+  return html;
+}
+
+function renderReport(){
+  document.getElementById("report").innerHTML = buildReportHTML(false);
+  document.getElementById("btn-download").addEventListener("click", downloadReport);
+  document.getElementById("btn-mailto").addEventListener("click", mailtoDraft);
+  document.getElementById("btn-back-edit").addEventListener("click", function(){
+    document.getElementById("report-panel").style.display = "none";
+    document.getElementById("layout").classList.remove("has-report");
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
+}
+
+function mailtoDraft(){
+  var s = computeScore();
+  var b = band(s.pct);
+  var business = fieldVal("f-business") || "your facility";
+  var to = fieldVal("f-email");
+  var jackie = fieldVal("f-jackie") || "Prime Clean";
+  var subject = "Your Cleanliness & Compliance Score — " + business;
+  var lines = [];
+  lines.push("Hi"+(fieldVal("f-contact")? " "+fieldVal("f-contact"):"")+",");
+  lines.push("");
+  lines.push("Thanks for the walkthrough today. Here's a quick summary of what I found at "+business+":");
+  lines.push("");
+  lines.push("Overall Cleanliness & Compliance Score: "+s.pct+"% ("+b.label+")");
+  CATEGORIES.forEach(function(c){
+    var cs = s.catScores[c.key];
+    lines.push("- "+c.name+": "+cs.pct+"%");
+  });
+  lines.push("");
+  lines.push("I've attached the full report with photos and notes. Happy to walk through it together, and if you'd like a written quote, just let me know.");
+  lines.push("");
+  lines.push("Best,");
+  lines.push(jackie);
+  lines.push("Prime Clean · (415) 572-8733 · info@primecleanba.com");
+  var body = lines.join("\n");
+  var mailUrl = "mailto:"+encodeURIComponent(to)+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+
+  var existing = document.getElementById("mailto-panel");
+  if(existing) existing.remove();
+
+  var panel = document.createElement("div");
+  panel.id = "mailto-panel";
+  panel.className = "panel";
+  panel.style.marginTop = "16px";
+  panel.innerHTML =
+    '<div class="eyebrow">Email Draft</div>'+
+    '<div class="field" style="margin-top:12px"><label>Subject</label><input readonly value="'+esc(subject)+'"></div>'+
+    '<div class="field" style="margin-top:12px"><label>Body</label><textarea readonly style="min-height:200px" id="mailto-body">'+esc(body)+'</textarea></div>'+
+    '<div class="actions-row">'+
+      '<button class="btn btn-gold" id="btn-copy-draft">Copy Draft</button>'+
+      '<a class="btn btn-outline" href="'+mailUrl+'" id="mailto-link">Open Mail App</a>'+
+    '</div>'+
+    '<p class="hint">Attach the downloaded report file for photos before sending — email drafts are text-only.</p>';
+  document.getElementById("report-actions").insertAdjacentElement("afterend", panel);
+  panel.scrollIntoView({behavior:"smooth", block:"nearest"});
+
+  document.getElementById("btn-copy-draft").addEventListener("click", function(){
+    var btn = document.getElementById("btn-copy-draft");
+    var text = "Subject: "+subject+"\n\n"+body;
+    function done(ok){ btn.textContent = ok ? "Copied ✓" : "Select the text above to copy"; setTimeout(function(){ btn.textContent = "Copy Draft"; }, 2200); }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){ done(true); }).catch(function(){
+        var ta = document.getElementById("mailto-body"); ta.focus(); ta.select();
+        try{ done(document.execCommand("copy")); }catch(e){ done(false); }
+      });
+    } else {
+      var ta = document.getElementById("mailto-body"); ta.focus(); ta.select();
+      try{ done(document.execCommand("copy")); }catch(e){ done(false); }
+    }
+  });
+}
+
+function downloadReport(){
+  var btn = document.getElementById("btn-download");
+  var s = computeScore();
+  var business = (fieldVal("f-business")||"walkthrough").replace(/[^a-z0-9]+/gi,"-").toLowerCase();
+  var dateSlug = new Date().toISOString().slice(0,10);
+  var fullHtml = '<!doctype html><html lang="en"><head><meta charset="utf-8">'+
+    '<meta name="viewport" content="width=device-width, initial-scale=1">'+
+    '<title>Cleanliness Report — '+esc(fieldVal("f-business")||"Prime Clean")+'</title>'+
+    '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Manrope:wght@400;600;700&display=swap">'+
+    '<style>'+
+    'body{margin:0;background:#f5f7f9;font-family:Manrope,system-ui,sans-serif;color:#101c26;padding:30px 16px}'+
+    'h1,h2,h3{font-family:"Plus Jakarta Sans",system-ui,sans-serif}'+
+    '.wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:18px}'+
+    ':root{--good:#2f9e5b;--good-bg:#e7f5ec;--fair:#c9821f;--fair-bg:#faf0dc;--poor:#d1493f;--poor-bg:#fbe9e7;--blue-900:#0a2f47;--blue-700:#0071a8;--blue-500:#3fb9df;--blue-050:#eef7fb;--gold:#eec04a;--cream-deep:#eaeef2;--line:#dde4e9;--muted:#5c6f7a}'+
+    '.report-head{background:linear-gradient(135deg,var(--blue-900),var(--blue-700));color:#fff;border-radius:24px;padding:28px 26px;position:relative;overflow:hidden}'+
+    '.rh-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}'+
+    '.brandline{font-family:"Plus Jakarta Sans";font-weight:800}.brandline span{color:var(--gold)}'+
+    '.datel{font-size:.78rem;color:rgba(255,255,255,.65);margin-top:3px}'+
+    '.big-score{text-align:right}.big-score .n{font-family:"Plus Jakarta Sans";font-weight:800;font-size:2.4rem;line-height:1}'+
+    '.big-score .band-label{font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-top:4px}'+
+    '.report-head h2{font-size:1.4rem;margin:18px 0 4px}.report-head p{color:rgba(255,255,255,.85);font-size:.9rem}'+
+    '.panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px}'+
+    '.eyebrow{font-family:"Plus Jakarta Sans";font-weight:700;font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:var(--blue-700)}'+
+    '.cat-bar-row{margin-top:12px}.lbl{display:flex;justify-content:space-between;font-size:.85rem;font-weight:700;margin-bottom:6px}'+
+    '.bar-track{height:8px;border-radius:99px;background:var(--line);overflow:hidden}.bar-fill{height:100%;border-radius:99px}'+
+    '.findings{display:flex;flex-direction:column;gap:10px;margin-top:6px}'+
+    '.finding{display:flex;gap:10px;padding:12px 14px;border-radius:12px;font-size:.87rem}'+
+    '.finding.f-poor{background:var(--poor-bg);color:var(--poor)}.finding.f-fair{background:var(--fair-bg);color:var(--fair)}'+
+    '.report-photos{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}.report-photos img{width:100px;height:100px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}'+
+    '.report-cta{background:var(--cream-deep);border-radius:20px;padding:22px;text-align:center}'+
+    '.report-cta p{font-size:.85rem;color:var(--muted);margin:6px 0 0}'+
+    '@media print{body{background:#fff}}'+
+    '</style></head><body><div class="wrap">'+buildReportHTML(true)+'</div></body></html>';
+
+  var filename = "prime-clean-report-"+business+"-"+dateSlug+".html";
+
+  if(window.claude && typeof window.claude.use === "function"){
+    if(btn){ btn.disabled = true; btn.textContent = "Saving…"; }
+    window.claude.use("downloads").then(function(downloads){
+      if(!downloads){
+        saveViaBlob(fullHtml, filename, btn);
+        return;
+      }
+      downloads.save({ filename: filename, data: fullHtml }).then(function(){
+        if(btn){ btn.disabled = false; btn.textContent = "Downloaded ✓"; }
+      }).catch(function(err){
+        if(btn){ btn.disabled = false; btn.textContent = "Download Report to Send"; }
+        if(err && err.code === "declined") return;
+        saveViaBlob(fullHtml, filename, btn);
+      });
+    });
+  } else {
+    saveViaBlob(fullHtml, filename, btn);
+  }
+}
+
+function saveViaBlob(html, filename, btn){
+  try{
+    var blob = new Blob([html], {type:"text/html"});
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 4000);
+    if(btn){ btn.disabled = false; btn.textContent = "Downloaded ✓"; }
+  }catch(e){
+    if(btn){ btn.disabled = false; btn.textContent = "Download Report to Send"; }
+    alert("Couldn't save the report automatically. Try File > Print > Save as PDF instead.");
+  }
+}
+
+function resetAll(){
+  if(!confirm("Start a new walkthrough? This clears the current form.")) return;
+  state = { ratings:{}, notes:{}, photos:{}, open:{} };
+  CATEGORIES.forEach(function(c,ci){ state.open[c.key] = ci===0; });
+  ["f-business","f-contact","f-city","f-jackie","f-email"].forEach(function(id){ document.getElementById(id).value=""; });
+  document.getElementById("f-type").selectedIndex = 0;
+  document.getElementById("report-panel").style.display = "none";
+  document.getElementById("layout").classList.remove("has-report");
+  renderCategories();
+  updateTopbar();
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+document.getElementById("btn-generate").addEventListener("click", function(){
+  renderReport();
+  document.getElementById("report-panel").style.display = "block";
+  document.getElementById("layout").classList.add("has-report");
+  document.getElementById("report-panel").scrollIntoView({behavior:"smooth", block:"start"});
+});
+document.getElementById("btn-reset").addEventListener("click", resetAll);
+
+renderCategories();
+updateTopbar();
+
+try{
+  var savedName = localStorage.getItem("pc_jackie_name");
+  if(savedName) document.getElementById("f-jackie").value = savedName;
+  document.getElementById("f-jackie").addEventListener("change", function(){
+    try{ localStorage.setItem("pc_jackie_name", document.getElementById("f-jackie").value); }catch(e){}
+  });
+}catch(e){}
+
+})();
+</script>
+</body>
+</html>

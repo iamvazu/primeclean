@@ -318,6 +318,7 @@
         <h4>Company</h4>
         <ul>
           <li><a href="about.html">About Prime Clean</a></li>
+          <li><a href="pricing.html">Pricing Calculator</a></li>
           <li><a href="government.html">Government Contracting</a></li>
           <li><a href="service-areas.html">Service Areas</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -345,5 +346,38 @@
 </footer>
 
 <script src="assets/script.js"></script>
+<script>
+(function(){
+  try{
+    var params = new URLSearchParams(window.location.search);
+    if(!params.has("sqft") && !params.has("type")) return;
+    var sqft = params.get("sqft");
+    var type = params.get("type");
+    var freq = params.get("freq");
+    var est = params.get("est");
+    if(sqft){
+      var sqftEl = document.getElementById("c-sqft");
+      if(sqftEl) sqftEl.value = Number(sqft).toLocaleString("en-US") + " sq ft";
+    }
+    if(type){
+      var typeEl = document.getElementById("c-type");
+      if(typeEl){
+        for(var i=0;i<typeEl.options.length;i++){
+          if(typeEl.options[i].value === type){ typeEl.selectedIndex = i; break; }
+        }
+      }
+    }
+    if(freq || est){
+      var msgEl = document.getElementById("c-message");
+      if(msgEl && !msgEl.value){
+        var parts = [];
+        if(freq) parts.push("Looking for " + freq + " cleaning.");
+        if(est) parts.push("Pricing calculator estimate: " + est + "/month.");
+        msgEl.value = parts.join(" ");
+      }
+    }
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
