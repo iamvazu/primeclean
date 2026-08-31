@@ -165,10 +165,20 @@ header.site .bar{
 }
 
 .foot-brand .brand-logo--footer{
-  height:60px;width:auto;max-width:220px;object-fit:contain;margin-bottom:16px;display:block;
+  height:82px;
+  width:auto;
+  max-width:280px;
+  object-fit:contain;
+  margin-bottom:18px;
+  display:block;
+  transition:transform .2s ease;
 }
+.foot-brand .brand-logo--footer:hover{transform:scale(1.02)}
 @media (max-width:767px){
-  .foot-brand .brand-logo--footer{height:48px}
+  .foot-brand .brand-logo--footer{height:68px;max-width:240px}
+}
+@media (max-width:420px){
+  .foot-brand .brand-logo--footer{height:58px;max-width:210px}
 }
 
 nav.primary{display:flex;gap:26px;align-items:center}
@@ -1215,7 +1225,6 @@ footer.site{background:var(--blue-900);color:#c5dce8;padding:64px 0 28px;margin-
 .foot-grid a{font-size:.92rem;color:#c5dce8;text-decoration:none;transition:color .15s ease}
 .foot-grid a:hover{color:var(--gold)}
 .foot-brand{margin-top:0}
-.foot-brand .brand-logo--footer{display:block;height:auto;max-height:44px;width:auto;margin-bottom:14px}
 .foot-brand p{color:#9db8c8;font-size:.9rem;max-width:32ch;margin:0;line-height:1.55}
 .foot-badges-inline{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
 .foot-badges-inline span{background:rgba(255,255,255,.08);color:#c5dce8;border:1px solid rgba(255,255,255,.12);padding:4px 10px;border-radius:99px;font-size:.74rem;font-weight:600}
