@@ -286,11 +286,179 @@ document.addEventListener('DOMContentLoaded', function () {
   if (gridCalc) initCalc(gridCalc, false);
 
 
+  // ---------- Careers Form & Resume Upload Handler ----------
+  var careersForm = document.getElementById('careers-application-form');
+  if (careersForm) {
+    var resumeInput = document.getElementById('app-resume-file');
+    var resumeDropzone = document.getElementById('resume-dropzone');
+    var resumeInfo = document.getElementById('resume-file-info');
+    var resumeNameSpan = document.getElementById('resume-file-name');
+    var resumeRemoveBtn = document.getElementById('resume-remove-btn');
+    var positionSelect = document.getElementById('app-position');
+    var submitBtn = document.getElementById('careers-submit-btn');
+    var statusNote = document.getElementById('app-status-note');
+    var successCard = document.getElementById('careers-success-card');
+
+    var selectedResumeData = null;
+    var selectedResumeName = null;
+    var selectedResumeType = null;
+
+    // 1-click apply buttons from job cards
+    document.querySelectorAll('.apply-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var role = btn.getAttribute('data-role');
+        if (positionSelect && role) {
+          positionSelect.value = role;
+        }
+        var formSection = document.getElementById('apply-form');
+        if (formSection) {
+          formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    function handleFile(file) {
+      if (!file) return;
+      if (file.size > 10 * 1024 * 1024) {
+        alert('File size exceeds 10MB limit. Please upload a smaller document.');
+        return;
+      }
+      selectedResumeName = file.name;
+      selectedResumeType = file.type;
+      
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var base64 = e.target.result.split(',')[1];
+        selectedResumeData = base64;
+        if (resumeNameSpan) resumeNameSpan.textContent = '📄 ' + file.name + ' (' + (Math.round(file.size/1024)) + ' KB)';
+        if (resumeInfo) resumeInfo.style.display = 'flex';
+        if (resumeDropzone) resumeDropzone.style.display = 'none';
+      };
+      reader.readAsDataURL(file);
+    }
+
+    if (resumeInput) {
+      resumeInput.addEventListener('change', function(e){
+        if (e.target.files && e.target.files[0]) {
+          handleFile(e.target.files[0]);
+        }
+      });
+    }
+
+    if (resumeDropzone) {
+      ['dragenter', 'dragover'].forEach(function(evt){
+        resumeDropzone.addEventListener(evt, function(e){
+          e.preventDefault();
+          resumeDropzone.classList.add('dragover');
+        });
+      });
+      ['dragleave', 'drop'].forEach(function(evt){
+        resumeDropzone.addEventListener(evt, function(e){
+          e.preventDefault();
+          resumeDropzone.classList.remove('dragover');
+        });
+      });
+      resumeDropzone.addEventListener('drop', function(e){
+        if (e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0]) {
+          handleFile(e.dataTransfer.files[0]);
+        }
+      });
+    }
+
+    if (resumeRemoveBtn) {
+      resumeRemoveBtn.addEventListener('click', function(){
+        selectedResumeData = null;
+        selectedResumeName = null;
+        selectedResumeType = null;
+        if (resumeInput) resumeInput.value = '';
+        if (resumeInfo) resumeInfo.style.display = 'none';
+        if (resumeDropzone) resumeDropzone.style.display = 'block';
+      });
+    }
+
+    careersForm.addEventListener('submit', async function(e){
+      e.preventDefault();
+      
+      var name = document.getElementById('app-name')?.value;
+      var email = document.getElementById('app-email')?.value;
+      var phone = document.getElementById('app-phone')?.value;
+      var city = document.getElementById('app-city')?.value;
+      var position = document.getElementById('app-position')?.value;
+      var availability = document.getElementById('app-avail')?.value;
+      var experience = document.getElementById('app-exp')?.value;
+      var authCheck = document.getElementById('app-auth')?.checked;
+      var message = document.getElementById('app-msg')?.value;
+
+      if (!name || !email || !phone || !position) {
+        alert('Please fill out all required fields.');
+        return;
+      }
+
+      if (!authCheck) {
+        alert('Please confirm that you are legally authorized to work in the United States.');
+        return;
+      }
+
+      var payload = {
+        name: name,
+        email: email,
+        phone: phone,
+        city: city,
+        position: position,
+        availability: availability,
+        experience: experience,
+        work_auth: authCheck,
+        message: message,
+        resume_filename: selectedResumeName,
+        resume_data: selectedResumeData,
+        resume_type: selectedResumeType
+      };
+
+      var originalBtnText = submitBtn ? submitBtn.innerHTML : 'Submit';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Submitting Application & Resume...';
+      }
+      if (statusNote) statusNote.style.display = 'none';
+
+      try {
+        var response = await fetch('/api/careers', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        var result = await response.json().catch(function(){ return {}; });
+
+        if (response.ok && (result.success || result.message)) {
+          careersForm.style.display = 'none';
+          if (successCard) {
+            successCard.style.display = 'block';
+            successCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        } else {
+          throw new Error(result.error || 'Server error occurred.');
+        }
+      } catch (err) {
+        console.error('Application submission error:', err);
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        }
+        if (statusNote) {
+          statusNote.innerHTML = '⚠️ Note: Direct server dispatch encountered an issue. You can also email your resume directly to <a href="mailto:jackie@primecleanba.com" style="color:var(--blue-700);text-decoration:underline;">jackie@primecleanba.com</a>.';
+          statusNote.style.display = 'block';
+        }
+      }
+    });
+  }
+
+
   // Scroll-reveal: fade + rise elements into view as the user scrolls.
   var revealSelectors = [
     '.step', '.vert-card', '.testi-card', '.reason-card',
     '.feature-panel', '.stat-strip .stat-cell', '.city-grid a',
-    '.doc-card', '.trust-float'
+    '.doc-card', '.trust-float', '.job-card'
   ];
   var revealEls = document.querySelectorAll(revealSelectors.join(','));
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -314,3 +482,4 @@ document.addEventListener('DOMContentLoaded', function () {
     revealEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
 });
+
