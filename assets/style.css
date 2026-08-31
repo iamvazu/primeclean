@@ -302,12 +302,28 @@ nav.primary a:hover, nav.primary a.active{color:var(--blue-700);border-color:var
   background:
     radial-gradient(100% 120% at 90% 0%, rgba(63,185,223,.12), transparent 50%),
     linear-gradient(160deg, #101c26 0%, #0a2f47 100%);
-  border:1px solid rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.14);
   border-radius:var(--radius-lg);
   padding:44px 38px;
   display:flex;flex-direction:column;
   box-shadow:var(--shadow-card);
   position:relative;overflow:hidden;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.dual-track-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 24px 50px -15px rgba(10,32,47,.45);
+  border-color:rgba(255,255,255,.28);
+}
+.dual-track-card.has-photo-facility{
+  background:
+    linear-gradient(150deg, rgba(10,38,58,.80) 0%, rgba(10,47,71,.90) 100%),
+    url('images/track_facility_office.jpg') center/cover no-repeat;
+}
+.dual-track-card.has-photo-gov{
+  background:
+    linear-gradient(150deg, rgba(10,38,58,.80) 0%, rgba(10,47,71,.90) 100%),
+    url('images/track_government_civic.jpg') center/cover no-repeat;
 }
 @media (max-width:600px){.dual-track-card{padding:30px 22px;border-radius:24px}}
 .dual-track-card::before{
