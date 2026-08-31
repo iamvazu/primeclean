@@ -15,20 +15,31 @@ function getHeaderHtml(prefix, activePage) {
   const isCareers = activePage === 'careers';
   const isGallery = activePage === 'gallery';
 
+  const homeHref = prefix ? `${prefix}` : '/';
+  const aboutHref = `${prefix}about`;
+  const servicesHref = `${prefix}services`;
+  const pricingHref = `${prefix}pricing`;
+  const govHref = `${prefix}government`;
+  const areasHref = `${prefix}service-areas`;
+  const blogHref = `${prefix}blog`;
+  const contactHref = `${prefix}contact`;
+  const careersHref = `${prefix}careers`;
+  const galleryHref = `${prefix}gallery`;
+
   return `<header class="site">
   <div class="wrap bar">
-    <a class="brand" href="${prefix}index.html">
+    <a class="brand" href="${homeHref}">
       <img class="brand-logo" src="${prefix}assets/logo.png" alt="Prime Clean — Elevate Your Workspace With Our Touch" width="438" height="204">
     </a>
     <nav class="primary">
-      <a href="${prefix}index.html"${isHome ? ' class="active"' : ''}>Home</a>
-      <a href="${prefix}about.html"${isAbout ? ' class="active"' : ''}>About</a>
-      <a href="${prefix}services.html"${isServices ? ' class="active"' : ''}>Services</a>
-      <a href="${prefix}pricing.html"${isPricing ? ' class="active"' : ''}>Pricing</a>
-      <a href="${prefix}government.html"${isGov ? ' class="active"' : ''}>Government</a>
-      <a href="${prefix}service-areas.html"${isAreas ? ' class="active"' : ''}>Service Areas</a>
-      <a href="${prefix}blog.html"${isBlog ? ' class="active"' : ''}>Blog</a>
-      <a href="${prefix}contact.html"${isContact ? ' class="active"' : ''}>Contact</a>
+      <a href="${homeHref}"${isHome ? ' class="active"' : ''}>Home</a>
+      <a href="${aboutHref}"${isAbout ? ' class="active"' : ''}>About</a>
+      <a href="${servicesHref}"${isServices ? ' class="active"' : ''}>Services</a>
+      <a href="${pricingHref}"${isPricing ? ' class="active"' : ''}>Pricing</a>
+      <a href="${govHref}"${isGov ? ' class="active"' : ''}>Government</a>
+      <a href="${areasHref}"${isAreas ? ' class="active"' : ''}>Service Areas</a>
+      <a href="${blogHref}"${isBlog ? ' class="active"' : ''}>Blog</a>
+      <a href="${contactHref}"${isContact ? ' class="active"' : ''}>Contact</a>
     </nav>
     <div class="header-actions">
       <a class="phone-pill" href="tel:14155728733" aria-label="Call Prime Clean at (415) 572-8733">
@@ -37,7 +48,7 @@ function getHeaderHtml(prefix, activePage) {
         </span>
         <span class="phone-pill-num">(415) 572-8733</span>
       </a>
-      <a class="btn btn-gold btn-sm" href="${prefix}contact.html">Get a Quote</a>
+      <a class="btn btn-gold btn-sm" href="${contactHref}">Get a Quote</a>
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
@@ -45,16 +56,16 @@ function getHeaderHtml(prefix, activePage) {
   </div>
   <div class="wrap">
     <nav class="mobile-nav">
-      <a href="${prefix}index.html"${isHome ? ' class="active"' : ''}>Home</a>
-      <a href="${prefix}about.html"${isAbout ? ' class="active"' : ''}>About Prime Clean</a>
-      <a href="${prefix}services.html"${isServices ? ' class="active"' : ''}>Commercial Services</a>
-      <a href="${prefix}pricing.html"${isPricing ? ' class="active"' : ''}>Pricing Calculator</a>
-      <a href="${prefix}gallery.html"${isGallery ? ' class="active"' : ''}>Before &amp; After Gallery</a>
-      <a href="${prefix}government.html"${isGov ? ' class="active"' : ''}>Government Capabilities</a>
-      <a href="${prefix}service-areas.html"${isAreas ? ' class="active"' : ''}>East Bay Coverage</a>
-      <a href="${prefix}blog.html"${isBlog ? ' class="active"' : ''}>Blog &amp; Knowledge Base</a>
-      <a href="${prefix}careers.html"${isCareers ? ' class="active"' : ''}>Careers &amp; Jobs</a>
-      <a href="${prefix}contact.html"${isContact ? ' class="active"' : ''}>Contact &amp; Free Walkthrough</a>
+      <a href="${homeHref}"${isHome ? ' class="active"' : ''}>Home</a>
+      <a href="${aboutHref}"${isAbout ? ' class="active"' : ''}>About Prime Clean</a>
+      <a href="${servicesHref}"${isServices ? ' class="active"' : ''}>Commercial Services</a>
+      <a href="${pricingHref}"${isPricing ? ' class="active"' : ''}>Pricing Calculator</a>
+      <a href="${galleryHref}"${isGallery ? ' class="active"' : ''}>Before &amp; After Gallery</a>
+      <a href="${govHref}"${isGov ? ' class="active"' : ''}>Government Capabilities</a>
+      <a href="${areasHref}"${isAreas ? ' class="active"' : ''}>East Bay Coverage</a>
+      <a href="${blogHref}"${isBlog ? ' class="active"' : ''}>Blog &amp; Knowledge Base</a>
+      <a href="${careersHref}"${isCareers ? ' class="active"' : ''}>Careers &amp; Jobs</a>
+      <a href="${contactHref}"${isContact ? ' class="active"' : ''}>Contact &amp; Free Walkthrough</a>
     </nav>
   </div>
 </header>`;

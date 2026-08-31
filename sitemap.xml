@@ -1,1255 +1,1261 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://primecleanba.com/index.html</loc>
+    <loc>https://primecleanba.com/</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/commercial-cleaning-richmond-ca.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://primecleanba.com/about.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://primecleanba.com/services.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://primecleanba.com/pricing.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://primecleanba.com/government.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://primecleanba.com/service-areas.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://primecleanba.com/blog.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://primecleanba.com/careers.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://primecleanba.com/contact.html</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://primecleanba.com/industries/bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/commercial-cleaning-richmond-ca</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/industries/commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/about</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/industries/government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/services</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/industries/industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/pricing</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/industries/medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/government</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/industries/property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/service-areas</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/industries/retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/gallery</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/industries/school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/blog</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/blog/commercial-cleaning-cost-richmond-ca-guide.html</loc>
+    <loc>https://primecleanba.com/careers</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://primecleanba.com/contact</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://primecleanba.com/industries/bank-financial-cleaning</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://primecleanba.com/industries/commercial-office-cleaning</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://primecleanba.com/industries/government-facility-janitorial</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://primecleanba.com/industries/industrial-warehouse-cleaning</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://primecleanba.com/industries/medical-clinic-cleaning</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://primecleanba.com/industries/property-management-cleaning</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://primecleanba.com/industries/retail-storefront-cleaning</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://primecleanba.com/industries/school-educational-cleaning</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://primecleanba.com/blog/commercial-cleaning-cost-richmond-ca-guide</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/blog/commercial-floor-care-strip-wax-tile-maintenance.html</loc>
+    <loc>https://primecleanba.com/blog/commercial-floor-care-strip-wax-tile-maintenance</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/blog/day-porter-vs-night-janitorial-commercial-buildings.html</loc>
+    <loc>https://primecleanba.com/blog/day-porter-vs-night-janitorial-commercial-buildings</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/blog/government-janitorial-contracting-wosb-california.html</loc>
+    <loc>https://primecleanba.com/blog/government-janitorial-contracting-wosb-california</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/blog/green-commercial-cleaning-leed-certification-california.html</loc>
+    <loc>https://primecleanba.com/blog/green-commercial-cleaning-leed-certification-california</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/blog/how-to-choose-commercial-cleaning-contractor-east-bay.html</loc>
+    <loc>https://primecleanba.com/blog/how-to-choose-commercial-cleaning-contractor-east-bay</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/blog/how-to-prepare-for-facility-cleaning-walkthrough.html</loc>
+    <loc>https://primecleanba.com/blog/how-to-prepare-for-facility-cleaning-walkthrough</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/blog/janitorial-rfp-template-scope-of-work-guide.html</loc>
+    <loc>https://primecleanba.com/blog/janitorial-rfp-template-scope-of-work-guide</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/blog/medical-office-cleaning-standards-contra-costa.html</loc>
+    <loc>https://primecleanba.com/blog/medical-office-cleaning-standards-contra-costa</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/blog/post-construction-cleaning-checklist-bay-area.html</loc>
+    <loc>https://primecleanba.com/blog/post-construction-cleaning-checklist-bay-area</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/blog/restroom-sanitation-odor-control-commercial-offices.html</loc>
+    <loc>https://primecleanba.com/blog/restroom-sanitation-odor-control-commercial-offices</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/blog/warehouse-industrial-facility-cleaning-checklist.html</loc>
+    <loc>https://primecleanba.com/blog/warehouse-industrial-facility-cleaning-checklist</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/richmond-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/richmond-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/richmond-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/richmond-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/richmond-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/richmond-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/richmond-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/richmond-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/richmond-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/richmond-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/richmond-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/richmond-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/richmond-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/richmond-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/richmond-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/richmond-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/oakland-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/oakland-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/oakland-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/oakland-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/oakland-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/oakland-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/oakland-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/oakland-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/oakland-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/oakland-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/oakland-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/oakland-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/oakland-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/oakland-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/oakland-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/oakland-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/berkeley-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/berkeley-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/berkeley-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/berkeley-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/berkeley-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/berkeley-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/berkeley-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/berkeley-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/berkeley-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/berkeley-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/berkeley-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/berkeley-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/berkeley-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/berkeley-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/berkeley-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/berkeley-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-francisco-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-francisco-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-francisco-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/san-francisco-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-francisco-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-francisco-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-francisco-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-francisco-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-francisco-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-francisco-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-francisco-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-francisco-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-francisco-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-francisco-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-francisco-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-francisco-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/alameda-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/alameda-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/alameda-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/alameda-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/alameda-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/alameda-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/alameda-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/alameda-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/alameda-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/alameda-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/alameda-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/alameda-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/alameda-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/alameda-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/alameda-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/alameda-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/emeryville-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/emeryville-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/emeryville-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/emeryville-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/emeryville-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/emeryville-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/emeryville-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/emeryville-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/emeryville-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/emeryville-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/emeryville-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/emeryville-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/emeryville-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/emeryville-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/emeryville-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/emeryville-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-leandro-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-leandro-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-leandro-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/san-leandro-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-leandro-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-leandro-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-leandro-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-leandro-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-leandro-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-leandro-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-leandro-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-leandro-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-leandro-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-leandro-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-leandro-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-leandro-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/hayward-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/hayward-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/hayward-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/hayward-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/hayward-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/hayward-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/hayward-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/hayward-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/hayward-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/hayward-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/hayward-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/hayward-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/hayward-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/hayward-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/hayward-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/hayward-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/fremont-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/fremont-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/fremont-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/fremont-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/fremont-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/fremont-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/fremont-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/fremont-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/fremont-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/fremont-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/fremont-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/fremont-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/fremont-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/fremont-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/fremont-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/fremont-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/walnut-creek-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/walnut-creek-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/walnut-creek-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/walnut-creek-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/walnut-creek-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/walnut-creek-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/walnut-creek-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/walnut-creek-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/walnut-creek-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/walnut-creek-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/walnut-creek-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/walnut-creek-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/walnut-creek-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/walnut-creek-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/walnut-creek-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/walnut-creek-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/concord-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/concord-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/concord-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/concord-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/concord-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/concord-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/concord-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/concord-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/concord-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/concord-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/concord-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/concord-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/concord-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/concord-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/concord-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/concord-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-ramon-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-ramon-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-ramon-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/san-ramon-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-ramon-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-ramon-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-ramon-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-ramon-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-ramon-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-ramon-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-ramon-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-ramon-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-ramon-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-ramon-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-ramon-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-ramon-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pleasanton-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pleasanton-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pleasanton-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/pleasanton-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pleasanton-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pleasanton-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pleasanton-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pleasanton-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pleasanton-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pleasanton-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pleasanton-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pleasanton-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pleasanton-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pleasanton-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pleasanton-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pleasanton-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-pablo-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-pablo-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-pablo-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/san-pablo-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-pablo-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-pablo-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-pablo-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-pablo-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-pablo-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-pablo-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-pablo-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-pablo-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-pablo-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-pablo-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/san-pablo-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/san-pablo-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/el-cerrito-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/el-cerrito-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/el-cerrito-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/el-cerrito-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/el-cerrito-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/el-cerrito-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/el-cerrito-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/el-cerrito-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/el-cerrito-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/el-cerrito-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/el-cerrito-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/el-cerrito-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/el-cerrito-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/el-cerrito-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/el-cerrito-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/el-cerrito-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/hercules-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/hercules-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/hercules-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/hercules-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/hercules-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/hercules-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/hercules-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/hercules-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/hercules-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/hercules-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/hercules-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/hercules-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/hercules-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/hercules-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/hercules-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/hercules-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pinole-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pinole-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pinole-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/pinole-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pinole-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pinole-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pinole-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pinole-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pinole-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pinole-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pinole-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pinole-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pinole-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pinole-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pinole-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pinole-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/martinez-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/martinez-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/martinez-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/martinez-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/martinez-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/martinez-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/martinez-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/martinez-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/martinez-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/martinez-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/martinez-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/martinez-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/martinez-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/martinez-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/martinez-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/martinez-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pleasant-hill-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pleasant-hill-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pleasant-hill-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/pleasant-hill-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pleasant-hill-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pleasant-hill-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pleasant-hill-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pleasant-hill-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pleasant-hill-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pleasant-hill-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pleasant-hill-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pleasant-hill-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pleasant-hill-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pleasant-hill-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/pleasant-hill-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/pleasant-hill-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/lafayette-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/lafayette-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/lafayette-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/lafayette-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/lafayette-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/lafayette-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/lafayette-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/lafayette-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/lafayette-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/lafayette-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/lafayette-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/lafayette-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/lafayette-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/lafayette-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/lafayette-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/lafayette-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/orinda-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/orinda-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/orinda-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/orinda-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/orinda-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/orinda-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/orinda-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/orinda-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/orinda-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/orinda-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/orinda-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/orinda-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/orinda-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/orinda-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/orinda-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/orinda-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/benicia-commercial-office-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/benicia-commercial-office-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/benicia-government-facility-janitorial.html</loc>
+    <loc>https://primecleanba.com/locations/benicia-government-facility-janitorial</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/benicia-medical-clinic-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/benicia-medical-clinic-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/benicia-industrial-warehouse-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/benicia-industrial-warehouse-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/benicia-property-management-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/benicia-property-management-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/benicia-retail-storefront-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/benicia-retail-storefront-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/benicia-school-educational-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/benicia-school-educational-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/locations/benicia-bank-financial-cleaning.html</loc>
+    <loc>https://primecleanba.com/locations/benicia-bank-financial-cleaning</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/privacy-policy.html</loc>
+    <loc>https://primecleanba.com/privacy-policy</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/cookie-policy.html</loc>
+    <loc>https://primecleanba.com/cookie-policy</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://primecleanba.com/terms-of-service.html</loc>
+    <loc>https://primecleanba.com/terms-of-service</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

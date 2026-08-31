@@ -4,11 +4,12 @@ const path = require('path');
 const rootDir = path.resolve(__dirname, '..');
 
 function getFooterHtml(prefix) {
+  const homeHref = prefix ? `${prefix}` : '/';
   return `<footer class="site">
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="foot-brand-link" href="${prefix}index.html" aria-label="Prime Clean Homepage">
+        <a class="foot-brand-link" href="${homeHref}" aria-label="Prime Clean Homepage">
           <img class="brand-logo brand-logo--footer" src="${prefix}assets/logo-white.png" alt="Prime Clean" width="438" height="204">
         </a>
         <p>Women-Owned, California Small Business Certified commercial and government cleaning contractor serving the East Bay and San Francisco.</p>
@@ -22,56 +23,56 @@ function getFooterHtml(prefix) {
       <div>
         <h4>Cleaning Solutions</h4>
         <ul>
-          <li><a href="${prefix}services.html">Commercial Janitorial</a></li>
-          <li><a href="${prefix}services.html">Day Porter Service</a></li>
-          <li><a href="${prefix}services.html">Restroom Deep Cleaning</a></li>
-          <li><a href="${prefix}services.html">Hard Floor Strip &amp; Wax</a></li>
-          <li><a href="${prefix}services.html">Carpet Steam Extraction</a></li>
-          <li><a href="${prefix}services.html">Post-Construction Cleaning</a></li>
-          <li><a href="${prefix}services.html">Terminal Disinfection</a></li>
+          <li><a href="${prefix}services">Commercial Janitorial</a></li>
+          <li><a href="${prefix}services">Day Porter Service</a></li>
+          <li><a href="${prefix}services">Restroom Deep Cleaning</a></li>
+          <li><a href="${prefix}services">Hard Floor Strip &amp; Wax</a></li>
+          <li><a href="${prefix}services">Carpet Steam Extraction</a></li>
+          <li><a href="${prefix}services">Post-Construction Cleaning</a></li>
+          <li><a href="${prefix}services">Terminal Disinfection</a></li>
         </ul>
       </div>
       <div>
         <h4>Industries Serviced</h4>
         <ul>
-          <li><a href="${prefix}industries/commercial-office-cleaning.html">Corporate &amp; Class A Offices</a></li>
-          <li><a href="${prefix}industries/medical-clinic-cleaning.html">Medical &amp; Clinical Facilities</a></li>
-          <li><a href="${prefix}industries/industrial-warehouse-cleaning.html">Industrial &amp; Warehouses</a></li>
-          <li><a href="${prefix}industries/retail-storefront-cleaning.html">Retail &amp; Showrooms</a></li>
-          <li><a href="${prefix}industries/property-management-cleaning.html">Property Management &amp; HOAs</a></li>
-          <li><a href="${prefix}industries/school-educational-cleaning.html">Schools &amp; Education</a></li>
-          <li><a href="${prefix}industries/bank-financial-cleaning.html">Financial Institutions</a></li>
-          <li><a href="${prefix}government.html">Government &amp; Public Sector</a></li>
+          <li><a href="${prefix}industries/commercial-office-cleaning">Corporate &amp; Class A Offices</a></li>
+          <li><a href="${prefix}industries/medical-clinic-cleaning">Medical &amp; Clinical Facilities</a></li>
+          <li><a href="${prefix}industries/industrial-warehouse-cleaning">Industrial &amp; Warehouses</a></li>
+          <li><a href="${prefix}industries/retail-storefront-cleaning">Retail &amp; Showrooms</a></li>
+          <li><a href="${prefix}industries/property-management-cleaning">Property Management &amp; HOAs</a></li>
+          <li><a href="${prefix}industries/school-educational-cleaning">Schools &amp; Education</a></li>
+          <li><a href="${prefix}industries/bank-financial-cleaning">Financial Institutions</a></li>
+          <li><a href="${prefix}government">Government &amp; Public Sector</a></li>
         </ul>
       </div>
       <div>
         <h4>East Bay Coverage</h4>
         <ul>
-          <li><a href="${prefix}locations/san-francisco-commercial-office-cleaning.html">San Francisco</a></li>
-          <li><a href="${prefix}locations/oakland-commercial-office-cleaning.html">Oakland</a></li>
-          <li><a href="${prefix}locations/richmond-commercial-office-cleaning.html">Richmond (HQ)</a></li>
-          <li><a href="${prefix}locations/berkeley-commercial-office-cleaning.html">Berkeley</a></li>
-          <li><a href="${prefix}locations/walnut-creek-commercial-office-cleaning.html">Walnut Creek</a></li>
-          <li><a href="${prefix}locations/concord-commercial-office-cleaning.html">Concord</a></li>
-          <li><a href="${prefix}locations/martinez-commercial-office-cleaning.html">Martinez</a></li>
-          <li><a href="${prefix}locations/benicia-commercial-office-cleaning.html">Benicia</a></li>
-          <li><a href="${prefix}locations/albany-commercial-office-cleaning.html">Albany</a></li>
-          <li><a href="${prefix}locations/pleasanton-commercial-office-cleaning.html">Pleasanton</a></li>
-          <li><a href="${prefix}service-areas.html" style="color:var(--gold);font-weight:700">View All 16+ Cities →</a></li>
+          <li><a href="${prefix}locations/san-francisco-commercial-office-cleaning">San Francisco</a></li>
+          <li><a href="${prefix}locations/oakland-commercial-office-cleaning">Oakland</a></li>
+          <li><a href="${prefix}locations/richmond-commercial-office-cleaning">Richmond (HQ)</a></li>
+          <li><a href="${prefix}locations/berkeley-commercial-office-cleaning">Berkeley</a></li>
+          <li><a href="${prefix}locations/walnut-creek-commercial-office-cleaning">Walnut Creek</a></li>
+          <li><a href="${prefix}locations/concord-commercial-office-cleaning">Concord</a></li>
+          <li><a href="${prefix}locations/martinez-commercial-office-cleaning">Martinez</a></li>
+          <li><a href="${prefix}locations/benicia-commercial-office-cleaning">Benicia</a></li>
+          <li><a href="${prefix}locations/albany-commercial-office-cleaning">Albany</a></li>
+          <li><a href="${prefix}locations/pleasanton-commercial-office-cleaning">Pleasanton</a></li>
+          <li><a href="${prefix}service-areas" style="color:var(--gold);font-weight:700">View All 16+ Cities →</a></li>
         </ul>
       </div>
       <div>
         <h4>Company &amp; Tools</h4>
         <ul>
-          <li><a href="${prefix}about.html">About Prime Clean</a></li>
-          <li><a href="${prefix}pricing.html">Pricing Calculator</a></li>
-          <li><a href="${prefix}gallery.html">Before &amp; After Gallery</a></li>
-          <li><a href="${prefix}tools/walkthrough-scorecard.html">Walkthrough Scorecard Tool</a></li>
-          <li><a href="${prefix}government.html">Government Contracting</a></li>
-          <li><a href="${prefix}service-areas.html">Service Coverage</a></li>
-          <li><a href="${prefix}blog.html">Blog &amp; Resources</a></li>
-          <li><a href="${prefix}careers.html">Careers &amp; Jobs</a></li>
-          <li><a href="${prefix}contact.html">Contact &amp; Free Walkthrough</a></li>
+          <li><a href="${prefix}about">About Prime Clean</a></li>
+          <li><a href="${prefix}pricing">Pricing Calculator</a></li>
+          <li><a href="${prefix}gallery">Before &amp; After Gallery</a></li>
+          <li><a href="${prefix}tools/walkthrough-scorecard">Walkthrough Scorecard Tool</a></li>
+          <li><a href="${prefix}government">Government Contracting</a></li>
+          <li><a href="${prefix}service-areas">Service Coverage</a></li>
+          <li><a href="${prefix}blog">Blog &amp; Resources</a></li>
+          <li><a href="${prefix}careers">Careers &amp; Jobs</a></li>
+          <li><a href="${prefix}contact">Contact &amp; Free Walkthrough</a></li>
         </ul>
       </div>
       <div>

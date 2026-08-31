@@ -557,12 +557,12 @@ function generateIndustryHtml(ind) {
     <nav class="primary">
       <a href="../index.html">Home</a>
       <a href="../about.html">About</a>
-      <a href="../services.html" class="active">Services</a>
-      <a href="../pricing.html">Pricing</a>
-      <a href="../government.html">Government</a>
-      <a href="../service-areas.html">Service Areas</a>
-      <a href="../blog.html">Blog</a>
-      <a href="../contact.html">Contact</a>
+      <a href="../services" class="active">Services</a>
+      <a href="../pricing">Pricing</a>
+      <a href="../government">Government</a>
+      <a href="../service-areas">Service Areas</a>
+      <a href="../blog">Blog</a>
+      <a href="../contact">Contact</a>
     </nav>
     <div class="header-actions">
       <a class="phone-pill" href="tel:14155728733" aria-label="Call Prime Clean at (415) 572-8733">
@@ -571,20 +571,20 @@ function generateIndustryHtml(ind) {
         </span>
         <span class="phone-pill-num">(415) 572-8733</span>
       </a>
-      <a class="btn btn-gold btn-sm" href="../contact.html">Get a Quote</a>
+      <a class="btn btn-gold btn-sm" href="../contact">Get a Quote</a>
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
   </div>
   <div class="wrap"><nav class="mobile-nav">
-    <a href="../index.html">Home</a>
-    <a href="../about.html">About</a>
-    <a href="../services.html">Services</a>
-    <a href="../pricing.html">Pricing</a>
-    <a href="../government.html">Government</a>
-    <a href="../service-areas.html">Service Areas</a>
-    <a href="../blog.html">Blog</a>
-    <a href="../careers.html">Careers</a>
-    <a href="../contact.html">Contact</a>
+    <a href="../">Home</a>
+    <a href="../about">About</a>
+    <a href="../services">Services</a>
+    <a href="../pricing">Pricing</a>
+    <a href="../government">Government</a>
+    <a href="../service-areas">Service Areas</a>
+    <a href="../blog">Blog</a>
+    <a href="../careers">Careers</a>
+    <a href="../contact">Contact</a>
   </nav></div>
 </header>
 
@@ -593,13 +593,13 @@ function generateIndustryHtml(ind) {
   <div class="wrap page-hero">
     <div class="page-hero-grid">
       <div>
-        <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../services.html">Services</a> / ${ind.name}</div>
+        <div class="breadcrumb"><a href="../">Home</a> / <a href="../services">Services</a> / ${ind.name}</div>
         <span class="eyebrow on-light">${ind.category} //</span>
         <h1>${ind.h1}</h1>
         <p>${ind.intro}</p>
         <div class="hero-ctas" style="margin-top:24px">
-          <a class="btn btn-gold" href="../contact.html?type=${encodeURIComponent(ind.name)}#quote-form">Schedule Free Walkthrough</a>
-          <a class="btn btn-outline" href="../pricing.html">Calculate Monthly Cost</a>
+          <a class="btn btn-gold" href="../contact?type=${encodeURIComponent(ind.name)}#quote-form">Schedule Free Walkthrough</a>
+          <a class="btn btn-outline" href="../pricing">Calculate Monthly Cost</a>
         </div>
         <div class="hero-checks" style="margin-top:22px">
           <div class="check-row"><span class="check-dot">${checkSvg}</span>Women-Owned &amp; CA Small Business Certified</div>

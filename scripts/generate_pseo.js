@@ -51,7 +51,7 @@ cities.forEach(city => {
       .filter(v => v.slug !== vertical.slug)
       .slice(0, 5)
       .map(v => {
-        return `<li><a href="${city.slug}-${v.slug}.html" style="color:var(--blue-700);font-weight:600;font-size:.9rem;text-decoration:none">→ ${v.name} in ${city.name}</a></li>`;
+        return `<li><a href="${city.slug}-${v.slug}" style="color:var(--blue-700);font-weight:600;font-size:.9rem;text-decoration:none">→ ${v.name} in ${city.name}</a></li>`;
       }).join('\n');
 
     // Same vertical in nearby cities
@@ -59,7 +59,7 @@ cities.forEach(city => {
       .filter(c => c.slug !== city.slug)
       .slice(0, 5)
       .map(c => {
-        return `<li><a href="${c.slug}-${vertical.slug}.html" style="color:var(--blue-700);font-weight:600;font-size:.9rem;text-decoration:none">→ ${vertical.shortName} in ${c.name}, CA</a></li>`;
+        return `<li><a href="${c.slug}-${vertical.slug}" style="color:var(--blue-700);font-weight:600;font-size:.9rem;text-decoration:none">→ ${vertical.shortName} in ${c.name}, CA</a></li>`;
       }).join('\n');
 
     // Replace placeholders
@@ -84,40 +84,41 @@ cities.forEach(city => {
 
     const outPath = path.join(outputDir, `${pageSlug}.html`);
     fs.writeFileSync(outPath, pageHtml, 'utf8');
-    generatedUrls.push(`locations/${pageSlug}.html`);
+    generatedUrls.push(`locations/${pageSlug}`);
   });
 });
 
 console.log(`Generated ${generatedUrls.length} programmatic location pages in ${outputDir}`);
 
-// Generate sitemap.xml
+// Generate sitemap.xml with Clean URLs
 const corePages = [
-  'index.html',
-  'commercial-cleaning-richmond-ca.html',
-  'about.html',
-  'services.html',
-  'pricing.html',
-  'government.html',
-  'service-areas.html',
-  'blog.html',
-  'careers.html',
-  'contact.html'
+  '',
+  'commercial-cleaning-richmond-ca',
+  'about',
+  'services',
+  'pricing',
+  'government',
+  'service-areas',
+  'gallery',
+  'blog',
+  'careers',
+  'contact'
 ];
 
 const industriesDir = path.join(rootDir, 'industries');
 const industryPages = fs.existsSync(industriesDir)
-  ? fs.readdirSync(industriesDir).filter(f => f.endsWith('.html')).map(f => `industries/${f}`)
+  ? fs.readdirSync(industriesDir).filter(f => f.endsWith('.html')).map(f => `industries/${f.replace(/\.html$/, '')}`)
   : [];
 
 const blogDir = path.join(rootDir, 'blog');
 const blogArticles = fs.existsSync(blogDir) 
-  ? fs.readdirSync(blogDir).filter(f => f.endsWith('.html') && f !== 'index.html').map(f => `blog/${f}`)
+  ? fs.readdirSync(blogDir).filter(f => f.endsWith('.html') && f !== 'index.html').map(f => `blog/${f.replace(/\.html$/, '')}`)
   : [];
 
 const legalPages = [
-  'privacy-policy.html',
-  'cookie-policy.html',
-  'terms-of-service.html'
+  'privacy-policy',
+  'cookie-policy',
+  'terms-of-service'
 ];
 
 const baseUrl = 'https://primecleanba.com';
@@ -126,10 +127,10 @@ const today = new Date().toISOString().split('T')[0];
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${corePages.map(page => `  <url>
-    <loc>${baseUrl}/${page}</loc>
+    <loc>${baseUrl}${page ? '/' + page : '/'}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>${page === '' ? '1.0' : '0.95'}</priority>
   </url>`).join('\n')}
 ${industryPages.map(ind => `  <url>
     <loc>${baseUrl}/${ind}</loc>
@@ -159,5 +160,6 @@ ${legalPages.map(page => `  <url>
 `;
 
 fs.writeFileSync(path.join(rootDir, 'sitemap.xml'), sitemapXml, 'utf8');
-console.log(`Generated sitemap.xml with ${corePages.length + blogArticles.length + generatedUrls.length} total indexed URLs`);
+console.log(`Generated sitemap.xml with ${corePages.length + industryPages.length + blogArticles.length + generatedUrls.length + legalPages.length} total indexed URLs`);
+
 
