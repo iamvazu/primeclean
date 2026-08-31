@@ -5,5 +5,8 @@
   "scripts": {
     "dev": "serve -p 3000",
     "generate:pseo": "node scripts/generate_pseo.js"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
   }
 }

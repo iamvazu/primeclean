@@ -164,21 +164,32 @@ header.site .bar{
   .brand-logo{height:42px;max-width:180px}
 }
 
-.foot-brand .brand-logo--footer{
-  height:82px;
-  width:auto;
-  max-width:280px;
+/* Dedicated Footer Logo - Bold, Crisp & High Visibility */
+.foot-brand .brand-logo--footer,
+.brand-logo.brand-logo--footer{
+  height:95px !important;
+  width:auto !important;
+  max-width:320px !important;
   object-fit:contain;
   margin-bottom:18px;
   display:block;
   transition:transform .2s ease;
 }
-.foot-brand .brand-logo--footer:hover{transform:scale(1.02)}
-@media (max-width:767px){
-  .foot-brand .brand-logo--footer{height:68px;max-width:240px}
+.foot-brand .brand-logo--footer:hover,
+.brand-logo.brand-logo--footer:hover{transform:scale(1.02)}
+@media (max-width:768px){
+  .foot-brand .brand-logo--footer,
+  .brand-logo.brand-logo--footer{
+    height:80px !important;
+    max-width:260px !important;
+  }
 }
 @media (max-width:420px){
-  .foot-brand .brand-logo--footer{height:58px;max-width:210px}
+  .foot-brand .brand-logo--footer,
+  .brand-logo.brand-logo--footer{
+    height:68px !important;
+    max-width:220px !important;
+  }
 }
 
 nav.primary{display:flex;gap:26px;align-items:center}

@@ -530,6 +530,11 @@ function generateIndustryHtml(ind) {
   <script type="application/ld+json">
   ${JSON.stringify(schemaJson, null, 2)}
   </script>
+  <!-- Vercel Web Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
