@@ -27,6 +27,28 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Service Accordion Interactive Expansion
+  var accordionHeaders = document.querySelectorAll('.service-accordion-header');
+  accordionHeaders.forEach(function (header) {
+    header.addEventListener('click', function () {
+      var item = header.closest('.service-accordion-item');
+      var wasOpen = item.classList.contains('is-open');
+      
+      // Close all items in group
+      var group = item.closest('.service-accordion');
+      if (group) {
+        group.querySelectorAll('.service-accordion-item').forEach(function (other) {
+          other.classList.remove('is-open');
+        });
+      }
+      
+      // Toggle current item if it wasn't open
+      if (!wasOpen) {
+        item.classList.add('is-open');
+      }
+    });
+  });
+
   // Segmented quote form toggle (Commercial vs Government)
   var tabButtons = document.querySelectorAll('.form-toggle button');
   var panels = document.querySelectorAll('[data-form-panel]');
