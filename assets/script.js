@@ -136,11 +136,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
               <div class="form-success-note">
                 📧 <b>Confirmation Sent:</b> A confirmation summary has been sent from <b>info@primecleanba.com</b> to <b>${payload.email}</b>.<br>
-                👤 <b>Jackie</b> and our operations team have been notified to conduct your walkthrough and prepare your Cleanliness &amp; Compliance Score.
+                🏢 <b>Prime Clean</b> operations dispatch has been notified to conduct your walkthrough and prepare your Cleanliness &amp; Compliance Score.
               </div>
 
               <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
-                <a class="btn btn-gold btn-sm" href="tel:14155728733">Call Jackie: (415) 572-8733</a>
+                <a class="btn btn-gold btn-sm" href="tel:14155728733">Call Prime Clean: (415) 572-8733</a>
                 <button type="button" class="btn btn-outline btn-sm" onclick="window.location.reload()">Book Another Visit</button>
               </div>
             </div>
