@@ -99,8 +99,14 @@ const corePages = [
   'pricing.html',
   'government.html',
   'service-areas.html',
+  'blog.html',
   'contact.html'
 ];
+
+const blogDir = path.join(rootDir, 'blog');
+const blogArticles = fs.existsSync(blogDir) 
+  ? fs.readdirSync(blogDir).filter(f => f.endsWith('.html') && f !== 'index.html').map(f => `blog/${f}`)
+  : [];
 
 const legalPages = [
   'privacy-policy.html',
@@ -119,6 +125,12 @@ ${corePages.map(page => `  <url>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>`).join('\n')}
+${blogArticles.map(article => `  <url>
+    <loc>${baseUrl}/${article}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>`).join('\n')}
 ${generatedUrls.map(url => `  <url>
     <loc>${baseUrl}/${url}</loc>
     <lastmod>${today}</lastmod>
@@ -135,4 +147,5 @@ ${legalPages.map(page => `  <url>
 `;
 
 fs.writeFileSync(path.join(rootDir, 'sitemap.xml'), sitemapXml, 'utf8');
-console.log(`Generated sitemap.xml with ${corePages.length + generatedUrls.length} total indexed URLs`);
+console.log(`Generated sitemap.xml with ${corePages.length + blogArticles.length + generatedUrls.length} total indexed URLs`);
+
