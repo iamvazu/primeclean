@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
               <div class="form-success-note">
                 📧 <b>Confirmation Sent:</b> A confirmation summary has been sent from <b>info@primecleanba.com</b> to <b>${payload.email}</b>.<br>
-                👤 <b>Jackie</b> (<b>jackie@primecleanba.com</b>) has been notified to conduct your walkthrough and prepare your Cleanliness &amp; Compliance Score.
+                👤 <b>Jackie</b> and our operations team have been notified to conduct your walkthrough and prepare your Cleanliness &amp; Compliance Score.
               </div>
 
               <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
