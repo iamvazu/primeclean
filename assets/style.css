@@ -243,20 +243,17 @@ nav.primary a:hover, nav.primary a.active{color:var(--blue-700);border-color:var
 }
 .hero-panel.has-photo{
   background:
-    linear-gradient(145deg, rgba(10,47,71,.88) 0%, rgba(10,47,71,.96) 100%),
+    linear-gradient(145deg, rgba(10,47,71,.78) 0%, rgba(10,47,71,.88) 100%),
     url('images/hero_building.jpg') center/cover no-repeat;
 }
 @media (max-width:720px){.hero-panel{padding:30px 22px;border-radius:26px}}
 .hero-panel::before{
   content:"";position:absolute;inset:0;
-  background-image:radial-gradient(circle, rgba(255,255,255,.12) 1.5px, transparent 1.5px);
-  background-size:26px 26px;opacity:.5;
+  background-image:radial-gradient(circle, rgba(255,255,255,.08) 1.5px, transparent 1.5px);
+  background-size:26px 26px;opacity:.35;
 }
-.hero-skyline-bg{
-  position:absolute;left:0;right:0;bottom:0;width:100%;height:60%;
-}
-.hero-panel-inner{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:start}
-@media (max-width:900px){.hero-panel-inner{grid-template-columns:1fr}}
+.hero-panel-inner{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:36px;align-items:center}
+@media (max-width:960px){.hero-panel-inner{grid-template-columns:1fr;gap:30px}}
 .hero-panel h1{font-size:clamp(1.9rem,3.2vw,2.5rem);color:#fff}
 .hero-panel .lede{color:#cfd9e2;font-size:1rem;margin-top:12px;max-width:46ch}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
@@ -269,20 +266,31 @@ nav.primary a:hover, nav.primary a.active{color:var(--blue-700);border-color:var
 }
 .check-dot svg{width:11px;height:11px;stroke:#26200a !important}
 
-.trust-float{
-  align-self:flex-start;background:var(--blue-050);border:1px solid var(--blue-100);
-  border-radius:var(--radius-md);padding:22px 22px;
-  display:flex;flex-direction:column;gap:12px;margin-top:6px;
+/* Hero Calculator Card */
+.hero-calc-card{
+  background:#ffffff;border-radius:var(--radius-lg);padding:24px 22px;
+  box-shadow:0 24px 50px rgba(0,0,0,0.28);border:1px solid rgba(255,255,255,.4);
+  position:relative;z-index:2;
 }
-.trust-float .label{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.86rem;color:var(--blue-900)}
-.trust-float .row{display:flex;align-items:center;gap:10px;font-size:.84rem;color:var(--ink-soft)}
-.trust-float .row svg{width:16px;height:16px;color:var(--blue-600);flex:none}
-.trust-float{flex:1;justify-content:space-between}
-.trust-float .divider{border-top:1px dashed var(--blue-100);margin:2px 0}
-.trust-float .stat-line{display:flex;justify-content:space-between;align-items:baseline}
-.trust-float .stat-line b{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem;color:var(--blue-900)}
-.trust-float .stat-line span{font-size:.78rem;color:var(--muted);max-width:14ch;text-align:right}
-.trust-float .more-link{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.82rem;color:var(--blue-700)}
+@media (max-width:540px){.hero-calc-card{padding:20px 16px}}
+.hero-calc-header{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.hero-calc-header h3{font-size:1.1rem;color:var(--blue-900);margin:4px 0 0;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800}
+.hero-calc-body .field{margin-bottom:11px}
+.hero-calc-body label{display:block;font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:4px}
+.hero-freq-toggle{display:flex;gap:6px}
+.hero-freq-toggle button{
+  flex:1;padding:7px 2px;font-size:.78rem;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;
+  border:1px solid var(--line);background:var(--cream);border-radius:var(--radius-sm);cursor:pointer;
+  color:var(--ink-soft);transition:all .15s ease;
+}
+.hero-freq-toggle button:hover{border-color:var(--blue-600);color:var(--blue-900)}
+.hero-freq-toggle button.active{background:var(--blue-900);color:#fff;border-color:var(--blue-900)}
+.hero-calc-output{
+  background:var(--cream);border:1px solid var(--blue-100);border-radius:var(--radius-md);
+  padding:12px 14px;margin-top:12px;text-align:center;
+}
+.hero-calc-price{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.5rem;font-weight:800;color:var(--blue-900);margin:2px 0}
+
 
 /* ---------- dual-track audience section (facility vs. contracting) ---------- */
 .dual-track-grid{

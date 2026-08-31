@@ -169,50 +169,51 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-  // ---------- Pricing Calculator Component ----------
-  var calcContainer = document.querySelector('.calc-grid');
-  if (calcContainer) {
-    var SIZE_BRACKETS = [
-      { max: 5000,      low: 0.16, high: 0.26 },
-      { max: 20000,     low: 0.11, high: 0.18 },
-      { max: 50000,     low: 0.09, high: 0.15 },
-      { max: Infinity,  low: 0.08, high: 0.13 }
-    ];
-    var FREQ_MULT   = { "1x": 0.55, "2x": 0.78, "3x": 1.0, "5x": 1.35 };
-    var FREQ_VISITS = { "1x": 4.33, "2x": 8.67, "3x": 13,  "5x": 21.7 };
-    var FREQ_LABEL  = { "1x": "1x / week", "2x": "2x / week", "3x": "3x / week", "5x": "5x / week" };
-    var TYPE_MULT = {
-      "Office": 1.0,
-      "Corporate Office": 1.0,
-      "Retail / Showroom": 1.0,
-      "Property Management / Multifamily": 0.95,
-      "Education / School": 1.05,
-      "Financial Institution": 1.1,
-      "Industrial / Warehouse": 0.6,
-      "Medical / Clinical": 1.65,
-      "Other": 1.0
-    };
-    var MONTHLY_MIN = 650;
+  // ---------- Universal Pricing Calculator Component ----------
+  var SIZE_BRACKETS = [
+    { max: 5000,      low: 0.16, high: 0.26 },
+    { max: 20000,     low: 0.11, high: 0.18 },
+    { max: 50000,     low: 0.09, high: 0.15 },
+    { max: Infinity,  low: 0.08, high: 0.13 }
+  ];
+  var FREQ_MULT   = { "1x": 0.55, "2x": 0.78, "3x": 1.0, "5x": 1.35 };
+  var FREQ_VISITS = { "1x": 4.33, "2x": 8.67, "3x": 13,  "5x": 21.7 };
+  var FREQ_LABEL  = { "1x": "1x / week", "2x": "2x / week", "3x": "3x / week", "5x": "5x / week" };
+  var TYPE_MULT = {
+    "Office": 1.0,
+    "Corporate Office": 1.0,
+    "Retail / Showroom": 1.0,
+    "Property Management / Multifamily": 0.95,
+    "Education / School": 1.05,
+    "Financial Institution": 1.1,
+    "Industrial / Warehouse": 0.6,
+    "Medical / Clinical": 1.65,
+    "Other": 1.0
+  };
+  var MONTHLY_MIN = 650;
 
+  function initCalc(calcContainer, isHero) {
     var freq = "3x";
-    var sliderEl = calcContainer.querySelector("#calc-sqft-slider");
-    var numEl = calcContainer.querySelector("#calc-sqft");
-    var typeEl = calcContainer.querySelector("#calc-type");
-    var toggleEl = calcContainer.querySelector("#calc-freq-toggle");
-    var rangeEl = calcContainer.querySelector("#calc-range");
-    var sublineEl = calcContainer.querySelector("#calc-subline");
-    var chipSqft = calcContainer.querySelector("#chip-sqft");
-    var chipType = calcContainer.querySelector("#chip-type");
-    var chipFreq = calcContainer.querySelector("#chip-freq");
-    var ctaWalkthrough = calcContainer.querySelector("#calc-cta-walkthrough");
+    var prefix = isHero ? "hero-" : "calc-";
+    var sliderEl = calcContainer.querySelector("#" + prefix + "sqft-slider") || calcContainer.querySelector("#calc-sqft-slider");
+    var numEl = calcContainer.querySelector("#" + prefix + "sqft") || calcContainer.querySelector("#calc-sqft");
+    var typeEl = calcContainer.querySelector("#" + prefix + "calc-type") || calcContainer.querySelector("#calc-type");
+    var toggleEl = calcContainer.querySelector("#" + prefix + "freq-toggle") || calcContainer.querySelector("#calc-freq-toggle");
+    var rangeEl = calcContainer.querySelector("#" + prefix + "calc-range") || calcContainer.querySelector("#calc-range");
+    var sublineEl = calcContainer.querySelector("#" + prefix + "calc-subline") || calcContainer.querySelector("#calc-subline");
+    var chipSqft = calcContainer.querySelector("#" + prefix + "chip-sqft") || calcContainer.querySelector("#chip-sqft");
+    var chipType = calcContainer.querySelector("#" + prefix + "chip-type") || calcContainer.querySelector("#chip-type");
+    var chipFreq = calcContainer.querySelector("#" + prefix + "chip-freq") || calcContainer.querySelector("#chip-freq");
+    var ctaWalkthrough = calcContainer.querySelector("#" + prefix + "calc-cta") || calcContainer.querySelector("#calc-cta-walkthrough");
     var ctaQuote = calcContainer.querySelector("#calc-cta-quote");
 
     function roundTo(n, step){ return Math.round(n/step)*step; }
     function fmt(n){ return "$" + Math.round(n).toLocaleString("en-US"); }
 
     function compute(){
-      if (!numEl || !typeEl) return null;
-      var sqft = Math.max(500, Math.min(500000, parseInt(numEl.value,10) || 8000));
+      if (!typeEl) return null;
+      var rawVal = numEl ? numEl.value : (sliderEl ? sliderEl.value : 5000);
+      var sqft = Math.max(500, Math.min(500000, parseInt(rawVal,10) || 5000));
       var type = typeEl.value;
       var bracket = SIZE_BRACKETS.find(function(b){ return sqft <= b.max; }) || SIZE_BRACKETS[SIZE_BRACKETS.length-1];
       var typeMult = TYPE_MULT[type] != null ? TYPE_MULT[type] : 1.0;
@@ -231,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function renderCalc(){
       var r = compute();
       if (!r) return;
-      if (rangeEl) rangeEl.textContent = fmt(r.low) + " – " + fmt(r.high);
+      if (rangeEl) rangeEl.innerHTML = fmt(r.low) + " – " + fmt(r.high) + (isHero ? '<span style="font-size:.8rem;font-weight:600;color:var(--ink-soft)"> /mo</span>' : '');
       if (sublineEl) {
         sublineEl.textContent = "≈ " + fmt(r.perVisitLow) + " – " + fmt(r.perVisitHigh) + " per visit · " + Math.round(r.visits) + " visits/month";
       }
@@ -258,6 +259,8 @@ document.addEventListener('DOMContentLoaded', function () {
         sliderEl.value = Math.max(500, Math.min(100000, v));
         renderCalc();
       });
+    } else if (sliderEl) {
+      sliderEl.addEventListener("input", renderCalc);
     }
     if (typeEl) {
       typeEl.addEventListener("change", renderCalc);
@@ -275,6 +278,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     renderCalc();
   }
+
+  var heroCalc = document.querySelector('#hero-pricing-calculator, .hero-calc-card');
+  if (heroCalc) initCalc(heroCalc, true);
+
+  var gridCalc = document.querySelector('.calc-grid');
+  if (gridCalc) initCalc(gridCalc, false);
+
 
   // Scroll-reveal: fade + rise elements into view as the user scrolls.
   var revealSelectors = [

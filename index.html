@@ -127,27 +127,13 @@
   <!-- HERO -->
   <div class="hero wrap">
     <div class="hero-panel has-photo">
-      <svg class="hero-skyline-bg" viewBox="0 0 900 300" preserveAspectRatio="none" fill="none">
-        <rect x="0" y="140" width="70" height="160" fill="rgba(255,255,255,.05)"/>
-        <rect x="80" y="90" width="55" height="210" fill="rgba(255,255,255,.07)"/>
-        <rect x="145" y="160" width="90" height="140" fill="rgba(255,255,255,.04)"/>
-        <rect x="245" y="60" width="60" height="240" fill="rgba(255,255,255,.08)"/>
-        <rect x="315" y="120" width="45" height="180" fill="rgba(255,255,255,.05)"/>
-        <rect x="370" y="30" width="70" height="270" fill="rgba(255,255,255,.09)"/>
-        <rect x="450" y="150" width="55" height="150" fill="rgba(255,255,255,.05)"/>
-        <rect x="515" y="95" width="65" height="205" fill="rgba(255,255,255,.07)"/>
-        <rect x="590" y="170" width="80" height="130" fill="rgba(255,255,255,.04)"/>
-        <rect x="680" y="75" width="50" height="225" fill="rgba(255,255,255,.08)"/>
-        <rect x="740" y="130" width="60" height="170" fill="rgba(255,255,255,.05)"/>
-        <rect x="810" y="180" width="90" height="120" fill="rgba(255,255,255,.04)"/>
-      </svg>
       <div class="hero-panel-inner">
         <div>
           <span class="eyebrow on-dark">Commercial &amp; Government Cleaning</span>
           <h1 style="margin-top:12px">Cleaning that holds up to inspection.</h1>
           <p class="lede">Women-Owned, California Small Business Certified. Serving offices, clinics, industrial sites, and public buildings across the East Bay and San Francisco.</p>
           <div class="hero-ctas">
-            <a class="btn btn-gold" href="contact.html">Get a Commercial Quote</a>
+            <a class="btn btn-gold" href="contact.html">Get a Free Site Walkthrough &amp; Cleanliness Score</a>
             <a class="btn btn-outline-light" href="government.html">Government &amp; Public Sector</a>
           </div>
           <div class="hero-checks">
@@ -155,17 +141,53 @@
             <div class="check-row light"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg></span>Background-checked, trained staff</div>
           </div>
         </div>
-        <div class="trust-float">
-          <div>
-            <span class="label">Certified &amp; Registered</span>
-            <div class="row" style="margin-top:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>Women-Owned Small Business (WOSB)</div>
-            <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>California Small Business Certified</div>
-            <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Active SAM.gov registration</div>
+
+        <!-- RIGHT-HAND COMMERCIAL COST CALCULATOR -->
+        <div class="hero-calc-card" id="hero-pricing-calculator">
+          <div class="hero-calc-header">
+            <span class="eyebrow on-light" style="color:var(--blue-700)">Instant Estimate</span>
+            <h3>Commercial Cleaning Calculator</h3>
           </div>
-          <div>
-            <div class="divider"></div>
-            <div class="stat-line" style="margin-top:14px"><b>0</b><span>missed service days in 2025</span></div>
-            <a class="more-link" href="government.html" style="display:inline-block;margin-top:14px">See all certifications →</a>
+          <div class="hero-calc-body">
+            <div class="field">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+                <label for="hero-sqft-slider" style="margin:0">Facility Size</label>
+                <span id="hero-chip-sqft" style="font-size:.88rem;font-weight:800;color:var(--blue-700)">5,000 sq ft</span>
+              </div>
+              <input type="range" id="hero-sqft-slider" min="1000" max="60000" step="500" value="5000" style="width:100%;accent-color:var(--blue-700);height:6px">
+              <input type="hidden" id="hero-sqft" value="5000">
+            </div>
+
+            <div class="field">
+              <label for="hero-calc-type">Facility Type</label>
+              <select id="hero-calc-type" style="padding:8px 12px;font-size:.85rem;width:100%;border-radius:var(--radius-sm)">
+                <option value="Corporate Office" selected>Corporate Office / Tech Suite</option>
+                <option value="Medical / Clinical">Medical / Clinical / Healthcare</option>
+                <option value="Industrial / Warehouse">Warehouse / Industrial</option>
+                <option value="Retail / Showroom">Retail / Storefront</option>
+                <option value="Education / School">School / Educational</option>
+                <option value="Financial Institution">Bank / Financial Institution</option>
+                <option value="Property Management / Multifamily">Property Management / Common Area</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Cleaning Frequency</label>
+              <div class="hero-freq-toggle" id="hero-freq-toggle">
+                <button type="button" class="btn-freq" data-freq="1x">1x/wk</button>
+                <button type="button" class="btn-freq" data-freq="2x">2x/wk</button>
+                <button type="button" class="btn-freq active" data-freq="3x">3x/wk</button>
+                <button type="button" class="btn-freq" data-freq="5x">5x/wk</button>
+              </div>
+            </div>
+
+            <div class="hero-calc-output">
+              <div style="font-size:.72rem;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em">Estimated Monthly Range</div>
+              <div id="hero-calc-range" class="hero-calc-price">$1,100 – $1,800<span style="font-size:.8rem;font-weight:600;color:var(--ink-soft)"> /mo</span></div>
+              <div id="hero-calc-subline" style="font-size:.78rem;color:var(--blue-700);font-weight:600">≈ $85 – $138 per visit · 13 visits/mo</div>
+            </div>
+
+            <a id="hero-calc-cta" class="btn btn-gold btn-sm" style="width:100%;justify-content:center;margin-top:12px;padding:11px 12px;font-size:.86rem" href="contact.html?sqft=5000&type=Corporate+Office&freq=3x+%2F+week&est=%241%2C100-%241%2C800#quote-form">Schedule Free 15-Min Walkthrough →</a>
           </div>
         </div>
       </div>
