@@ -207,9 +207,10 @@
           <p>Tell us about your facility — square footage, frequency, and specific requirements. We will schedule a site walkthrough and send a clear, itemized proposal within 24 hours.</p>
         </div>
 
-        <form action="../contact.html" method="get">
+        <form data-quote-form action="../contact.html" method="get">
           <input type="hidden" name="service" value="retail-storefront-cleaning">
           <input type="hidden" name="location" value="Benicia">
+          <input type="hidden" name="form_type" value="commercial">
           
           <div class="field-grid">
             <div class="field">
@@ -233,6 +234,44 @@
             </div>
           </div>
 
+          <div class="field">
+            <label for="loc-address">Facility Address in Benicia *</label>
+            <span class="field-help">Street address, Suite, City &amp; Zip code</span>
+            <input type="text" id="loc-address" name="address" placeholder="e.g. 100 Main St, Benicia, CA" required>
+          </div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="loc-date">Preferred Walkthrough Date *</label>
+              <span class="field-help">Choose your target day (Mon–Sat)</span>
+              <input type="date" id="loc-date" name="preferred_date" required>
+            </div>
+            <div class="field">
+              <label for="loc-time">Preferred 15-Min Walkthrough Time *</label>
+              <span class="field-help">15-minute on-site visit</span>
+              <select id="loc-time" name="preferred_time" required>
+                <option value="" disabled selected>Select a 15-minute time slot...</option>
+                <option value="08:00 AM (15 min)">08:00 AM (15 min)</option>
+                <option value="08:30 AM (15 min)">08:30 AM (15 min)</option>
+                <option value="09:00 AM (15 min)">09:00 AM (15 min)</option>
+                <option value="09:30 AM (15 min)">09:30 AM (15 min)</option>
+                <option value="10:00 AM (15 min)">10:00 AM (15 min)</option>
+                <option value="10:30 AM (15 min)">10:30 AM (15 min)</option>
+                <option value="11:00 AM (15 min)">11:00 AM (15 min)</option>
+                <option value="11:30 AM (15 min)">11:30 AM (15 min)</option>
+                <option value="01:00 PM (15 min)">01:00 PM (15 min)</option>
+                <option value="01:30 PM (15 min)">01:30 PM (15 min)</option>
+                <option value="02:00 PM (15 min)">02:00 PM (15 min)</option>
+                <option value="02:30 PM (15 min)">02:30 PM (15 min)</option>
+                <option value="03:00 PM (15 min)">03:00 PM (15 min)</option>
+                <option value="03:30 PM (15 min)">03:30 PM (15 min)</option>
+                <option value="04:00 PM (15 min)">04:00 PM (15 min)</option>
+                <option value="04:30 PM (15 min)">04:30 PM (15 min)</option>
+                <option value="Flexible / Contact to confirm">Flexible (Anytime during business hours)</option>
+              </select>
+            </div>
+          </div>
+
           <div class="field-grid">
             <div class="field">
               <label for="sqft">Approximate Square Footage</label>
@@ -252,10 +291,11 @@
 
           <div class="field">
             <label for="notes">Facility Notes or Scope Details</label>
-            <textarea id="notes" name="notes" placeholder="Tell us about the space in Benicia (e.g. restrooms, executive suites, floor type, security requirements)..."></textarea>
+            <textarea id="notes" name="message" placeholder="Tell us about the space in Benicia (e.g. restrooms, executive suites, floor type, security requirements)..."></textarea>
           </div>
 
-          <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;padding:16px">Submit Benicia Quote Request →</button>
+          <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;padding:16px">Schedule 15-Min Walkthrough &amp; Quote →</button>
+          <p class="form-note" style="display:none;margin-top:14px;color:var(--blue-700);font-weight:600;font-size:.9rem"></p>
         </form>
       </div>
     </div>

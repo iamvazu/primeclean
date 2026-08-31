@@ -126,41 +126,121 @@
     <div class="wrap contact-layout">
       <div class="form-card">
         <div class="form-toggle">
-          <button type="button" class="active" data-target="commercial">Commercial Quote</button>
+          <button type="button" class="active" data-target="commercial">Commercial Quote &amp; 15-Min Walkthrough</button>
           <button type="button" data-target="government">Government &amp; Public Sector</button>
         </div>
 
+        <div class="walkthrough-badge-tip">
+          <div class="walkthrough-badge-icon">⏱️</div>
+          <div>
+            <strong>15-Minute On-Site Walkthrough:</strong> Jackie will personally walk your facility, evaluate high-touch sanitation, restrooms, floor care, and compliance, and provide a written Cleanliness &amp; Compliance Score within 24 hours.
+          </div>
+        </div>
+
         <form data-quote-form data-form-panel="commercial">
+          <input type="hidden" name="form_type" value="commercial">
           <div class="field-grid">
-            <div class="field"><label for="c-name">Full name</label><input id="c-name" name="name" type="text" required></div>
-            <div class="field"><label for="c-company">Company / property name</label><input id="c-company" name="company" type="text" required></div>
-            <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" required></div>
-            <div class="field"><label for="c-phone">Phone</label><input id="c-phone" name="phone" type="tel" required></div>
-            <div class="field"><label for="c-type">Facility type</label>
+            <div class="field"><label for="c-name">Full name *</label><input id="c-name" name="name" type="text" placeholder="e.g. Jane Doe" required></div>
+            <div class="field"><label for="c-company">Company / property name *</label><input id="c-company" name="company" type="text" placeholder="e.g. Acme Corp / Bayview Center" required></div>
+            <div class="field"><label for="c-email">Email *</label><input id="c-email" name="email" type="email" placeholder="jane@company.com" required></div>
+            <div class="field"><label for="c-phone">Phone *</label><input id="c-phone" name="phone" type="tel" placeholder="(415) 555-0199" required></div>
+          </div>
+
+          <div class="field">
+            <label for="c-address">Facility Address (Where the walkthrough will occur) *</label>
+            <span class="field-help">Street address, Suite, City &amp; Zip code</span>
+            <input id="c-address" name="address" type="text" placeholder="e.g. 123 Main St, Suite 400, Richmond, CA 94804" required>
+          </div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="c-date">Preferred Walkthrough Date *</label>
+              <span class="field-help">Choose your target day (Mon–Sat)</span>
+              <input id="c-date" name="preferred_date" type="date" required>
+            </div>
+            <div class="field">
+              <label for="c-time">Preferred 15-Min Walkthrough Time *</label>
+              <span class="field-help">15-minute on-site visit</span>
+              <select id="c-time" name="preferred_time" required>
+                <option value="" disabled selected>Select a 15-minute time slot...</option>
+                <option value="08:00 AM (15 min)">08:00 AM (15 min)</option>
+                <option value="08:30 AM (15 min)">08:30 AM (15 min)</option>
+                <option value="09:00 AM (15 min)">09:00 AM (15 min)</option>
+                <option value="09:30 AM (15 min)">09:30 AM (15 min)</option>
+                <option value="10:00 AM (15 min)">10:00 AM (15 min)</option>
+                <option value="10:30 AM (15 min)">10:30 AM (15 min)</option>
+                <option value="11:00 AM (15 min)">11:00 AM (15 min)</option>
+                <option value="11:30 AM (15 min)">11:30 AM (15 min)</option>
+                <option value="01:00 PM (15 min)">01:00 PM (15 min)</option>
+                <option value="01:30 PM (15 min)">01:30 PM (15 min)</option>
+                <option value="02:00 PM (15 min)">02:00 PM (15 min)</option>
+                <option value="02:30 PM (15 min)">02:30 PM (15 min)</option>
+                <option value="03:00 PM (15 min)">03:00 PM (15 min)</option>
+                <option value="03:30 PM (15 min)">03:30 PM (15 min)</option>
+                <option value="04:00 PM (15 min)">04:00 PM (15 min)</option>
+                <option value="04:30 PM (15 min)">04:30 PM (15 min)</option>
+                <option value="Flexible / Contact to confirm">Flexible (Anytime during business hours)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="c-type">Facility type</label>
               <select id="c-type" name="facility_type">
-                <option>Office</option><option>Medical / Clinical</option><option>Industrial / Warehouse</option>
-                <option>Retail / Showroom</option><option>Property Management / Multifamily</option>
-                <option>Education</option><option>Financial Institution</option><option>Other</option>
+                <option value="Office">Corporate Office</option>
+                <option value="Medical / Clinical">Medical / Clinical</option>
+                <option value="Industrial / Warehouse">Industrial / Warehouse</option>
+                <option value="Retail / Showroom">Retail / Showroom</option>
+                <option value="Property Management / Multifamily">Property Management / Multifamily</option>
+                <option value="Education / School">Education / School</option>
+                <option value="Financial Institution">Financial Institution</option>
+                <option value="Other">Other Commercial Facility</option>
               </select>
             </div>
             <div class="field"><label for="c-sqft">Approx. square footage</label><input id="c-sqft" name="sqft" type="text" placeholder="e.g. 12,000 sq ft"></div>
           </div>
-          <div class="field"><label for="c-message">Anything else we should know?</label><textarea id="c-message" name="message" placeholder="Current cleaning frequency, number of locations, timeline..."></textarea></div>
-          <button type="submit" class="btn btn-gold">Request a Commercial Quote</button>
+          <div class="field"><label for="c-message">Anything else we should know?</label><textarea id="c-message" name="message" placeholder="Current cleaning frequency, specific areas of focus, security check-in procedures..."></textarea></div>
+          <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;padding:16px">Schedule 15-Min Walkthrough &amp; Quote →</button>
           <p class="form-note" style="display:none;margin-top:14px;color:var(--blue-700);font-weight:600;font-size:.9rem"></p>
         </form>
 
         <form data-quote-form data-form-panel="government" style="display:none">
+          <input type="hidden" name="form_type" value="government">
           <div class="field-grid">
-            <div class="field"><label for="g-name">Full name</label><input id="g-name" name="name" type="text" required></div>
-            <div class="field"><label for="g-agency">Agency / entity name</label><input id="g-agency" name="agency" type="text" required></div>
-            <div class="field"><label for="g-email">Email</label><input id="g-email" name="email" type="email" required></div>
-            <div class="field"><label for="g-phone">Phone</label><input id="g-phone" name="phone" type="tel" required></div>
-            <div class="field"><label for="g-solicitation">Solicitation / RFP number (if known)</label><input id="g-solicitation" name="solicitation" type="text"></div>
-            <div class="field"><label for="g-naics">NAICS code needed</label><input id="g-naics" name="naics" type="text" placeholder="e.g. 561720"></div>
+            <div class="field"><label for="g-name">Full name *</label><input id="g-name" name="name" type="text" placeholder="e.g. Capt. / John Doe" required></div>
+            <div class="field"><label for="g-agency">Agency / entity name *</label><input id="g-agency" name="agency" type="text" placeholder="e.g. City of Richmond / County of Contra Costa" required></div>
+            <div class="field"><label for="g-email">Email *</label><input id="g-email" name="email" type="email" placeholder="john.doe@agency.gov" required></div>
+            <div class="field"><label for="g-phone">Phone *</label><input id="g-phone" name="phone" type="tel" placeholder="(415) 555-0199" required></div>
           </div>
-          <div class="field"><label for="g-message">Timeline &amp; details</label><textarea id="g-message" name="message" placeholder="Bid deadline, facility size, scope details..."></textarea></div>
-          <button type="submit" class="btn btn-gold">Send Government Inquiry</button>
+
+          <div class="field">
+            <label for="g-address">Facility / Base Address *</label>
+            <span class="field-help">Location for walkthrough or service delivery</span>
+            <input id="g-address" name="address" type="text" placeholder="e.g. 450 Civic Center Plaza, Richmond, CA 94804" required>
+          </div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="g-date">Preferred Walkthrough Date (Optional)</label>
+              <input id="g-date" name="preferred_date" type="date">
+            </div>
+            <div class="field">
+              <label for="g-time">Preferred 15-Min Time Slot</label>
+              <select id="g-time" name="preferred_time">
+                <option value="Flexible / Contact to confirm">Flexible / Contact to confirm</option>
+                <option value="08:00 AM (15 min)">08:00 AM (15 min)</option>
+                <option value="09:00 AM (15 min)">09:00 AM (15 min)</option>
+                <option value="10:00 AM (15 min)">10:00 AM (15 min)</option>
+                <option value="11:00 AM (15 min)">11:00 AM (15 min)</option>
+                <option value="01:00 PM (15 min)">01:00 PM (15 min)</option>
+                <option value="02:00 PM (15 min)">02:00 PM (15 min)</option>
+                <option value="03:00 PM (15 min)">03:00 PM (15 min)</option>
+                <option value="04:00 PM (15 min)">04:00 PM (15 min)</option>
+              </select>
+            </div>
+            <div class="field"><label for="g-solicitation">Solicitation / RFP number (if known)</label><input id="g-solicitation" name="solicitation" type="text" placeholder="e.g. RFP-2026-042"></div>
+            <div class="field"><label for="g-naics">NAICS code needed</label><input id="g-naics" name="naics" type="text" placeholder="e.g. 561720 / 561210"></div>
+          </div>
+          <div class="field"><label for="g-message">Timeline &amp; details</label><textarea id="g-message" name="message" placeholder="Bid deadline, facility size, security clearance requirements, scope details..."></textarea></div>
+          <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;padding:16px">Send Government Inquiry &amp; Walkthrough Request →</button>
           <p class="form-note" style="display:none;margin-top:14px;color:var(--blue-700);font-weight:600;font-size:.9rem"></p>
         </form>
       </div>

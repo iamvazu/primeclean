@@ -41,18 +41,133 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Basic client-side submit handling (no backend wired up yet)
+  // Set minimum date for walkthrough date inputs (tomorrow or next business day)
+  var dateInputs = document.querySelectorAll('input[type="date"]');
+  var tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  var minDateStr = tomorrow.toISOString().split('T')[0];
+  dateInputs.forEach(function (input) {
+    input.setAttribute('min', minDateStr);
+  });
+
+  // Schedule Walkthrough submission handler
   var forms = document.querySelectorAll('form[data-quote-form]');
   forms.forEach(function (form) {
-    form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
+      
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var originalBtnText = submitBtn ? submitBtn.innerHTML : 'Submit';
       var note = form.querySelector('.form-note');
+      
+      // Extract form data
+      var formData = new FormData(form);
+      var payload = {};
+      formData.forEach(function (value, key) {
+        payload[key] = value;
+      });
+
+      // Show loading state
+      if (submitBtn) {
+        submitBtn.classList.add('is-loading');
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Scheduling 15-Min Walkthrough...';
+      }
       if (note) {
-        note.textContent = 'Thanks — this form is a working draft. Connect it to your email or CRM before launch.';
-        note.style.display = 'block';
+        note.style.display = 'none';
+      }
+
+      try {
+        var response = await fetch('/api/schedule-walkthrough', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        var result = await response.json().catch(function () { return {}; });
+
+        if (response.ok && result.success !== false) {
+          // Render rich confirmation card
+          var formCard = form.closest('.form-card');
+          var bookedName = payload.name || 'Valued Client';
+          var bookedDate = payload.preferred_date || 'Flexible / Next Available';
+          var bookedTime = payload.preferred_time || 'Flexible';
+          var bookedAddress = payload.address || 'Facility on record';
+          var bookedOrg = payload.company || payload.agency || 'Commercial Facility';
+
+          var successHtml = `
+            <div class="form-success-card">
+              <div class="form-success-header">
+                <div class="form-success-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6L9 17l-5-5"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="eyebrow on-light" style="color:var(--gold-dark);font-size:.78rem">Confirmed Request</span>
+                  <h3>Walkthrough Request Received!</h3>
+                </div>
+              </div>
+              <p style="color:var(--ink-soft);font-size:.95rem;margin-bottom:14px">
+                Thank you, <strong>${bookedName}</strong>. Your request for a <strong>Free 15-Minute On-Site Walkthrough</strong> has been submitted.
+              </p>
+              
+              <div class="form-success-details">
+                <div class="form-success-row">
+                  <span class="label">📅 Date:</span>
+                  <span class="val">${bookedDate}</span>
+                </div>
+                <div class="form-success-row">
+                  <span class="label">⏰ Time:</span>
+                  <span class="val">${bookedTime} (15 min)</span>
+                </div>
+                <div class="form-success-row">
+                  <span class="label">📍 Address:</span>
+                  <span class="val">${bookedAddress}</span>
+                </div>
+                <div class="form-success-row">
+                  <span class="label">🏢 Facility:</span>
+                  <span class="val">${bookedOrg}</span>
+                </div>
+              </div>
+
+              <div class="form-success-note">
+                📧 <b>Confirmation Sent:</b> A confirmation summary has been sent from <b>info@primecleanba.com</b> to <b>${payload.email}</b>.<br>
+                👤 <b>Jackie</b> (<b>jackie@primecleanba.com</b>) has been notified to conduct your walkthrough and prepare your Cleanliness &amp; Compliance Score.
+              </div>
+
+              <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
+                <a class="btn btn-gold btn-sm" href="tel:14155728733">Call Jackie: (415) 572-8733</a>
+                <button type="button" class="btn btn-outline btn-sm" onclick="window.location.reload()">Book Another Visit</button>
+              </div>
+            </div>
+          `;
+
+          if (formCard) {
+            formCard.innerHTML = successHtml;
+            formCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        } else {
+          throw new Error(result.error || 'Server returned an error.');
+        }
+      } catch (err) {
+        console.error('Walkthrough submission error:', err);
+        if (submitBtn) {
+          submitBtn.classList.remove('is-loading');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        }
+        if (note) {
+          note.innerHTML = '⚠️ Note: Direct server dispatch encountered an issue. Please call us directly at <a href="tel:14155728733" style="color:var(--blue-700);text-decoration:underline;">(415) 572-8733</a> or email <a href="mailto:info@primecleanba.com" style="color:var(--blue-700);text-decoration:underline;">info@primecleanba.com</a>.';
+          note.style.display = 'block';
+        }
       }
     });
   });
+
 
   // Scroll-reveal: fade + rise elements into view as the user scrolls.
   var revealSelectors = [
