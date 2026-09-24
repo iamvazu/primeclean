@@ -1,6 +1,8 @@
+import nodemailer from 'nodemailer';
+
 // Vercel Serverless Function: Job Application & Resume Submission
-// Jackie Notification Destination: jackie@primecleanba.com
-// Candidate Confirmation Sender: info@primecleanba.com
+// Admin Notifications: jackie@primecleanba.com & iamvazu@gmail.com
+// Google Workspace Sender: info@primecleanba.com
 
 export const config = {
   api: {
@@ -219,14 +221,57 @@ export default async function handler(req, res) {
       </html>
     `;
 
-    // 3. Attempt Email Delivery via Resend / SendGrid if Configured
+    // 3. Attempt Email Delivery via Google Workspace SMTP (or Resend fallback)
     let emailSent = false;
+    const adminRecipients = ['jackie@primecleanba.com', 'iamvazu@gmail.com'];
+    const googleUser = process.env.GOOGLE_WORKSPACE_USER || process.env.GMAIL_USER || 'info@primecleanba.com';
+    const googlePass = process.env.GOOGLE_WORKSPACE_APP_PASSWORD || process.env.GMAIL_APP_PASSWORD || process.env.SMTP_PASS || process.env.GMAIL_PASSWORD;
     const resendApiKey = process.env.RESEND_API_KEY;
-    const sendgridApiKey = process.env.SENDGRID_API_KEY;
 
-    if (resendApiKey) {
+    const attachments = resume_data ? [{
+      filename: resume_filename || 'Candidate_Resume.pdf',
+      content: resume_data,
+      encoding: 'base64'
+    }] : [];
+
+    if (googlePass) {
       try {
-        const attachments = resume_data ? [{
+        const transporter = nodemailer.createTransport({
+          host: 'smtp.gmail.com',
+          port: 465,
+          secure: true,
+          auth: {
+            user: googleUser,
+            pass: googlePass.replace(/\s+/g, '')
+          }
+        });
+
+        // Send to Jackie & Admin
+        await transporter.sendMail({
+          from: `"Prime Clean Careers" <${googleUser}>`,
+          to: adminRecipients,
+          replyTo: email,
+          subject: `💼 New Job Application: ${name} (${position})`,
+          html: jackieEmailHtml,
+          attachments
+        });
+
+        // Send confirmation to Candidate
+        await transporter.sendMail({
+          from: `"Prime Clean Careers" <${googleUser}>`,
+          to: email,
+          replyTo: googleUser,
+          subject: `We've received your application for ${position} — Prime Clean`,
+          html: candidateEmailHtml
+        });
+
+        emailSent = true;
+      } catch (e) {
+        console.warn('Google Workspace SMTP error:', e.message);
+      }
+    } else if (resendApiKey) {
+      try {
+        const resendAttachments = resume_data ? [{
           filename: resume_filename || 'Candidate_Resume.pdf',
           content: resume_data
         }] : [];
@@ -239,11 +284,11 @@ export default async function handler(req, res) {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            from: 'Prime Clean Dispatch <info@primecleanba.com>',
-            to: ['jackie@primecleanba.com', 'iamvazu@gmail.com'],
+            from: `Prime Clean Dispatch <${googleUser}>`,
+            to: adminRecipients,
             subject: `💼 New Job Application: ${name} (${position})`,
             html: jackieEmailHtml,
-            attachments
+            attachments: resendAttachments
           })
         });
 
@@ -255,7 +300,7 @@ export default async function handler(req, res) {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            from: 'Prime Clean Careers <info@primecleanba.com>',
+            from: `Prime Clean Careers <${googleUser}>`,
             to: [email],
             subject: `We've received your application for ${position} — Prime Clean`,
             html: candidateEmailHtml
@@ -265,52 +310,6 @@ export default async function handler(req, res) {
         emailSent = true;
       } catch (e) {
         console.warn('Resend API call error:', e.message);
-      }
-    } else if (sendgridApiKey) {
-      try {
-        const attachments = resume_data ? [{
-          content: resume_data,
-          filename: resume_filename || 'Candidate_Resume.pdf',
-          type: resume_type || 'application/pdf',
-          disposition: 'attachment'
-        }] : [];
-
-        await fetch('https://api.sendgrid.com/v3/mail/send', {
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${sendgridApiKey}`,
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            personalizations: [
-              { to: [{ email: 'jackie@primecleanba.com' }, { email: 'iamvazu@gmail.com' }] }
-            ],
-            from: { email: 'info@primecleanba.com', name: 'Prime Clean Dispatch' },
-            subject: `💼 New Job Application: ${name} (${position})`,
-            content: [{ type: 'text/html', value: jackieEmailHtml }],
-            attachments
-          })
-        });
-
-        await fetch('https://api.sendgrid.com/v3/mail/send', {
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${sendgridApiKey}`,
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            personalizations: [
-              { to: [{ email }] }
-            ],
-            from: { email: 'info@primecleanba.com', name: 'Prime Clean Careers' },
-            subject: `We've received your application for ${position} — Prime Clean`,
-            content: [{ type: 'text/html', value: candidateEmailHtml }]
-          })
-        });
-
-        emailSent = true;
-      } catch (e) {
-        console.warn('SendGrid API call error:', e.message);
       }
     }
 

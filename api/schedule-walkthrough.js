@@ -1,6 +1,8 @@
+import nodemailer from 'nodemailer';
+
 // Vercel Serverless Function: Schedule 15-Minute Walkthrough & Send Notification + Confirmation Emails
-// Jackie Notification: jackie@primecleanba.com
-// Customer Confirmation From: info@primecleanba.com
+// Admin Recipients: jackie@primecleanba.com & iamvazu@gmail.com
+// Google Workspace Sender: info@primecleanba.com
 
 export default async function handler(req, res) {
   // Set CORS headers
@@ -52,7 +54,7 @@ export default async function handler(req, res) {
     const displayType = facility_type || (form_type === 'government' ? 'Government / Public Sector' : 'Commercial Facility');
     const submissionDate = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }) + ' (PT)';
 
-    // 1. Prepare Jackie's Notification Email
+    // 1. Prepare Jackie & Admin Notification Email
     const jackieEmailHtml = `
       <!DOCTYPE html>
       <html>
@@ -231,17 +233,50 @@ export default async function handler(req, res) {
       </html>
     `;
 
-    // 3. Email Dispatcher Logic
-    const recipients = ['jackie@primecleanba.com', 'iamvazu@gmail.com'];
-    const senderFrom = process.env.RESEND_FROM || 'Prime Clean <info@primecleanba.com>';
+    // 3. Email Dispatcher Logic (Google Workspace SMTP via info@primecleanba.com)
+    const adminRecipients = ['jackie@primecleanba.com', 'iamvazu@gmail.com'];
+    const googleUser = process.env.GOOGLE_WORKSPACE_USER || process.env.GMAIL_USER || 'info@primecleanba.com';
+    const googlePass = process.env.GOOGLE_WORKSPACE_APP_PASSWORD || process.env.GMAIL_APP_PASSWORD || process.env.SMTP_PASS || process.env.GMAIL_PASSWORD;
     const resendApiKey = process.env.RESEND_API_KEY;
-    const sendgridApiKey = process.env.SENDGRID_API_KEY;
+
     let emailSentToAdmins = false;
     let emailSentToCustomer = false;
 
-    if (resendApiKey) {
-      // Send using Resend
-      const adminRes = await fetch('https://api.resend.com/emails', {
+    if (googlePass) {
+      // Direct Google Workspace SMTP connection
+      const transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true,
+        auth: {
+          user: googleUser,
+          pass: googlePass.replace(/\s+/g, '') // remove spaces from 16-char app pass
+        }
+      });
+
+      // Send to Jackie & Admin
+      await transporter.sendMail({
+        from: `"Prime Clean Dispatch" <${googleUser}>`,
+        to: adminRecipients,
+        replyTo: email,
+        subject: `🗓️ New 15-Min Walkthrough / Lead Request: ${name} (${orgName})`,
+        html: jackieEmailHtml
+      });
+      emailSentToAdmins = true;
+
+      // Send Auto-Reply to Customer
+      await transporter.sendMail({
+        from: `"Prime Clean" <${googleUser}>`,
+        to: email,
+        replyTo: googleUser,
+        subject: `Request Received: Prime Clean Commercial Cleaning & Walkthrough for ${name}`,
+        html: customerEmailHtml
+      });
+      emailSentToCustomer = true;
+    } else if (resendApiKey) {
+      // Fallback: Resend API if configured
+      const senderFrom = process.env.RESEND_FROM || `Prime Clean <${googleUser}>`;
+      await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${resendApiKey}`,
@@ -249,17 +284,14 @@ export default async function handler(req, res) {
         },
         body: JSON.stringify({
           from: senderFrom,
-          to: recipients,
+          to: adminRecipients,
           reply_to: email,
           subject: `🗓️ New 15-Min Walkthrough / Lead Request: ${name} (${orgName})`,
           html: jackieEmailHtml
         })
       });
 
-      if (adminRes.ok) emailSentToAdmins = true;
-
-      // Send Confirmation to Prospect
-      const customerRes = await fetch('https://api.resend.com/emails', {
+      await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${resendApiKey}`,
@@ -268,54 +300,19 @@ export default async function handler(req, res) {
         body: JSON.stringify({
           from: senderFrom,
           to: [email],
-          reply_to: 'info@primecleanba.com',
+          reply_to: googleUser,
           subject: `Request Received: Prime Clean Commercial Cleaning & Walkthrough for ${name}`,
           html: customerEmailHtml
-        })
-      });
-
-      if (customerRes.ok) emailSentToCustomer = true;
-    } else if (sendgridApiKey) {
-      // Send using SendGrid
-      const sendgridFrom = process.env.SENDGRID_FROM || 'info@primecleanba.com';
-
-      await fetch('https://api.sendgrid.com/v3/mail/send', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${sendgridApiKey}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          personalizations: [{ to: recipients.map(r => ({ email: r })) }],
-          from: { email: sendgridFrom, name: 'Prime Clean' },
-          reply_to: { email: email, name: name },
-          subject: `🗓️ New 15-Min Walkthrough / Lead Request: ${name} (${orgName})`,
-          content: [{ type: 'text/html', value: jackieEmailHtml }]
-        })
-      });
-
-      await fetch('https://api.sendgrid.com/v3/mail/send', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${sendgridApiKey}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          personalizations: [{ to: [{ email: email, name: name }] }],
-          from: { email: sendgridFrom, name: 'Prime Clean' },
-          reply_to: { email: 'info@primecleanba.com', name: 'Prime Clean Operations' },
-          subject: `Request Received: Prime Clean Commercial Cleaning & Walkthrough for ${name}`,
-          content: [{ type: 'text/html', value: customerEmailHtml }]
         })
       });
       emailSentToAdmins = true;
       emailSentToCustomer = true;
     } else {
-      // Development / Local / Simulated logging mode
+      // Development / Local console log fallback
       console.log('--- [WALKTHROUGH / CONTACT FORM SUBMISSION] ---');
-      console.log('Admin Recipients:', recipients);
+      console.log('Admin Recipients:', adminRecipients);
       console.log('Customer Recipient:', email);
-      console.log('From Address:', senderFrom);
+      console.log('From Google Workspace Account:', googleUser);
       console.log('Booking Data:', {
         name,
         company: orgName,
@@ -328,7 +325,7 @@ export default async function handler(req, res) {
         sqft,
         message
       });
-      console.log('NOTE: To deliver live emails, set RESEND_API_KEY (or SENDGRID_API_KEY) in Vercel Environment Variables.');
+      console.log('NOTE: To deliver real emails through Google Workspace, add GOOGLE_WORKSPACE_APP_PASSWORD in Vercel Environment Variables.');
       emailSentToAdmins = true;
       emailSentToCustomer = true;
     }
