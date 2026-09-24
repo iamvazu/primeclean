@@ -47,22 +47,23 @@
     "slug": "medical-clinic-cleaning",
     "name": "Medical & Healthcare Clinic Cleaning",
     "shortName": "Medical Cleaning",
-    "headline": "Medical, Dental & Healthcare Clinic Disinfection",
-    "scopeTitle": "Healthcare & Clinical Sanitation Protocols",
+    "headline": "Medical, Dental & Healthcare Clinic Disinfection (Cal/OSHA Certified)",
+    "scopeTitle": "Healthcare, Biotech & Clinical Sanitation Protocols",
     "heroImage": "assets/images/service_medical.jpg",
-    "metaDescription": "Terminal cleaning and hospital-grade medical facility disinfection in {city}, CA. EPA-registered disinfectants, OSHA compliance, and cross-contamination prevention.",
-    "intro": "Cleanliness in healthcare is a non-negotiable standard of care. Prime Clean delivers terminal cleaning, medical-grade disinfection, and strict sanitation protocols for clinics and dental practices in {city}, CA.",
+    "metaDescription": "Cal/OSHA Bloodborne Pathogens certified terminal cleaning and healthcare facility disinfection in {city}, CA. EPA List N disinfectants, Title 8 CCR § 5193 compliance, and medical cross-contamination prevention.",
+    "intro": "Cleanliness in healthcare and biotech environments is a non-negotiable standard of care. Prime Clean delivers Cal/OSHA Bloodborne Pathogens (Title 8 CCR § 5193) certified terminal cleaning, medical-grade disinfection, and strict sanitation protocols for clinics, dental practices, biotech labs, and surgical suites in {city}, CA.",
     "scopeItems": [
-      "EPA-registered List N hospital disinfectants with verified kill-times for pathogens",
-      "Color-coded microfiber towel and mop systems to eliminate room-to-room cross-contamination",
-      "Touchpoint disinfection of exam tables, patient chairs, counters, and door hardware",
-      "Sterilization of waiting room seating, reception check-in desks, and protective partitions",
-      "OSHA-compliant biohazard protocol awareness and HEPA air filtration vacuuming"
+      "EPA-registered List N hospital disinfectants with verified kill-times for bloodborne pathogens, viruses, and bacteria",
+      "Cal/OSHA Bloodborne Pathogens (Title 8 CCR § 5193) certified technicians adhering to exposure control protocols",
+      "Institutional 4-color microfiber towel and mop systems eliminating room-to-room cross-contamination",
+      "Touchpoint terminal disinfection of exam tables, patient chairs, clinical counters, and diagnostic equipment",
+      "Sterilization of waiting room seating, reception check-in kiosks, and protective acrylic partitions",
+      "HEPA multi-stage air filtration vacuuming capturing 99.97% of particulates down to 0.3 microns"
     ],
     "highlights": [
-      { "title": "Infection Prevention First", "desc": "Protocol-driven cleaning exceeding CDC and California health standards." },
-      { "title": "Healthcare Trained Techs", "desc": "Specialized training on medical grade sanitizers and PPE protocols." },
-      { "title": "Discreet Scheduling", "desc": "Evening and weekend service windows to protect patient privacy." }
+      { "title": "Cal/OSHA BBP Certified", "desc": "Led by certified operations supervisor adhering to Title 8 CCR § 5193 standards." },
+      { "title": "EPA List-N Disinfection", "desc": "Hospital-grade virucidal chemistry with documented dwell times for full pathogen kill." },
+      { "title": "Discreet After-Hours Service", "desc": "Evening and weekend service windows to protect patient privacy and clinic operations." }
     ]
   },
   {

@@ -79,56 +79,60 @@ const industriesData = [
     category: "HEALTHCARE & CLINICAL",
     name: "Medical & Healthcare Clinic Cleaning",
     h1: "Medical, Dental & Healthcare Clinic Disinfection in the East Bay & San Francisco",
-    metaTitle: "Medical Clinic Cleaning & Disinfection Services East Bay | Prime Clean",
-    metaDescription: "Hospital-grade medical facility cleaning and terminal disinfection in the East Bay & SF. EPA List N disinfectants, OSHA compliance, and cross-contamination prevention for clinics & dental offices.",
+    metaTitle: "Medical & Dental Clinic Cleaning Services East Bay | Cal/OSHA Certified | Prime Clean",
+    metaDescription: "Cal/OSHA Bloodborne Pathogens (Title 8 CCR § 5193) certified medical facility cleaning in the East Bay & SF. EPA List N disinfectants, terminal cleaning for clinics, dental practices, biotech labs & surgery centers.",
     heroImage: "service_medical.jpg",
-    heroAlt: "Medical clinic sanitation technician performing infection control disinfection in healthcare facility",
-    badgeNumber: "EPA List N",
-    badgeLabel: "Hospital-Grade Disinfection",
-    intro: "Healthcare and outpatient clinical facilities demand sanitation protocols where cleanliness is a standard of patient care and regulatory compliance. Prime Clean delivers terminal cleaning, medical-grade disinfection, and strict cross-contamination control for private practices, urgent cares, dental clinics, physical therapy centers, and ambulatory surgical suites across the Bay Area.",
+    heroAlt: "Cal/OSHA certified medical clinic sanitation technician performing infection control disinfection in East Bay healthcare facility",
+    badgeNumber: "Cal/OSHA",
+    badgeLabel: "Title 8 CCR § 5193 Certified",
+    intro: "Healthcare facilities, dental practices, biotech wet labs, and clinical environments demand an exacting sanitation standard where infection control is paramount. Prime Clean delivers terminal cleaning, medical-grade disinfection, and rigorous cross-contamination prevention under active <strong>Cal/OSHA Bloodborne Pathogens Certification (Title 8 CCR § 5193, Cert. #000043147277)</strong> across private medical practices, dental clinics, urgent care centers, dialysis units, life sciences labs, and outpatient surgical suites throughout the San Francisco Bay Area and East Bay.",
     differentiators: [
       {
+        title: "Cal/OSHA Bloodborne Pathogens Certified",
+        desc: "Supervised and executed under strict California Title 8 CCR § 5193 standards, including exposure control plans, sharps awareness, and biohazard spill remediation."
+      },
+      {
         title: "EPA-Registered List N Disinfectants",
-        desc: "Hospital-grade bactericidal, virucidal, and fungicidal chemistry with certified dwell times for total pathogen inactivation."
+        desc: "Hospital-grade bactericidal, virucidal, and fungicidal chemistry respecting certified manufacturer dwell times for total pathogen inactivation."
       },
       {
-        title: "Color-Coded Microfiber System",
-        desc: "Strict color-coding protocols that guarantee mop heads and towels used in restrooms never cross-contaminate clinical exam rooms."
-      },
-      {
-        title: "OSHA & Bloodborne Pathogen Trained",
-        desc: "Janitorial staff rigorously trained in PPE usage, bio-waste awareness, and healthcare infection prevention guidelines."
+        title: "Institutional 4-Zone Color-Coded Microfiber",
+        desc: "Guaranteed separation of cleaning cloths and flat-mop heads between restrooms, exam rooms, lab prep stations, and patient waiting lounges to eliminate cross-contamination."
       }
     ],
     scopeItems: [
-      { title: "Exam Room Terminal Cleaning", desc: "Detailed sanitization of patient exam tables, physician stools, counters, diagnostic equipment exteriors, and sinks." },
-      { title: "Waiting Room & Reception Sterilization", desc: "High-frequency disinfection of waiting room seating, check-in touchscreens, acrylic partitions, and reception desks." },
-      { title: "Color-Coded Microfiber Wipe-Downs", desc: "Separated microfiber color zones to prevent cross-contamination between restrooms, waiting areas, and treatment zones." },
-      { title: "Clinical Restroom Sanitation", desc: "Medical-grade disinfection of all fixtures, touchless dispensers, grab bars, floors, and emergency pull cords." },
-      { title: "HEPA Multi-Stage Floor Filtration", desc: "HEPA vacuuming capturing 99.97% of airborne particulates down to 0.3 microns, combined with disinfectant flat-mopping." },
-      { title: "Bio-Waste Touchpoint Awareness", desc: "Strict adherence to facility bio-waste handling guidelines and non-porous surface antimicrobial wipe-downs." }
+      { title: "Exam & Procedure Room Terminal Cleaning", desc: "Detailed sanitization of patient exam tables, physician stools, clinical cabinetry, diagnostic equipment exteriors, and touchless sinks." },
+      { title: "Dental Operatory & Sterilization Suite Detailing", desc: "Aerosolized residue wipedown, dental chair disinfection, delivery unit exterior cleaning, and suction area perimeter sanitization." },
+      { title: "Biotech & Life Sciences Wet Lab Sanitation", desc: "Non-interfering cleaning of lab bench perimeters, chemical storage exterior wiping, vinyl ESD flooring care, and anteroom decontamination." },
+      { title: "Waiting Room & Reception Infection Control", desc: "High-frequency disinfection of waiting room seating, check-in kiosks, touchscreen tablets, acrylic sneeze guards, and reception pens." },
+      { title: "Clinical Restroom Medical Disinfection", desc: "Hospital-grade sanitization of all fixtures, touchless dispensers, grab bars, floors, and emergency pull cords." },
+      { title: "HEPA Multi-Stage Floor Filtration", desc: "HEPA vacuuming capturing 99.97% of airborne particulates down to 0.3 microns, combined with hospital-grade disinfectant flat-mopping." }
     ],
     options: [
-      { name: "Nightly Healthcare Janitorial", freq: "5x – 7x / week", desc: "After-hours terminal disinfection and clinical reset ensuring sterile readiness for the next morning's patients." },
+      { name: "Nightly Clinical Janitorial", freq: "5x – 7x / week", desc: "After-hours terminal disinfection and clinical reset ensuring sterile readiness for the next morning's patients." },
       { name: "High-Traffic Clinic Day Porter", freq: "Daily 8 AM – 5 PM", desc: "Continuous wipe-downs of high-turnover patient waiting areas, reception check-in counters, and staff restrooms." },
       { name: "Terminal Deep Sanitization", freq: "Weekly / Monthly", desc: "Electrostatic antimicrobial fogging, high-pressure tile steam scrubbing, and comprehensive clinical resets." }
     ],
     faqs: [
       {
-        q: "What disinfection chemistry do you use for healthcare facilities?",
-        a: "We utilize EPA-registered List N hospital-grade disinfectants with verified kill claims against human coronavirus, influenza, MRSA, norovirus, and bloodborne pathogens, respecting strict surface dwell times."
+        q: "What certifications does Prime Clean hold for medical and clinical cleaning?",
+        a: "Prime Clean's operations leadership holds active Cal/OSHA Bloodborne Pathogens Certification (Title 8 CCR § 5193, Cert. #000043147277). In addition, we are a certified Women-Owned Small Business (WOSB), State of California Small Business (#2048444), and DIR Registered Janitorial Contractor (#1001318678)."
       },
       {
-        q: "How do you prevent cross-contamination between rooms?",
-        a: "We enforce an institutional color-coded microfiber towel and flat-mop system (e.g., red for clinical restrooms, yellow for lab/prep zones, blue for waiting rooms). Mop pads and towels are never shared across zones."
+        q: "What disinfection chemistry do you use for healthcare and dental facilities?",
+        a: "We utilize EPA-registered List N hospital-grade disinfectants with verified kill claims against bloodborne pathogens (HIV-1, Hepatitis B & C), human coronavirus, influenza, MRSA, norovirus, and resistant bacteria, strictly honoring mandated contact dwell times."
       },
       {
-        q: "Are your cleaning technicians trained in OSHA healthcare standards?",
-        a: "Yes. All healthcare cleaning team members complete comprehensive training on OSHA Bloodborne Pathogen standards (29 CFR 1910.1030), proper PPE donning/doffing, and CDC environmental infection control guidelines."
+        q: "How do you prevent cross-contamination between clinical rooms and restrooms?",
+        a: "We enforce an institutional 4-zone color-coded microfiber towel and flat-mop system (red for clinical restrooms, yellow for lab/prep zones, blue for waiting rooms, green for administrative areas). Mop pads and cloths are isolated and never cross-contaminate zones."
+      },
+      {
+        q: "What healthcare and clinical sectors do you service in the East Bay?",
+        a: "We service private medical practices, dental and orthodontic clinics, biotech/life sciences research labs, urgent care centers, outpatient surgery centers, dialysis clinics, physical therapy offices, school district health offices, and aesthetic medspas across Alameda, Contra Costa, and San Francisco counties."
       },
       {
         q: "Can you accommodate discreet evening cleaning after clinic operating hours?",
-        a: "Absolutely. We schedule clinical cleaning exclusively after patient care hours or over weekends to ensure zero interference with patient appointments and complete confidentiality."
+        a: "Absolutely. We schedule clinical cleaning exclusively after patient care hours or over weekends to ensure zero interference with patient appointments, maintain complete HIPAA confidentiality, and adhere to secure lock-up protocols."
       }
     ]
   },

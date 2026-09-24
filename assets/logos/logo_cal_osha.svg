@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" width="320" height="120">
+  <defs>
+    <linearGradient id="calOshaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a2f47" />
+      <stop offset="100%" stop-color="#144d73" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4af37" />
+      <stop offset="100%" stop-color="#b89320" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer Rounded Background -->
+  <rect x="2" y="2" width="316" height="116" rx="10" fill="#ffffff" stroke="#0a2f47" stroke-width="2.5" />
+  
+  <!-- Left Shield Icon Container -->
+  <g transform="translate(16, 15)">
+    <!-- Shield Base -->
+    <path d="M 42 5 Q 75 14 78 30 Q 78 65 42 85 Q 6 65 6 30 Q 9 14 42 5 Z" fill="url(#calOshaGrad)" stroke="url(#goldGrad)" stroke-width="2.5" />
+    <!-- Cross / Bio-Medical Hazard Cross -->
+    <path d="M 37 25 L 47 25 L 47 38 L 60 38 L 60 48 L 47 48 L 47 61 L 37 61 L 37 48 L 24 48 L 24 38 L 37 38 Z" fill="#ffffff" />
+    <circle cx="42" cy="43" r="4" fill="#d4af37" />
+  </g>
+  
+  <!-- Text Elements -->
+  <!-- Header: State of California Cal/OSHA -->
+  <text x="108" y="32" font-family="'Plus Jakarta Sans', 'Segoe UI', Arial, sans-serif" font-weight="900" font-size="20" fill="#0a2f47" letter-spacing="0.5">Cal/OSHA</text>
+  
+  <!-- Subheading Badge -->
+  <rect x="108" y="42" width="194" height="22" rx="4" fill="#0a2f47" />
+  <text x="205" y="57" font-family="'Plus Jakarta Sans', 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="11" fill="#ffffff" text-anchor="middle" letter-spacing="0.8">BLOODBORNE PATHOGENS</text>
+  
+  <!-- Standards & Details -->
+  <text x="108" y="80" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-weight="700" font-size="11" fill="#d4af37">TITLE 8 CCR § 5193</text>
+  <text x="108" y="96" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-weight="600" font-size="10.5" fill="#4a5568">CERTIFIED PROTOCOLS</text>
+  <circle cx="292" cy="85" r="8" fill="#d4af37" />
+  <path d="M 288 85 L 291 88 L 297 81" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

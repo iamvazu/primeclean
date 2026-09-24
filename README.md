@@ -8,12 +8,14 @@ Official website and digital lead generation engine for **Prime Clean** (https:/
 * **Entity**: Prime Clean (WOSB & California Certified Small Business)
 * **Coverage**: San Francisco & East Bay Area (Contra Costa, Alameda, Solano, and San Francisco Counties)
 * **Certifications & Registrations**:
+  * **Leadership**: Jacquelinne A. Samano Figueroa (Founder & Operations Director)
+  * **Cal/OSHA BBP**: Bloodborne Pathogens Certified (Title 8 CCR § 5193, Cert. #`000043147277`)
   * **SBA WOSB**: Women-Owned Small Business Certified
   * **California Small Business (SB)**: Certification #`2048444`
   * **Cal eProcure**: Active Registered State Vendor
   * **DIR Janitorial Contractor**: Registration No. `JS-LR-1001318678`
   * **Insurance**: $2,000,000 Commercial General Liability & Full Bonding
-* **Key Service Lines**: Daily Janitorial, Day Porters, Medical Disinfection, VCT Strip & Wax, Hot-Water Carpet Extraction, Window Detailing, and Post-Construction Turnover.
+* **Key Service Lines**: Daily Janitorial, Day Porters, Cal/OSHA Medical Disinfection, VCT Strip & Wax, Hot-Water Carpet Extraction, Window Detailing, and Post-Construction Turnover.
 
 ---
 
