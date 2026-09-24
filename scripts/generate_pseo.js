@@ -23,7 +23,7 @@ const generatedUrls = [];
 cities.forEach(city => {
   verticals.forEach(vertical => {
     const pageSlug = `${city.slug}-${vertical.slug}`;
-    const pageTitle = `${vertical.headline} in ${city.name}, CA | Prime Clean`;
+    const pageTitle = `${vertical.name} in ${city.name}, CA | Commercial Cleaners Near Me | Prime Clean`;
     const metaDescription = vertical.metaDescription.replace(/{city}/g, city.name);
     const verticalIntro = vertical.intro.replace(/{city}/g, city.name);
 
