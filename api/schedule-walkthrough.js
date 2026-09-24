@@ -159,11 +159,9 @@ export default async function handler(req, res) {
           .header p { margin: 0; font-size: 14px; color: #cbd5e1; }
           .content { padding: 32px 28px; }
           .greeting { font-size: 17px; font-weight: 700; color: #0a2f47; margin-bottom: 14px; }
-          .booking-card { background: #f0f7fb; border: 1.5px solid #b8daed; border-radius: 10px; padding: 20px; margin: 24px 0; }
+          .highlight-banner { background: #e0f2fe; border-left: 4px solid #0284c7; padding: 16px; border-radius: 6px; margin: 18px 0; font-size: 14.5px; color: #0369a1; }
+          .booking-card { background: #f0f7fb; border: 1.5px solid #b8daed; border-radius: 10px; padding: 20px; margin: 20px 0; }
           .booking-header { font-size: 13px; font-weight: 700; color: #0369a1; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
-          .booking-row { display: flex; margin-bottom: 10px; font-size: 14px; }
-          .booking-label { font-weight: 600; color: #475569; width: 110px; flex-shrink: 0; }
-          .booking-val { color: #0a2f47; font-weight: 700; }
           .steps-box { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px; margin: 20px 0; }
           .step-item { display: flex; gap: 12px; margin-bottom: 12px; }
           .step-item:last-child { margin-bottom: 0; }
@@ -180,47 +178,53 @@ export default async function handler(req, res) {
       <body>
         <div class="container">
           <div class="header">
-            <div class="badge">Prime Clean · Free Site Walkthrough</div>
-            <h1>Walkthrough Request Received & Confirmed</h1>
-            <p>Thank you for choosing Prime Clean Commercial & Government Janitorial Services.</p>
+            <div class="badge">Prime Clean · Commercial &amp; Government Janitorial</div>
+            <h1>We Received Your Request!</h1>
+            <p>Thank you for contacting Prime Clean.</p>
           </div>
           <div class="content">
-            <div class="greeting">Hi ${name},</div>
-            <p>We have received your request for a <strong>Free 15-Minute On-Site Walkthrough</strong>. Jackie and our operations team have logged your requested appointment details:</p>
+            <div class="greeting">Hello ${name},</div>
+            <p>Thank you for reaching out to Prime Clean. We have received your request regarding <strong>${orgName}</strong>.</p>
 
-            <div class="booking-card">
-              <div class="booking-header">📍 Confirmed Appointment Details</div>
-              <div style="font-size:14px; margin-bottom:8px;"><strong>Date:</strong> ${displayDate}</div>
-              <div style="font-size:14px; margin-bottom:8px;"><strong>Time:</strong> ${displayTime} (Approx. 15 Minutes)</div>
-              <div style="font-size:14px; margin-bottom:8px;"><strong>Facility Address:</strong> ${displayAddress}</div>
-              <div style="font-size:14px;"><strong>Company / Facility:</strong> ${orgName} (${displayType})</div>
+            <div class="highlight-banner">
+              ⏱️ <strong>Next Step:</strong> One of our Prime Clean associates will review your inquiry and reach out to you within the next <strong>1 to 24 hours</strong> to discuss your scope and confirm your details.
             </div>
 
-            <h3 style="font-size: 16px; color: #0a2f47; margin: 24px 0 12px;">What to expect during your 15-minute visit:</h3>
+            <div class="booking-card">
+              <div class="booking-header">📍 Summary of Your Request</div>
+              <div style="font-size:14px; margin-bottom:8px;"><strong>Facility / Company:</strong> ${orgName} (${displayType})</div>
+              <div style="font-size:14px; margin-bottom:8px;"><strong>Facility Address:</strong> ${displayAddress}</div>
+              <div style="font-size:14px; margin-bottom:8px;"><strong>Preferred Walkthrough Date:</strong> ${displayDate}</div>
+              <div style="font-size:14px; margin-bottom:8px;"><strong>Preferred Time Slot:</strong> ${displayTime} (15 Min Walkthrough)</div>
+              ${sqft ? `<div style="font-size:14px; margin-bottom:8px;"><strong>Approximate Size:</strong> ${sqft}</div>` : ''}
+              ${message ? `<div style="font-size:14px; margin-top:8px; padding-top:8px; border-top:1px dashed #cbd5e1;"><strong>Your Notes:</strong> <em>${message}</em></div>` : ''}
+            </div>
+
+            <h3 style="font-size: 16px; color: #0a2f47; margin: 24px 0 12px;">What happens next:</h3>
             <div class="steps-box">
               <div class="step-item">
                 <div class="step-num">1</div>
-                <div class="step-text"><strong>On-Site Evaluation:</strong> Jackie will visit your facility in person for ~15 minutes to review high-touch areas, restrooms, flooring, and OSHA/compliance points.</div>
+                <div class="step-text"><strong>Rapid Review:</strong> Our operations dispatch team reviews your facility location and requirements.</div>
               </div>
               <div class="step-item">
                 <div class="step-num">2</div>
-                <div class="step-text"><strong>Cleanliness & Compliance Score:</strong> You will receive a written evaluation with our findings, giving you an honest second opinion.</div>
+                <div class="step-text"><strong>Direct Contact (1–24 Hours):</strong> An associate calls or emails you directly to confirm your 15-minute on-site visit or customized scope.</div>
               </div>
               <div class="step-item">
                 <div class="step-num">3</div>
-                <div class="step-text"><strong>Itemized Proposal:</strong> Within 24 hours of the walkthrough, you'll receive a detailed, transparent proposal tailored to your schedule.</div>
+                <div class="step-text"><strong>Cleanliness &amp; Compliance Score:</strong> Following our visit, you receive a free written evaluation with itemized pricing options.</div>
               </div>
             </div>
 
             <div class="contact-bar">
-              <h4>Need to adjust the time or have questions?</h4>
-              <p>Direct Phone: <a href="tel:14155728733">(415) 572-8733</a> &nbsp;·&nbsp; Email: <a href="mailto:info@primecleanba.com">info@primecleanba.com</a></p>
+              <h4>Need Immediate Assistance or Have Urgent Questions?</h4>
+              <p>Direct Office: <a href="tel:14155728733">(415) 572-8733</a> &nbsp;·&nbsp; Email: <a href="mailto:info@primecleanba.com">info@primecleanba.com</a></p>
             </div>
           </div>
           <div class="footer">
             <p><strong>Prime Clean</strong> · 353 S 24th St, Richmond, CA 94804</p>
-            <p>Women-Owned Small Business · CA Small Business Certified · Licensed, Bonded & Insured</p>
-            <p style="margin-top: 10px; color: #94a3b8; font-size: 11px;">Serving East Bay & San Francisco Facilities</p>
+            <p>Women-Owned Small Business (WOSB) · CA Small Business Certified (#2048444) · Licensed, Bonded &amp; Insured</p>
+            <p style="margin-top: 10px; color: #94a3b8; font-size: 11px;">Serving Contra Costa County, Alameda County &amp; San Francisco</p>
           </div>
         </div>
       </body>
@@ -228,17 +232,16 @@ export default async function handler(req, res) {
     `;
 
     // 3. Email Dispatcher Logic
+    const recipients = ['jackie@primecleanba.com', 'iamvazu@gmail.com'];
+    const senderFrom = process.env.RESEND_FROM || 'Prime Clean <info@primecleanba.com>';
     const resendApiKey = process.env.RESEND_API_KEY;
     const sendgridApiKey = process.env.SENDGRID_API_KEY;
-    let emailSentToJackie = false;
+    let emailSentToAdmins = false;
     let emailSentToCustomer = false;
 
     if (resendApiKey) {
       // Send using Resend
-      const senderFrom = process.env.RESEND_FROM || 'Prime Clean <info@primecleanba.com>';
-      
-      // Send to Jackie
-      const jackieRes = await fetch('https://api.resend.com/emails', {
+      const adminRes = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${resendApiKey}`,
@@ -246,14 +249,14 @@ export default async function handler(req, res) {
         },
         body: JSON.stringify({
           from: senderFrom,
-          to: ['jackie@primecleanba.com'],
+          to: recipients,
           reply_to: email,
-          subject: `🗓️ New 15-Min Walkthrough Request: ${name} (${orgName})`,
+          subject: `🗓️ New 15-Min Walkthrough / Lead Request: ${name} (${orgName})`,
           html: jackieEmailHtml
         })
       });
 
-      if (jackieRes.ok) emailSentToJackie = true;
+      if (adminRes.ok) emailSentToAdmins = true;
 
       // Send Confirmation to Prospect
       const customerRes = await fetch('https://api.resend.com/emails', {
@@ -266,7 +269,7 @@ export default async function handler(req, res) {
           from: senderFrom,
           to: [email],
           reply_to: 'info@primecleanba.com',
-          subject: `Walkthrough Confirmed: Prime Clean 15-Minute Site Visit for ${name}`,
+          subject: `Request Received: Prime Clean Commercial Cleaning & Walkthrough for ${name}`,
           html: customerEmailHtml
         })
       });
@@ -283,10 +286,10 @@ export default async function handler(req, res) {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          personalizations: [{ to: [{ email: 'jackie@primecleanba.com' }] }],
+          personalizations: [{ to: recipients.map(r => ({ email: r })) }],
           from: { email: sendgridFrom, name: 'Prime Clean' },
           reply_to: { email: email, name: name },
-          subject: `🗓️ New 15-Min Walkthrough Request: ${name} (${orgName})`,
+          subject: `🗓️ New 15-Min Walkthrough / Lead Request: ${name} (${orgName})`,
           content: [{ type: 'text/html', value: jackieEmailHtml }]
         })
       });
@@ -300,18 +303,19 @@ export default async function handler(req, res) {
         body: JSON.stringify({
           personalizations: [{ to: [{ email: email, name: name }] }],
           from: { email: sendgridFrom, name: 'Prime Clean' },
-          reply_to: { email: 'info@primecleanba.com', name: 'Prime Clean Support' },
-          subject: `Walkthrough Confirmed: Prime Clean 15-Minute Site Visit for ${name}`,
+          reply_to: { email: 'info@primecleanba.com', name: 'Prime Clean Operations' },
+          subject: `Request Received: Prime Clean Commercial Cleaning & Walkthrough for ${name}`,
           content: [{ type: 'text/html', value: customerEmailHtml }]
         })
       });
-      emailSentToJackie = true;
+      emailSentToAdmins = true;
       emailSentToCustomer = true;
     } else {
-      // Development / Default logging mode
-      console.log('--- [WALKTHROUGH FORM SUBMISSION] ---');
-      console.log('Target Recipient (Jackie): jackie@primecleanba.com');
+      // Development / Local / Simulated logging mode
+      console.log('--- [WALKTHROUGH / CONTACT FORM SUBMISSION] ---');
+      console.log('Admin Recipients:', recipients);
       console.log('Customer Recipient:', email);
+      console.log('From Address:', senderFrom);
       console.log('Booking Data:', {
         name,
         company: orgName,
@@ -324,8 +328,8 @@ export default async function handler(req, res) {
         sqft,
         message
       });
-      console.log('NOTE: To deliver real emails, set RESEND_API_KEY in Vercel Environment Variables.');
-      emailSentToJackie = true;
+      console.log('NOTE: To deliver live emails, set RESEND_API_KEY (or SENDGRID_API_KEY) in Vercel Environment Variables.');
+      emailSentToAdmins = true;
       emailSentToCustomer = true;
     }
 

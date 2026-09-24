@@ -231,7 +231,7 @@ export default async function handler(req, res) {
           content: resume_data
         }] : [];
 
-        // Send to Jackie
+        // Send to Jackie & Admin
         await fetch('https://api.resend.com/emails', {
           method: 'POST',
           headers: {
@@ -240,7 +240,7 @@ export default async function handler(req, res) {
           },
           body: JSON.stringify({
             from: 'Prime Clean Dispatch <info@primecleanba.com>',
-            to: ['jackie@primecleanba.com'],
+            to: ['jackie@primecleanba.com', 'iamvazu@gmail.com'],
             subject: `💼 New Job Application: ${name} (${position})`,
             html: jackieEmailHtml,
             attachments
@@ -283,7 +283,7 @@ export default async function handler(req, res) {
           },
           body: JSON.stringify({
             personalizations: [
-              { to: [{ email: 'jackie@primecleanba.com' }] }
+              { to: [{ email: 'jackie@primecleanba.com' }, { email: 'iamvazu@gmail.com' }] }
             ],
             from: { email: 'info@primecleanba.com', name: 'Prime Clean Dispatch' },
             subject: `💼 New Job Application: ${name} (${position})`,
