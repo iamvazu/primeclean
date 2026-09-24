@@ -1,6 +1,7 @@
 {
   "name": "prime-clean-website",
   "version": "1.0.0",
+  "type": "module",
   "description": "Prime Clean Commercial & Government Cleaning Website",
   "scripts": {
     "dev": "serve -p 3000",
