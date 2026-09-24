@@ -105,6 +105,11 @@ const corePages = [
   'contact'
 ];
 
+const countiesDir = path.join(rootDir, 'counties');
+const countyPages = fs.existsSync(countiesDir)
+  ? fs.readdirSync(countiesDir).filter(f => f.endsWith('.html')).map(f => `counties/${f.replace(/\.html$/, '')}`)
+  : [];
+
 const industriesDir = path.join(rootDir, 'industries');
 const industryPages = fs.existsSync(industriesDir)
   ? fs.readdirSync(industriesDir).filter(f => f.endsWith('.html')).map(f => `industries/${f.replace(/\.html$/, '')}`)
@@ -131,6 +136,12 @@ ${corePages.map(page => `  <url>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${page === '' ? '1.0' : '0.95'}</priority>
+  </url>`).join('\n')}
+${countyPages.map(county => `  <url>
+    <loc>${baseUrl}/${county}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>`).join('\n')}
 ${industryPages.map(ind => `  <url>
     <loc>${baseUrl}/${ind}</loc>
@@ -160,6 +171,6 @@ ${legalPages.map(page => `  <url>
 `;
 
 fs.writeFileSync(path.join(rootDir, 'sitemap.xml'), sitemapXml, 'utf8');
-console.log(`Generated sitemap.xml with ${corePages.length + industryPages.length + blogArticles.length + generatedUrls.length + legalPages.length} total indexed URLs`);
+console.log(`Generated sitemap.xml with ${corePages.length + countyPages.length + industryPages.length + blogArticles.length + generatedUrls.length + legalPages.length} total indexed URLs`);
 
 
